@@ -1,13 +1,136 @@
 <!-- dies wird unsere Webside -->
 
-
 <!DOCTYPE html>
-<html lang="de">
-  <head>
-    <meta charset="utf-8">
-    <title>mainpage</title>
-  </head>
-  <body>
-Hier kommt der Inhalt hin.
-  </body>
+
+<!-- fünftes Land? -> Wie und wo unterbringen?  -->
+<!-- Verlinkungen von den jeweiligen Ländern zu Kathrins Seite -->
+<!-- Positionierung der Tabelle, Rahmen, weitere Tabelleneigenschaften falls nötig -->
+
+
+
+<html>
+
+<head>
+
+<title> Culture Cit  </title>
+	<meta charset="UTF8" />
+
+
+</head>
+
+
+<body>	
+
+	<header>
+	<h1> Culture Cit -  Ihr virtueller Reisebegleiter </h1>
+	Wohin geht Ihre nächste Reise?
+	</header>
+
+	
+<!-- S. 30 als Inspo für Seitenaufbau -->
+
+
+<section
+
+
+<!--Verlinkungen der einzelnen Länder von der main page aus  -->
+
+<div id="table content">
+	<section>
+	
+				<table> 
+				
+				<table border="1"  frame="all"  > 
+			
+
+				<tr> 
+						<td>
+						<b>Land 1</b>
+						<br>
+						Hier steht etwas zu Land 1		
+						</td>
+						<td>
+							<b>Land 2</b>
+						<br>
+						Hier steht etwas zu Land 2
+						</td>
+						<td>
+							<b>Land 3</b>
+						<br>
+						Hier steht etwas zu Land 3		
+						</td>
+				</tr>
+	
+				<tr> 
+					<td>
+							<b>Land 4</b>
+						<br>
+						Hier steht etwas zu Land 4
+						</td>
+						<td>
+							<b>Land 5</b>
+						<br>
+						Hier steht etwas zu Land 5
+						</td>
+				</tr>
+			</table>
+	</section>
+</div>
+	
+	<br>
+	<br>
+	<br>
+	Alternative HTML-Darstellung der Tabelle (optisch natürlich kein Unterschied, aber Problem bei der Rahmenerstellung):
+	
+<div id="table content2">
+		<section>
+		
+			<table>
+				<tr>
+				<table border="1"  frame="all"  > 
+					  <th id="Land 1">Land 1</th>
+					  <th id="Land 2">Land 2</th>
+					  <th id="Land 3">Land 3</th>
+				</tr>
+				
+				<tr>
+					  <td headers="Land 1"> Hier kommt Text zu Land 1. </td>
+					  <td headers="Land 2"> Hier kommt Text zu Land 2. </td>
+					  <td headers="Land 3"> Hier kommt Text zu Land  3 </td>
+				</tr>
+			</table>
+
+		<table>
+				<tr>
+				<table border="1"  frame="all"  >
+					<th id="Land 4">Land 4</th>
+					 <th id="Land 5">Land 5</th>
+				</tr>
+				
+				<tr>
+					<td headers="Land 4"> Hier kommt Text zu Land 4. </td>
+					<td headers="Land 5"> Hier kommt Text zu Land 5. </td>
+				</tr>
+		</table>
+	</section>
+</div>
+
+	<br>
+	<br>
+	<br>
+<div id="Einführungstext unter der Tabelle">
+	<section>
+		<p>
+		<b>Hier kommt ein bisschen genereller Einführungstext zur Seite. </b>
+		<br>
+		Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.
+
+</p>
+</section>
+</div>
+	
+
+</body>
+
+
 </html>
