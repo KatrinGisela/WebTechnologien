@@ -1,0 +1,56 @@
+
+
+
+
+head{
+font-family:"Arial";
+}
+body{
+font-family:"Arial";
+background-color:orange;
+
+}
+
+ #menu {
+float:left;
+
+font-family:"Arial";
+margin-right:50px;
+
+}
+
+ #menu li{
+list-style-type:none;
+font-weight: bold;
+width:8em;
+%%margin-left:-2.5em;
+text-align:center;
+
+
+}
+
+#menu a{
+text-decoration:none;
+color:black;
+border:3px blue outset;
+background-color:#CCCCFF;
+display:block;
+border-radius:10px;
+}
+#menu a:hover{
+border: 3px blue inset;
+}
+
+li ul{
+display:none;
+}
+li:hover ul{
+display: block;
+}
+section{
+width:1000px;
+}
+aside{
+background-color:red;
+float:right;
+}
