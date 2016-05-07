@@ -48,17 +48,17 @@
 						<b>Land 1</b>
 						<br>
 						Hier steht etwas zu Land 1		
-						<t/d>
+						</td>
 						<td>
 							<b>Land 2</b>
 						<br>
 						Hier steht etwas zu Land 2
-						<t/d>
+						</td>
 						<td>
 							<b>Land 3</b>
 						<br>
 						Hier steht etwas zu Land 3		
-						<t/d>
+						</td>
 				</tr>
 	
 				<tr> 
@@ -66,12 +66,12 @@
 							<b>Land 4</b>
 						<br>
 						Hier steht etwas zu Land 4
-						<t/d>
+						</td>
 						<td>
 							<b>Land 5</b>
 						<br>
 						Hier steht etwas zu Land 5
-						<t/d>
+						</td>
 				</tr>
 			</table>
 	</section>
