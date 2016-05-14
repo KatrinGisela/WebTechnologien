@@ -3,7 +3,7 @@
 %%header
 
 head{
-font-family:"Arial";
+font-family:"Libre Sans";
 }
 body{
 font-family:"Arial";
@@ -77,4 +77,15 @@ float:right;
 %%Funktionen
 a:hover{
 background-color: white;
+}
+
+%% index
+#tableContent {
+background-color: red;
+font-size: 30pt;
+}
+
+%% index
+#EinführungstextUnterTabelle{
+font-size: 30pt;
 }
