@@ -13,15 +13,15 @@ Gisela:
 	* Links testen (z. B. file:///home/andreas/git/webtech/Assignement1/ChinaSeightSeeing.html) 
 	* Seight Seeing ausbessern 
 	* Menü links setzen und Text mittig (flexibles Box-Layout), dreiteilig 
-	* Hervorhebungen wo man sich gerade befindet 
-	* Startseite in Navigation 
+	* Hervorhebungen, wo man sich gerade befindet 
+	* Startseite in Navigation
+	* Texte für China einfügen  
 	
 
 Sladjana: 
 
-	* CSS-Style abgerundete Ecken, Länder 
-	* Tabelle der Startseite in Liste mit abgerundeten Ecken umwandeln 
-	* 50% Texte einfügen  	
+	* CSS-Style „index“ abgerundete Ecken für die Länder 
+	* 50% Texte einfügen: Polen, Kuba
 	
 
 Andreas: 
@@ -35,7 +35,7 @@ Andreas:
 	* Hymne zu jedem Land (jamendo.com)
 	* 3 externe Links auf andere Seiten (Link aufs Auswärtige Amt)
 	* Hyperlinks erkennbar (Hover: z. B. http://www.w3schools.com/cssref/sel_hover.asp )
-	* 50% Texte einfügen  	
+	* 50% Texte einfügen: Italien, Ghana
 	
 
 Facts: siehe Wikipedia und politische Lage
