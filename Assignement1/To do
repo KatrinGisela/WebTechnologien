@@ -27,7 +27,7 @@ Sladjana:
 Andreas: 
 
 	* Kontakt & Impressum in zwei verschiedene Unterseiten 
-	* mehrere Seiten gleichzeitig bearbeiten (über Metaseite?) (modularisieren)
+	* mehrere Seiten gleichzeitig bearbeiten (über Metaseite?) (modularisieren): z. B. Menü, header, footer etc. 
 	* UTF-8 
 	* Logo
 	* Homelink
