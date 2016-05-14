@@ -1,26 +1,11 @@
-﻿Fragen:
-Startseite in Navigation?
-Text links
-
-
-
-Sightseeing: 10?
-Facts: Text oder Tabelle?
-überall <p> oder <div> fuer den Fliesstext? h1, h3, h4
-Browseranpassung
-zu einem Tutorium
-Bild einbinden?
-	
-Bis wann wer was?
-HTML bis zum 10.05. 16 Uhr
-Homeseite (Sladjana)
-Struktur einer Länderseite mit Navigationsleiste (Gisela)
-
 Alle: 
 	
 	* zwei Städte und Bilderzahl variabel mit Bildumfluss (evtl. in einen Block setzen?)
+	* Facts: Text 
 	* prüfen 
-		– 
+		– a:hover 
+		– Browseranpassung
+		– html & CSS Validierung 
 
 
 
@@ -30,8 +15,8 @@ Gisela:
 	* Seight Seeing ausbessern 
 	* Menü links setzen und Text mittig (flexibles Box-Layout), dreiteilig 
 	* Hervorhebungen wo man sich gerade befindet 
-
-
+	* Startseite in Navigation 
+	
 Sladjana: 
 
 	* CSS-Style abgerundete Ecken, Länder 
@@ -53,11 +38,12 @@ Andreas:
 	* 3 externe Links auf andere Seiten (Link aufs Auswärtige Amt)
 	* Hyperlinks erkennbar (Hover: z. B. http://www.w3schools.com/cssref/sel_hover.asp )
 	* 50% Texte einfügen  	
-
+	
 	
 
-CSS:
-
+	* CSS
+		– Hintergrund #AFD1D1 
+		– 
 
 
 
