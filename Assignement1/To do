@@ -27,10 +27,10 @@ Sladjana:
 
 Andreas: 
 
-	* Kontakt & Impressum in zwei verschiedene Unterseiten 
+	* Kontakt & Impressum in zwei verschiedene Unterseiten, links dazu in <footer><address>
 	* mehrere Seiten gleichzeitig bearbeiten (über Metaseite?) (modularisieren): z. B. Menü, header, footer etc. 
 	* UTF-8 
-	* Logo
+	* Logo in <header>
 	* Homelink
 	
 	* Hymne zu jedem Land (jamendo.com)
