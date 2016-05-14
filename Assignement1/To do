@@ -19,7 +19,8 @@ Struktur einer Länderseite mit Navigationsleiste (Gisela)
 Alle: 
 	* Texte einfügen  
 	* zwei Städte und Bilderzahl variabel mit Bildumfluss (evtl. in einen Block setzen?)
-	* 
+	* prüfen 
+		– 
 
 
 
@@ -28,25 +29,29 @@ Gisela:
 	* Links testen (z. B. file:///home/andreas/git/webtech/Assignement1/ChinaSeightSeeing.html) 
 	* Seight Seeing ausbessern 
 
+Sladjana: 
+	* Tabelle der Startseite in Liste mit abgerundeten Ecken umwandeln 
+
 
 
 Andreas: 
-	* Menü links setzen und Text mittig (Box-Layout) 
-	* mehrere Seiten gleichzeitig bearbeiten (über Metaseite?) 
+
+	* Kontakt & Impressum in zwei verschiedene Unterseiten 
+	* Menü links setzen und Text mittig (flexibles Box-Layout), dreiteilig 
+	* mehrere Seiten gleichzeitig bearbeiten (über Metaseite?) (modularisieren)
 	* UTF-8 
 	* Logo
 	* Homelink
-	* Kontakt
-	* Impressum
 	
-	* Hymne zu jedem Land
-	* 3 Links
-	* Hyperlinks erkennbar 
+	* Hymne zu jedem Land (jamendo.com)
+	* 3 externe Links auf andere Seiten (Link aufs Auswärtige Amt)
+	* Hyperlinks erkennbar (Hover: z. B. http://www.w3schools.com/cssref/sel_hover.asp )
 	* Hervorhebungen wo man sich gerade befindet 
+
 	
 
 CSS:
--Hover: z. B. http://www.w3schools.com/cssref/sel_hover.asp
+
 -eine neue CSS3-Eigenschaft
 
 
