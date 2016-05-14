@@ -7,8 +7,26 @@ font-family:"Arial";
 }
 body{
 font-family:"Arial";
-background-color:orange;
+background-color:#00ffff;
+display:-moz-box;
 
+}
+%%Seiteneinteilung
+#links, #mitte, #rechts{
+width: 100px;
+height: 300px;
+}
+#links{
+background-color:#00ff00;
+-moz-box-flex:1;
+}
+#mitte{
+background-color:red;
+-moz-box-flex:2;
+}
+#rechts{
+background-color:#ffff00;
+-moz-box-flex:3;
 }
 
 %%menu
@@ -55,4 +73,8 @@ width:1000px;
 aside{
 background-color:red;
 float:right;
+}
+%%Funktionen
+a:hover{
+background-color: white;
 }
