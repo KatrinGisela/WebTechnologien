@@ -9,7 +9,7 @@ font-family:"Libre Sans";
 body{
 font-family: "Libre Sans";
 background-color:#afd1d1;
-display:-moz-box;
+display: flex;
 
 }
 
