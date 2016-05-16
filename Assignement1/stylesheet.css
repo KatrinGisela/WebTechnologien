@@ -1,20 +1,21 @@
 
-%%header
+/*header*/
 
 head{
 font-family:"Libre Sans";
+
 }
 body{
-font-family:"Arial";
+font-family: "Libre Sans";
 background-color:#afd1d1;
-display:-moz-box;
+display: flex;
 
 }
 
 
-%%Seiteneinteilung
+Seiteneinteilung
 #links, #mitte, #rechts{
-width: 100px;
+width: 200px;
 height: 300px;
 }
 #links{
@@ -32,7 +33,7 @@ background-color:#ffff00;
 
 
 
-%%menu
+/*menu*/
  #menu {
 float:left;
 
@@ -45,7 +46,7 @@ margin-right:50px;
 list-style-type:none;
 font-weight: bold;
 width:8em;
-%%margin-left:-2.5em;
+/*margin-left:-2.5em;*/
 text-align:center;
 
 }
@@ -62,7 +63,7 @@ border-radius:10px;
 border: 3px blue inset;
 }
 
-%%div-elements
+/*div-elements*/
 li ul{
 display:none;
 }
@@ -78,14 +79,14 @@ float:right;
 }
 
 
-%%Funktionen
+/*Funktionen*/
 a:hover{
 background-color: white;
 }
 
 
 
-%% index - Länderelemente (abger. Ecken)
+/* index - Länderelemente (abger. Ecken)*/
 div {
 }
 .mainChina{
@@ -154,7 +155,7 @@ div {
 
 
 
-%% index - Text unter den Länderelementen
+/*index - Text unter den Länderelementen*/
 div{
 }
 
