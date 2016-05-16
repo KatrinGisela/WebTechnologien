@@ -27,7 +27,16 @@ Sladjana:
 
 Andreas: 
 
+	* Fragen: 
+
+		– warum <html lang="de"> ? Ist das sinnvoll? Wofür dient es? Warum steht es nicht auf index.html? 
+		– manche Dateien sind nicht in UTF-8 kodiert sondern in ISO-8859-1, 
+
 	* Kontakt & Impressum in zwei verschiedene Unterseiten, links dazu in <footer><address>
+		
+		– HTML5 Elemente benutzen: email, tel, url
+
+
 	* mehrere Seiten gleichzeitig bearbeiten (über Metaseite?) (modularisieren): z. B. Menü, header, footer etc. 
 	* UTF-8 
 	* Logo in <header>
@@ -43,8 +52,3 @@ Facts: siehe Wikipedia und politische Lage
 Sight Seeing
 good to know: Etikette, Notrufnummern, FunFacts
 
-Kontakt:
-HTML5 Elemente benutzen:
--email
--tel
--url
