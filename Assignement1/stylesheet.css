@@ -85,105 +85,113 @@ background-color: white;
 }
 
 
+%% index - Überschriften
+
+h1 {
+color: blue;
+text-align: center;
+}
+
+h2 {
+color: darkblue;
+text-align: center;
+}
 
 %% index - Länderelemente (abger. Ecken)
 div {
 }
 .mainChina{
   	position: relative;
-        top: 50px;
-    	left: 80%;
+ 	top: 30px;
+ 	left: 3%;
   	border: 2px solid white;
-	color:white;
-	font-size: 15;
+	color:#006699;
+	text-align: center;
+	font-size: 15 pt;
 	border-radius: 5em;
 	padding: 3em;
-	width: 40em;
-	background-color: red;
+	width: 20em;
+	background-color: #0099FF;
+	
 }
 
 .mainGhana{
 	position: relative;
- 	top: 75px;
- 	left: 80%;
+ 	top: 55px;
+ 	left: 3%;
   	border: 2px solid white;
-	color:white;
-	font-size: 15;
+	color:#006699;
+	text-align: center;
+	font-size: 15 pt;
 	border-radius: 5em;
 	padding: 3em;
-	width: 40em;
-	background-color: red;
+	width: 20em;
+	background-color: #6699FF;
 }
 
 .mainItalien{
  	position: relative;
- 	top: 100px;
- 	left: 80%;
+ 	top: 80px;
+ 	left: 3%;
   	border: 2px solid white;
-	color:white;
-	font-size: 15;
+	color:#006699;
+	text-align: center;
+	font-size: 15 pt;
 	border-radius: 5em;
 	padding: 3em;
-	width: 40em;
-	background-color: red;
+	width: 20em;
+	background-color: #66CCFF;
 }
 .mainKuba{
  	position: relative;
- 	top: 125px;
- 	left: 80%;
+ 	top: 105px;
+ 	left: 3%;
   	border: 2px solid white;
-	color:white;
-	font-size: 15;
+	color:#006699;
+	text-align: center;
+	font-size: 15 pt;
 	border-radius: 5em;
 	padding: 3em;
-	width: 40em;
-	background-color: red;
+	width: 20em;
+	background-color: #66FFFF;
 }
 .mainPolen{
  	position: relative;
- 	top: 150px;
- 	left: 80%;
+ 	top: 130px;
+ 	left: 3%;
   	border: 2px solid white;
-	color:white;
-	font-size: 15;
+	color:#006699;
+	font-size:15 pt;
+	text-align: center;
 	border-radius: 5em;
 	padding: 3em;
-	width: 40em;
-	background-color: red;
+	width: 20em;
+	background-color: #CCFFFF;
 }
 }
 
 
 
-%% index - Text unter den Länderelementen
-div{
+%% index - Einführungstext Mainpage (unter den fünf Länderelementen)
+p {
 }
 
-.textüberschriftMain{
-position: relative
-top: 200px;
- 	left: 80%;
+.textueberschriftMain{
+
+text-align: center;
+color: #0066CC;
 font-family: sans-serif;
-font-size: 26px;
 font-weight: bold;
-color: black;
-line-height: 140%;
-letter-spacing: 1px;
+font-size: 20pt;
 }
 
 .textinhaltMain {
-position: relative
-top: 200px;
- 	left: 80%;
+text-align: center;
 font-family: sans-serif;
-font-size: 22px;
+font-size: 16pt;
 font-weight: bold;
-color: black;
-line-height: 140%;
-letter-spacing: 1px;
+color: #0066CC;
+
 	
 }
-
-color:white;
-	font-size: 15;
 }
