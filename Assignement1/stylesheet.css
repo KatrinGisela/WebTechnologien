@@ -1,35 +1,28 @@
-
-
-/*header*/
-
-head{
-font-family:"Libre Sans";
-
-}
 body{
 font-family: "Libre Sans";
 background-color:#afd1d1;
-display: flex;
+}
 
+section{
+display: flex;
 }
 
 
 Seiteneinteilung
 #links, #mitte, #rechts{
-width: 200px;
-height: 300px;
+<!--width: 200px;-->
 }
 #links{
 background-color:#00ff00;
--moz-box-flex:1;
+
 }
 #mitte{
 background-color:red;
--moz-box-flex:2;
+
 }
 #rechts{
 background-color:#ffff00;
--moz-box-flex:3;
+
 }
 
 
