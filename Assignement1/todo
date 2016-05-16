@@ -31,14 +31,15 @@ Andreas:
 
 		– warum <html lang="de"> ? Ist das sinnvoll? Wofür dient es? Warum steht es nicht auf index.html? 
 		– manche Dateien sind nicht in UTF-8 kodiert sondern in ISO-8859-1, 
+		– verwenden wir irgendwo <main>? 
+		– wo sind die <href> auf der Hauptseite?
+		– gibt es eine Möglichkeit, die Breiten- und Höhenangabe innerhalb der .css-Datei relativ zu setzen? 
 
 	* Kontakt & Impressum in zwei verschiedene Unterseiten, links dazu in <footer><address>
 		
-		– HTML5 Elemente benutzen: email, tel, url
-
 
 	* mehrere Seiten gleichzeitig bearbeiten (über Metaseite?) (modularisieren): z. B. Menü, header, footer etc. 
-	* UTF-8 
+	* UTF-8, Byte Order Mark entfernen, http://validator.w3.org/i18n-checker/
 	* Logo in <header>
 	* Homelink
 	
