@@ -1,4 +1,4 @@
-Alle: 
+﻿Alle: 
 	
 	* zwei Städte und Bilderzahl variabel mit Bildumfluss (evtl. in einen Block setzen?): <img src="kaleidoskop.gif" alt="Blick in ein Kaleidoskop">
 
@@ -7,6 +7,7 @@ Alle:
 		– a:hover 
 		– Browseranpassung
 		– html & CSS Validierung 
+	*Startseite an Firefox anpassen
 
 
 Gisela: 
