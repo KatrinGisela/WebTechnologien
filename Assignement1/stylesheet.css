@@ -1,7 +1,9 @@
 ﻿body{
 font-family: "Arial";
 text-align: justify;
-background-color:#afd1d1;
+background="images/palme.jpg" 
+/* background-color:#81F7D8; */
+background-color:#F3E2A9;
 }
 
 section {
@@ -98,70 +100,70 @@ div {
 }
 .mainChina{
   	position: relative;
- 	top: 0px;
- 	left: 3%;
+ 	top: 30px;
+ 	left: 10%;
   	border: 2px solid white;
 	color:#006699;
 	text-align: center;
 	font-size: 15 pt;
-	border-radius: 3em;
-	padding: 1em;
-	width: 10em;
+	border-radius: 4em;
+	padding: 2em;
+	width: 15em;
 	background-color: #0099FF;
 	
 }
 
 .mainGhana{
 	position: relative;
- 	top: -150px;
- 	left: 40%;
+ 	top: -120px;
+ 	left: 35%;
   	border: 2px solid white;
 	color:#006699;
 	text-align: center;
 	font-size: 15 pt;
-	border-radius: 3em;
-	padding: 3em;
-	width: 10em;
+	border-radius: 4em;
+	padding: 2em;
+	width: 15em;
 	background-color: #6699FF;
 }
 
 .mainItalien{
  	position: relative;
- 	top: 0px;
- 	left: 70%;
+ 	top: -263px;
+ 	left: 60%;
   	border: 2px solid white;
 	color:#006699;
 	text-align: center;
 	font-size: 15 pt;
-	border-radius: 3em;
-	padding: 3em;
-	width: 10em;
+	border-radius:  4em;
+	padding: 2em;
+	width: 15em;
 	background-color: #66CCFF;
 }
 .mainKuba{
  	position: relative;
- 	top: 105px;
- 	left: 3%;
+ 	top: -225px;
+ 	left: 22%;
   	border: 2px solid white;
 	color:#006699;
 	text-align: center;
 	font-size: 15 pt;
-	border-radius: 5em;
-	padding: 3em;
-	width: 20em;
+	border-radius: 4em;
+	padding: 2em;
+	width: 15em;
 	background-color: #66FFFF;
 }
 .mainPolen{
  	position: relative;
- 	top: 130px;
- 	left: 3%;
+ 	top: -370px;
+ 	left: 47%;
   	border: 2px solid white;
 	color:#006699;
 	font-size:15 pt;
 	text-align: center;
-	border-radius: 5em;
-	padding: 3em;
-	width: 20em;
+	border-radius: 4em;
+	padding: 2em;
+	width: 15em;
 	background-color: #CCFFFF;
 }
 }
