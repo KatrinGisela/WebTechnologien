@@ -1,49 +1,55 @@
 ﻿Alle: 
-	*impressum und Kontakt einfügen
-	*UTF-8 
-	* zwei Städte und Bilderzahl variabel mit Bildumfluss (evtl. in einen Block setzen?): <img src="kaleidoskop.gif" alt="Blick in ein Kaleidoskop">
 
+	
+	*UTF-8 
+	* bei Bildern bitte beachten: 2 Städte + beim Einfügen  <img src="kaleidoskop.gif" alt="Blick in ein Kaleidoskop"> + - beim Einfügen der Bilder 400px verwenden
 	* Facts: Text 
+	* dem User mitteilen, wo er sich gerade befindet (breadcrumbs)
 	* prüfen 
-		– a:hover 
-		– Browseranpassung
+		– Browseranpassung (Tutor fragen)
 		– html & CSS Validierung 
 
+		- die lis entfernen (VALIDIEREN!!)
+		
+		
+		
+		Fragen an den Tutor:
+		sind nav, header und footer neueste html5 Elemente?
+		
 
 Gisela: 
 
 	* Links testen (DONE) (z. B. file:///home/andreas/git/webtech/Assignement1/ChinaSeightSeeing.html) 
-	* Seight Seeing ausbessern (DONE)
-	* Menü links setzen und Text mittig (flexibles Box-Layout), dreiteilig (DONE) 
+
+
 	* Hervorhebungen, wo man sich gerade befindet (PROBLEM)
-	* Startseite in Navigation (DONE)
-	* Texte für China einfügen  (DONE)
-	
+
+	* sich um das Bild kümmern (Hintergrundbild)
+	* alt in den Bildern hinzufügen
+	* facts vervollständigen 
+	* prüfen, wieso China nicht mehr zu geht (evtl. doxh das li drinnnen lassen)
 
 Sladjana: 
 
-	* CSS-Style „index“ abgerundete Ecken für die Länder (DONE)
-	* 50% Texte einfügen: Polen (DONE), Kuba
-	*Mainpage Länder-Großschreibung raus
+	
+	* Mainpage Länder-Großschreibung raus
+	* 
 	
 
 Andreas: 
 
 	* Kontakt & Impressum in zwei verschiedene Unterseiten, links dazu in <footer><address>
 	* mehrere Seiten gleichzeitig bearbeiten (über Metaseite?) (modularisieren): z. B. Menü, header, footer etc. 
-	* 
 	* Logo (Weltkugel) in <header> in "schicker" Leiste, die ein Link ist auf jede Seite
-	
 	* Hymne zu jedem Land (jamendo.com)
 	* 3 externe Links auf andere Seiten (Link aufs Auswärtige Amt)
 	* Hyperlinks erkennbar (Hover: z. B. http://www.w3schools.com/cssref/sel_hover.asp )
 	* 50% Texte einfügen: Italien, Ghana
+	* lang=de in Kontakt und Imrpressum hinzufügen
 	
-		– warum <html lang="de"> ? Ist das sinnvoll? Wofür dient es? Warum steht es nicht auf index.html? 
-		– manche Dateien sind nicht in UTF-8 kodiert sondern in ISO-8859-1, 
-		– verwenden wir irgendwo <main>? 
-		– wo sind die <href> auf der Hauptseite?
-		– gibt es eine Möglichkeit, die Breiten- und Höhenangabe innerhalb der .css-Datei relativ zu setzen? 
+	
+
+		
 
 
 Facts: siehe Wikipedia und politische Lage
