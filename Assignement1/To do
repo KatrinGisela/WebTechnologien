@@ -1,5 +1,6 @@
 ﻿Alle: 
-	
+	*impressum und Kontakt einfügen
+	*UTF-8 
 	* zwei Städte und Bilderzahl variabel mit Bildumfluss (evtl. in einen Block setzen?): <img src="kaleidoskop.gif" alt="Blick in ein Kaleidoskop">
 
 	* Facts: Text 
@@ -11,33 +12,39 @@
 
 Gisela: 
 
-	* Links testen (z. B. file:///home/andreas/git/webtech/Assignement1/ChinaSeightSeeing.html) 
-	* Seight Seeing ausbessern 
-	* Menü links setzen und Text mittig (flexibles Box-Layout), dreiteilig 
-	* Hervorhebungen, wo man sich gerade befindet 
-	* Startseite in Navigation
-	* Texte für China einfügen  
+	* Links testen (DONE) (z. B. file:///home/andreas/git/webtech/Assignement1/ChinaSeightSeeing.html) 
+	* Seight Seeing ausbessern (DONE)
+	* Menü links setzen und Text mittig (flexibles Box-Layout), dreiteilig (DONE) 
+	* Hervorhebungen, wo man sich gerade befindet (PROBLEM)
+	* Startseite in Navigation (DONE)
+	* Texte für China einfügen  (DONE)
 	
 
 Sladjana: 
 
 	* CSS-Style „index“ abgerundete Ecken für die Länder (DONE)
 	* 50% Texte einfügen: Polen (DONE), Kuba
+	*Mainpage Länder-Großschreibung raus
 	
 
 Andreas: 
 
 	* Kontakt & Impressum in zwei verschiedene Unterseiten, links dazu in <footer><address>
 	* mehrere Seiten gleichzeitig bearbeiten (über Metaseite?) (modularisieren): z. B. Menü, header, footer etc. 
-	* UTF-8 
-	* Logo in <header>
-	* Homelink
+	* 
+	* Logo (Weltkugel) in <header> in "schicker" Leiste, die ein Link ist auf jede Seite
 	
 	* Hymne zu jedem Land (jamendo.com)
 	* 3 externe Links auf andere Seiten (Link aufs Auswärtige Amt)
 	* Hyperlinks erkennbar (Hover: z. B. http://www.w3schools.com/cssref/sel_hover.asp )
 	* 50% Texte einfügen: Italien, Ghana
 	
+		– warum <html lang="de"> ? Ist das sinnvoll? Wofür dient es? Warum steht es nicht auf index.html? 
+		– manche Dateien sind nicht in UTF-8 kodiert sondern in ISO-8859-1, 
+		– verwenden wir irgendwo <main>? 
+		– wo sind die <href> auf der Hauptseite?
+		– gibt es eine Möglichkeit, die Breiten- und Höhenangabe innerhalb der .css-Datei relativ zu setzen? 
+
 
 Facts: siehe Wikipedia und politische Lage
 Sight Seeing
