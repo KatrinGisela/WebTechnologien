@@ -1,10 +1,18 @@
-﻿body{
+﻿index{
+	background-image : url("images/Hintergrundbild2.png"); 
+}
+
+
+body{
 font-family: "Arial";
 text-align: justify;
-background="images/palme.jpg" 
+background-image : url("images/Hintergrundbild.png"); 
+
 /* background-color:#81F7D8; */
-background-color:#F3E2A9;
+/* background-color:#F3E2A9; */
 }
+
+
 
 section {
 display: flex;
