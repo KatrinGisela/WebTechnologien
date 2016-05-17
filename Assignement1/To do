@@ -1,20 +1,20 @@
 ﻿Alle: 
 
 	
-	*UTF-8 
+	*UTF-8 (DONE)
 	* bei Bildern bitte beachten: 2 Städte + beim Einfügen  <img src="kaleidoskop.gif" alt="Blick in ein Kaleidoskop"> + - beim Einfügen der Bilder 400px verwenden
 	* Facts: Text 
 	* dem User mitteilen, wo er sich gerade befindet (breadcrumbs)
 	* prüfen 
 		– Browseranpassung (Tutor fragen)
 		– html & CSS Validierung 
-
 		- die lis entfernen (VALIDIEREN!!)
 		
 		
 		
 		Fragen an den Tutor:
-		sind nav, header und footer neueste html5 Elemente?
+		- sind nav, header und footer neueste html5 Elemente?
+		– Browseranpassung (Tutor fragen)
 		
 
 Gisela: 
@@ -31,7 +31,7 @@ Gisela:
 
 Sladjana: 
 
-	
+	FRAGE: ich habe nun in meiner Polen-Sightseeing-Datei mit <br> gearbeitet, um die Abstände zwischen den Bildern anzupassen. Obwohl es sicherlich nicht guter Code ist, drinnen behalten oder herausnehmen?
 	* Mainpage Länder-Großschreibung raus
 	* 
 	
