@@ -1,4 +1,4 @@
-body{
+ï»¿body{
 font-family: "Arial";
 text-align: justify;
 background-color:#afd1d1;
@@ -81,7 +81,7 @@ background-color: white;
 }
 
 
-%% index - Überschriften
+%% index - Ãœberschriften
 
 h1 {
 color: blue;
@@ -93,7 +93,7 @@ color: darkblue;
 text-align: center;
 }
 
-/* index - Länderelemente (abger. Ecken)*/
+/* index - LÃ¤nderelemente (abger. Ecken)*/
 div {
 }
 .mainChina{
@@ -166,7 +166,7 @@ div {
 }
 }
 
-/*index - Text unter den Länderelementen*/
+/*index - Text unter den LÃ¤nderelementen*/
 div{
 }
 
