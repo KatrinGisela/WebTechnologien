@@ -1,9 +1,4 @@
-﻿index{
-	background-image : url("images/Hintergrundbild2.png"); 
-}
-
-
-body{
+﻿body {
 font-family: "Arial";
 text-align: justify;
 background-image : url("images/Hintergrundbild.png"); 
@@ -199,3 +194,4 @@ color: #0066CC;
 	
 }
 }
+
