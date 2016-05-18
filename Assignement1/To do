@@ -38,9 +38,10 @@ Sladjana:
 
 Andreas: 
 
+	* Idee: <section> in <main> oder <div> umwandeln 
 	* Kontakt & Impressum in zwei verschiedene Unterseiten, links dazu in <footer><address>
 	* mehrere Seiten gleichzeitig bearbeiten (über Metaseite?) (modularisieren): z. B. Menü, header, footer etc. 
-	* Logo (Weltkugel) in <header> in "schicker" Leiste, die ein Link ist auf jede Seite
+	* <header> in "schicker" Leiste, die ein Link ist auf jede Seite
 	* Hymne zu jedem Land (jamendo.com)
 	* 3 externe Links auf andere Seiten (Link aufs Auswärtige Amt)
 	* Hyperlinks erkennbar (Hover: z. B. http://www.w3schools.com/cssref/sel_hover.asp )

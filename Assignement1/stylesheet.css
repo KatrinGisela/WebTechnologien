@@ -1,101 +1,96 @@
 ﻿body {
-font-family: "Arial";
-text-align: justify;
-background-image : url("images/Hintergrundbild.png"); 
+	font-family: "Arial";
+	text-align: justify;
+	background-image : url("images/Hintergrundbild.png"); 
 
-/* background-color:#81F7D8; */
-/* background-color:#F3E2A9; */
+	/* background-color:#81F7D8; */
+	/* background-color:#F3E2A9; */
 }
-
-
 
 section {
-display: flex;
-justify-content: space-between;
-
+	display: flex;
+	justify-content: space-between;
 }
-
 
 Seiteneinteilung
 #links, #mitte, #rechts{
-<!--width: 200px;-->
+	<!--width: 200px;-->
 }
+
 #links{
 }
+
 #mitte{
-
 	min-width: 700px;
-
 }
+
 #rechts{
-/* left: 220 em; */
-margin: 30px;
+	/* left: 220 em; */
+	margin: 30px;
 }
 
 
 
 /*menu*/
  #menu {
-float:left;
-
-font-family:"Arial";
-margin-right:50px;
-
+	float:left;
+	font-family:"Arial";
+	margin-right:50px;
 }
 
  #menu li{
-list-style-type:none;
-font-weight: bold;
-width:8em;
-/*margin-left:-2.5em;*/
-text-align:center;
-
+	list-style-type:none;
+	font-weight: bold;
+	width:8em;
+	/*margin-left:-2.5em;*/
+	text-align:center;
 }
 
 #menu a{
-text-decoration:none;
-color:black;
-border:3px blue outset;
-background-color:#CCCCFF;
-display:block;
-border-radius:10px;
+	text-decoration:none;
+	color:black;
+	border:3px blue outset;
+	background-color:#CCCCFF;
+	display:block;
+	border-radius:10px;
 }
+
 #menu a:hover{
-border: 3px blue inset;
+	border: 3px blue inset;
 }
 
 /*div-elements*/
 li ul{
-display:none;
-}
-li:hover ul{
-display: block;
-}
-section{
-width:1000px;
-}
-aside{
-background-color:red;
-float:right;
+	display:none;
 }
 
+li:hover ul{
+	display: block;
+}
+
+section{
+	width:1000px;
+}
+aside{
+	background-color:red;
+	float:right;
+}
 
 /*Funktionen*/
 a:hover{
-background-color: white;
+	background-color: white;
 }
 
 
 %% index - Überschriften
-
 h1 {
-color: blue;
-text-align: center;
+	color: blue;
+	text-align: center;
 }
 
 h2 {
-color: darkblue;
-text-align: center;
+	color: darkblue;
+	text-align: center;
 }
 
 /* index - Länderelemente (abger. Ecken)*/
@@ -113,7 +108,6 @@ div {
 	padding: 2em;
 	width: 15em;
 	background-color: #0099FF;
-	
 }
 
 .mainGhana{
@@ -143,6 +137,7 @@ div {
 	width: 15em;
 	background-color: #66CCFF;
 }
+
 .mainKuba{
  	position: relative;
  	top: -225px;
@@ -156,6 +151,7 @@ div {
 	width: 15em;
 	background-color: #66FFFF;
 }
+
 .mainPolen{
  	position: relative;
  	top: -370px;
@@ -170,45 +166,37 @@ div {
 	background-color: #CCFFFF;
 }
 
-
 /*index - Text unter den Länderelementen*/
 div{
 }
 
 .textueberschriftMain{
-
-text-align: center;
-color: #0066CC;
-font-family: sans-serif;
-font-weight: bold;
-font-size: 20pt;
+	text-align: center;
+	color: #0066CC;
+	font-family: sans-serif;
+	font-weight: bold;
+	font-size: 20pt;
 }
 
 .textinhaltMain {
-text-align: center;
-font-family: sans-serif;
-font-size: 16pt;
-font-weight: bold;
-color: #0066CC;
+	text-align: center;
+	font-family: sans-serif;
+	font-size: 16pt;
+	font-weight: bold;
+	color: #0066CC;
 }
 
 .displayInline {
-text-align: center; 
-display: inline;
-float: left;
-white-space:nowrap  
+	text-align: center; 
+	display: inline;
+	float: left;
+	white-space:nowrap  
 }
 
 .zentriert{ 
 	padding-top: 2em; 
 	text-align: center;
-        margin-left: auto;
-        margin-right: auto;
+	margin-left: auto;
+	margin-right: auto;
 	white-space: nowrap;
 }
-
-<<<<<<< HEAD
-=======
-
-
->>>>>>> origin/master
