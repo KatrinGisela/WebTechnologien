@@ -188,9 +188,13 @@ div{
 }
 
 .zentriert{ 
-	padding-top: 2em; 
 	text-align: center;
 	margin-left: auto;
 	margin-right: auto;
-	white-space: nowrap;
+}
+
+#linkInFooter{
+	padding-top: 2em; 
+	padding-left: 1em; 
+	display: inline;
 }
