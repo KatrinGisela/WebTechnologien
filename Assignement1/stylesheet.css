@@ -7,6 +7,16 @@
 	/* background-color:#F3E2A9; */
 }
 
+img.headerLogo{
+	display: inline;
+	height: 2em; 
+}
+
+h1.headerLogo {
+	display: inline;
+	padding-left: 0.5em; 
+}
+
 section {
 	display: flex;
 	justify-content: space-between;
@@ -192,9 +202,13 @@ div{
 }
 
 .zentriert{ 
-	padding-top: 2em; 
 	text-align: center;
 	margin-left: auto;
 	margin-right: auto;
-	white-space: nowrap;
+}
+
+#linkInFooter{
+	padding-top: 2em; 
+	padding-left: 1em; 
+	display: inline;
 }
