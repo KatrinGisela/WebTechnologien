@@ -1,17 +1,18 @@
 ﻿Alle: 
 
 	
-	*UTF-8 (DONE)
+	* warum überschneiden sich die Blasen mit den Länderlinks auf index.html eigentlich? 
+	* UTF-8 (DONE)
+	* ich glaube, anstatt <br> ist es besser, mit padding oder margin in CSS arbeiten. <br> ist eigentlich nur dafür da, Gedichte oder sowas zu setzen 
+	* ich würde auch auskommentierten Code rausnehmen 
 	* bei Bildern bitte beachten: 2 Städte + beim Einfügen  <img src="kaleidoskop.gif" alt="Blick in ein Kaleidoskop"> + - beim Einfügen der Bilder 400px verwenden
 	* Facts: Text 
-	* dem User mitteilen, wo er sich gerade befindet (breadcrumbs), indem das Menü offen bleibt und der gewählte Eintrag markiert bleibt 
+	* dem User mitteilen, wo er sich gerade befindet (breadcrumbs), indem das Menü offen bleibt und der gewählte Eintrag markiert bleibt; z. B. in dem man eine ID (.active) setzt – da steht dann background: 04FFFFFF oder so drin – und dann auf jeder Seite den Link auf diese Seite damit auszeichnet 
 	* prüfen 
 		– Browseranpassung (Tutor fragen)
 		– html & CSS Validierung 
 		- die lis entfernen (VALIDIEREN!!)
-		
-		
-		
+			
 		Fragen an den Tutor nochmals zusammengefasst:
 		- sind nav, header und footer neueste html5 Elemente?
 		– Browseranpassung (Tutor fragen)
@@ -38,7 +39,6 @@ Sladjana:
 
 Andreas: 
 	
-	* &nbsp; mit css-Style ersetzen 
 	* Idee: <section> in <main> oder <div> umwandeln 
 	* <header> in "schicker" Leiste, die ein Link ist auf jede Seite
 	* 3 externe Links auf andere Seiten (Link aufs Auswärtige Amt)
