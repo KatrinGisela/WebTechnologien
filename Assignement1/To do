@@ -4,7 +4,7 @@
 	*UTF-8 (DONE)
 	* bei Bildern bitte beachten: 2 Städte + beim Einfügen  <img src="kaleidoskop.gif" alt="Blick in ein Kaleidoskop"> + - beim Einfügen der Bilder 400px verwenden
 	* Facts: Text 
-	* dem User mitteilen, wo er sich gerade befindet (breadcrumbs)
+	* dem User mitteilen, wo er sich gerade befindet (breadcrumbs), indem das Menü offen bleibt und der gewählte Eintrag markiert bleibt 
 	* prüfen 
 		– Browseranpassung (Tutor fragen)
 		– html & CSS Validierung 
@@ -40,7 +40,6 @@ Andreas:
 	
 	* &nbsp; mit css-Style ersetzen 
 	* Idee: <section> in <main> oder <div> umwandeln 
-	* Kontakt & Impressum in zwei verschiedene Unterseiten, links dazu in <footer><address>
 	* mehrere Seiten gleichzeitig bearbeiten (über Metaseite?) (modularisieren): z. B. Menü, header, footer etc. 
 	* <header> in "schicker" Leiste, die ein Link ist auf jede Seite
 	* Hymne zu jedem Land (jamendo.com)

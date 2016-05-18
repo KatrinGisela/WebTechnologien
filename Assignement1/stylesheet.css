@@ -30,7 +30,6 @@ Seiteneinteilung
 }
 
 
-
 /*menu*/
  #menu {
 	float:left;
@@ -71,6 +70,7 @@ li:hover ul{
 section{
 	width:1000px;
 }
+
 aside{
 	background-color:red;
 	float:right;
@@ -96,6 +96,7 @@ h2 {
 /* index - Länderelemente (abger. Ecken)*/
 div {
 }
+
 .mainChina{
   	position: relative;
  	top: 30px;
