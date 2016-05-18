@@ -186,13 +186,6 @@ div{
 	color: #0066CC;
 }
 
-.displayInline {
-	text-align: center; 
-	display: inline;
-	float: left;
-	white-space:nowrap  
-}
-
 .zentriert{ 
 	padding-top: 2em; 
 	text-align: center;

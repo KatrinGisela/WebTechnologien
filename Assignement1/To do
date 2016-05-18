@@ -37,14 +37,14 @@ Sladjana:
 	- Startseite: text lässt sich nicht nach oben bringen...
 
 Andreas: 
-
+	
+	* &nbsp; mit css-Style ersetzen 
 	* Idee: <section> in <main> oder <div> umwandeln 
 	* Kontakt & Impressum in zwei verschiedene Unterseiten, links dazu in <footer><address>
 	* mehrere Seiten gleichzeitig bearbeiten (über Metaseite?) (modularisieren): z. B. Menü, header, footer etc. 
 	* <header> in "schicker" Leiste, die ein Link ist auf jede Seite
 	* Hymne zu jedem Land (jamendo.com)
 	* 3 externe Links auf andere Seiten (Link aufs Auswärtige Amt)
-	* Hyperlinks erkennbar (Hover: z. B. http://www.w3schools.com/cssref/sel_hover.asp )
 	* 50% Texte einfügen: Italien, Ghana
 	* lang=de in Kontakt und Imrpressum hinzufügen
 	
