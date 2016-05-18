@@ -20,7 +20,9 @@ h1.headerLogo {
 section {
 	display: flex;
 	justify-content: space-between;
+	width:1000px;
 }
+
 
 Seiteneinteilung
 #links, #mitte, #rechts{
@@ -77,9 +79,6 @@ li:hover ul{
 	display: block;
 }
 
-section{
-	width:1000px;
-}
 
 aside{
 	background-color:red;

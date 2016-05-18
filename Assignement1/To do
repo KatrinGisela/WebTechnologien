@@ -6,8 +6,11 @@
 	* ich glaube, anstatt <br> ist es besser, mit padding oder margin in CSS arbeiten. <br> ist eigentlich nur dafür da, Gedichte oder sowas zu setzen 
 	* ich würde auch auskommentierten Code rausnehmen 
 	* bei Bildern bitte beachten: 2 Städte + beim Einfügen  <img src="kaleidoskop.gif" alt="Blick in ein Kaleidoskop"> + - beim Einfügen der Bilder 400px verwenden
+	* haben wir eigentlich eine class, mit wir die Bilder, die rechts stehen auszeichnen (also z. B. um sicher zu gehen, dass die alle die gleiche Breite haben, ohne jedes Bild einzeln in die Hand nehmen zu müssen?)
 	* Facts: Text 
+	* wäre es möglich, das Hintergrundbild abzuschwächen (manchmal ist der Kontrast zur Schrift ziemlich gering)
 	* dem User mitteilen, wo er sich gerade befindet (breadcrumbs), indem das Menü offen bleibt und der gewählte Eintrag markiert bleibt; z. B. in dem man eine ID (.active) setzt – da steht dann background: 04FFFFFF oder so drin – und dann auf jeder Seite den Link auf diese Seite damit auszeichnet 
+	* warum wurde der section eigentlich eine feste Breite von 1000px zugewiesen? 
 	* prüfen 
 		– Browseranpassung (Tutor fragen)
 		– html & CSS Validierung 
