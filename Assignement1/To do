@@ -10,6 +10,7 @@
 	* Facts: Text 
 	* wäre es möglich, das Hintergrundbild abzuschwächen (manchmal ist der Kontrast zur Schrift ziemlich gering)
 	* dem User mitteilen, wo er sich gerade befindet (breadcrumbs), indem das Menü offen bleibt und der gewählte Eintrag markiert bleibt; z. B. in dem man eine ID (.active) setzt – da steht dann background: 04FFFFFF oder so drin – und dann auf jeder Seite den Link auf diese Seite damit auszeichnet 
+	* header und footer vielleicht doch besser linksbündig setzen, da sonst auch die flex-box zentriert werden müsste 
 	* warum wurde der section eigentlich eine feste Breite von 1000px zugewiesen? 
 	* prüfen 
 		– Browseranpassung (Tutor fragen)
