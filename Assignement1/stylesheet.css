@@ -7,6 +7,16 @@
 	/* background-color:#F3E2A9; */
 }
 
+img.headerLogo{
+	display: inline;
+	height: 2em; 
+}
+
+h1.headerLogo {
+	display: inline;
+	padding-left: 0.5em; 
+}
+
 section {
 	display: flex;
 	justify-content: space-between;
