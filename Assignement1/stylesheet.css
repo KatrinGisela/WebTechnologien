@@ -58,6 +58,10 @@ Seiteneinteilung
 	border: 3px blue inset;
 }
 
+#menu #nav1 a:active, #menu #nav2 a:active, #menu #nav3 a:active{
+background-color:red;
+}
+
 /*div-elements*/
 li ul{
 	display:none;
