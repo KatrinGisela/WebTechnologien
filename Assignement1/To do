@@ -1,23 +1,13 @@
 ﻿Alle: 
-Fragen:
--doppelte ID link in footer
-	
 	
 	* divs auf Hauptseite:  http://jsfiddle.net/thery2zs/2/
-	*UTF-8 (DONE)
 	* bei Bildern bitte beachten: 2 Städte + beim Einfügen  <img src="kaleidoskop.gif" alt="Blick in ein Kaleidoskop"> + - beim Einfügen der Bilder 400px verwenden
 	* Facts: Text 
-	* dem User mitteilen, wo er sich gerade befindet (breadcrumbs), indem das Menü offen bleibt und der gewählte Eintrag markiert bleibt 
+
 	* prüfen 
-		– Browseranpassung (Tutor fragen)
+
 		– html & CSS Validierung 
 		- die lis entfernen (VALIDIEREN!!)
-		
-		
-		
-		Fragen an den Tutor nochmals zusammengefasst:
-		- sind nav, header und footer neueste html5 Elemente?
-		– Browseranpassung (Tutor fragen)
 		
 
 Gisela: 
@@ -34,21 +24,11 @@ Sladjana:
 
 	
 Andreas: 
-	
-	* <header> in "schicker" Leiste, die ein Link ist auf jede Seite
+
 	* lang=de in Kontakt und Imrpressum hinzufügen
+
 	
-	
-
-		
-
-
 Facts: siehe Wikipedia und politische Lage
 Sight Seeing
 good to know: Etikette, Notrufnummern, FunFacts
 
-Kontakt:
-HTML5 Elemente benutzen:
--email
--tel
--url
