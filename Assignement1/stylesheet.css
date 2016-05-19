@@ -7,8 +7,6 @@
 	/* background-color:#F3E2A9; */
 }
 
-
-
 img.headerLogo{
 	display: inline;
 	height: 2em; 
@@ -18,6 +16,13 @@ h1.headerLogo {
 	display: inline;
 	padding-left: 0.5em; 
 }
+
+
+headerDivBox {
+	width:100px;
+	height:50px;
+}
+
 
 section {
 	display: flex;
