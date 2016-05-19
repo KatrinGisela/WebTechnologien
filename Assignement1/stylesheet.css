@@ -8,6 +8,19 @@
 }
 
 
+<<<<<<< HEAD
+=======
+img.headerLogo{
+	display: inline;
+	height: 2em; 
+}
+
+h1.headerLogo {
+	display: inline;
+	padding-left: 0.5em; 
+}
+
+>>>>>>> origin/master
 section {
 	display: flex;
 	justify-content: space-between;
@@ -62,7 +75,7 @@ Seiteneinteilung
 }
 
 #menu a#curNav{
-color:orange;
+color:lightgreen;
 background-color:darkblue;
 
 }
