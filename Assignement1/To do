@@ -1,20 +1,20 @@
 ﻿Alle: 
-	
-	* divs auf Hauptseite:  http://jsfiddle.net/thery2zs/2/
-	* bei Bildern bitte beachten: 2 Städte + beim Einfügen  <img src="kaleidoskop.gif" alt="Blick in ein Kaleidoskop"> + - beim Einfügen der Bilder 400px verwenden
-	* Facts: Text 
-
+		
+	(* divs auf Hauptseite:  http://jsfiddle.net/thery2zs/2/ )
 	* prüfen 
 
-		– html & CSS Validierung 
 		- die lis entfernen (VALIDIEREN!!)
 		
-
+		– html Validierung 
+		– CSS Validierung : http://jigsaw.w3.org/css-validator/validator 	Fehler: „Ungültige Nummer : font-size Zu viele Werte oder die Werte werden nicht erkannt : 15 pt”  in .mainChina etc. 
+		
+		
 Gisela: 
 	* Hervorhebungen, wo man sich gerade befindet (DONE)
 	* facts vervollständigen (DONE)
 	* prüfen, wieso China nicht mehr zu geht (evtl. doxh das li drinnnen lassen) (DONE)
 
+	
 Sladjana: 
 
 	FRAGEN: 
@@ -26,9 +26,4 @@ Sladjana:
 Andreas: 
 
 	* lang=de in Kontakt und Imrpressum hinzufügen
-
-	
-Facts: siehe Wikipedia und politische Lage
-Sight Seeing
-good to know: Etikette, Notrufnummern, FunFacts
 
