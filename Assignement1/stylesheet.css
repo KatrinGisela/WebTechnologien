@@ -2,13 +2,21 @@
 	font-family: "Arial";
 	text-align: justify;
 	background-image : url("images/Hintergrundbild.png"); 
-
-	/* background-color:#81F7D8; */
-	/* background-color:#F3E2A9; */
 }
 
 img.headerLogo{
-	height: 9em; 
+	display: inline;
+	height: 2em; 
+}
+
+h1.headerLogo {
+	display: inline;
+	padding-left: 0.5em; 
+}
+
+headerDivBox {
+	width:100px;
+	height:50px;
 }
 
 .mainDiv {
@@ -17,24 +25,13 @@ img.headerLogo{
 	width:1000px;
 }
 
-
-Seiteneinteilung
-#links, #mitte, #rechts{
-	<!--width: 200px;-->
-}
-
-#links{
-}
-
 #mitte{
 	min-width: 700px;
 }
 
 #rechts{
-	/* left: 220 em; */
 	margin: 30px;
 }
-
 
 /*menu*/
  #menu {
@@ -87,8 +84,7 @@ a:hover{
 	background-color: white;
 }
 
-
-%% index - Überschriften
+/* index - Überschriften*/
 h1 {
 	color: blue;
 	text-align: center;
@@ -100,8 +96,6 @@ h2 {
 }
 
 /* index - Länderelemente (abger. Ecken)*/
-div {
-}
 
 .mainChina{
   	position: relative;
@@ -115,7 +109,6 @@ div {
 	padding: 2em;
 	width: 15em;
 	background-color: #0099FF;
-	
 }
 
 .mainGhana{
@@ -130,7 +123,6 @@ div {
 	padding: 2em;
 	width: 15em;
 	background-color: #6699FF;
-
 }
 
 .mainItalien{
@@ -145,7 +137,6 @@ div {
 	padding: 2em;
 	width: 15em;
 	background-color: #66CCFF;
-
 }
 
 .mainKuba{
@@ -160,7 +151,6 @@ div {
 	padding: 2em;
 	width: 15em;
 	background-color: #66FFFF;
-
 }
 
 .mainPolen{
@@ -175,12 +165,9 @@ div {
 	padding: 2em;
 	width: 15em;
 	background-color: #CCFFFF;
-
 }
 
 /*index - Text unter den Länderelementen*/
-div{
-}
 
 .textueberschriftMain{
 	text-align: center;
