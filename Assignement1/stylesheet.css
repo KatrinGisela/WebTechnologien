@@ -7,6 +7,7 @@
 	/* background-color:#F3E2A9; */
 }
 
+
 section {
 	display: flex;
 	justify-content: space-between;
@@ -89,8 +90,8 @@ h1 {
 }
 
 h2 {
-	color: darkblue;
-	text-align: center;
+	color: black;
+	text-align: left;
 }
 
 /* index - Länderelemente (abger. Ecken)*/
