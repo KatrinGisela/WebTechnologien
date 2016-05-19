@@ -8,8 +8,7 @@
 }
 
 
-<<<<<<< HEAD
-=======
+
 img.headerLogo{
 	display: inline;
 	height: 2em; 
@@ -20,7 +19,6 @@ h1.headerLogo {
 	padding-left: 0.5em; 
 }
 
->>>>>>> origin/master
 section {
 	display: flex;
 	justify-content: space-between;
@@ -73,6 +71,8 @@ Seiteneinteilung
 #menu a:hover{
 	border: 3px blue inset;
 }
+
+ 
 
 #menu a#curNav{
 color:lightgreen;
