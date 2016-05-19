@@ -9,7 +9,6 @@ img.headerLogo{
 	height: 9em; 
 }
 
-
 .mainDiv {
 	display: flex;
 	justify-content: space-between;
@@ -52,8 +51,6 @@ img.headerLogo{
 	border: 3px blue inset;
 }
 
- 
-
 #menu a#curNav{
 color:lightgreen;
 background-color:darkblue;
@@ -68,7 +65,6 @@ li ul{
 li:hover ul{
 	display: block;
 }
-
 
 /*Funktionen*/
 a:hover{
@@ -87,7 +83,6 @@ h2 {
 }
 
 /* index - Länderelemente (abger. Ecken)*/
-
 .mainChina{
   	position: relative;
  	top: 30px;
@@ -159,7 +154,6 @@ h2 {
 }
 
 /*index - Text unter den Länderelementen*/
-
 .textueberschriftMain{
 	text-align: center;
 	color: #0066CC;
