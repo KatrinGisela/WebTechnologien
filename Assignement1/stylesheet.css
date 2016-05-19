@@ -24,7 +24,7 @@ headerDivBox {
 }
 
 
-section {
+.mainDiv {
 	display: flex;
 	justify-content: space-between;
 	width:1000px;
