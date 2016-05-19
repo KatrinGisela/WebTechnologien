@@ -18,10 +18,21 @@ h1.headerLogo {
 }
 
 
-headerDivBox {
-	width:100px;
+#headerOuterBox {
+	width:500px;
 	height:50px;
 }
+
+#headerInnerLeftBox {
+	width: 50%
+	float:left;
+}
+
+#headerInnerRightBox {
+	width: 50%
+	float:left;
+}
+
 
 section {
 	display: flex;
@@ -125,6 +136,8 @@ div {
 	padding: 2em;
 	width: 15em;
 	background-color: #0099FF;
+
+	
 }
 
 .mainGhana{
@@ -139,6 +152,7 @@ div {
 	padding: 2em;
 	width: 15em;
 	background-color: #6699FF;
+
 }
 
 .mainItalien{
@@ -153,6 +167,7 @@ div {
 	padding: 2em;
 	width: 15em;
 	background-color: #66CCFF;
+
 }
 
 .mainKuba{
@@ -167,6 +182,7 @@ div {
 	padding: 2em;
 	width: 15em;
 	background-color: #66FFFF;
+
 }
 
 .mainPolen{
@@ -181,6 +197,7 @@ div {
 	padding: 2em;
 	width: 15em;
 	background-color: #CCFFFF;
+
 }
 
 /*index - Text unter den Länderelementen*/
