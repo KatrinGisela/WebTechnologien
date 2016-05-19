@@ -32,13 +32,10 @@ Sladjana:
 	- Validator sagt, "header" passt nicht hinein, stimmt das?
 	- Startseite: text lässt sich nicht nach oben bringen...
 
+	
 Andreas: 
 	
-	* &nbsp; mit css-Style ersetzen 
-	* Idee: <section> in <main> oder <div> umwandeln 
 	* <header> in "schicker" Leiste, die ein Link ist auf jede Seite
-	* 3 externe Links auf andere Seiten (Link aufs Auswärtige Amt)
-	* 50% Texte einfügen: Italien, Ghana
 	* lang=de in Kontakt und Imrpressum hinzufügen
 	
 	
