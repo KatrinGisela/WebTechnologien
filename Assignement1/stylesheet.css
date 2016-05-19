@@ -8,31 +8,8 @@
 }
 
 img.headerLogo{
-	display: inline;
-	height: 2em; 
+	height: 9em; 
 }
-
-h1.headerLogo {
-	display: inline;
-	padding-left: 0.5em; 
-}
-
-
-#headerOuterBox {
-	width:500px;
-	height:50px;
-}
-
-#headerInnerLeftBox {
-	width: 50%
-	float:left;
-}
-
-#headerInnerRightBox {
-	width: 50%
-	float:left;
-}
-
 
 section {
 	display: flex;
@@ -87,6 +64,8 @@ Seiteneinteilung
 	border: 3px blue inset;
 }
 
+ 
+
 #menu a#curNav{
 color:lightgreen;
 background-color:darkblue;
@@ -136,7 +115,6 @@ div {
 	padding: 2em;
 	width: 15em;
 	background-color: #0099FF;
-
 	
 }
 
