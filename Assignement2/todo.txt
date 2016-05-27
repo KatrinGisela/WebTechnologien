@@ -1,5 +1,15 @@
 TODO
 
+Schritte: 
+
+	1. html5 + css3
+	2. jQuery und d3s.js in html-Struktur einbinden
+	3. GET-request mittels jQuery 
+
+
+
+
+
 Sladiator 
 
 
