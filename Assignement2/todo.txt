@@ -11,15 +11,13 @@ Schritte:
 
 
 Sladiator 
-
-
+- Aufteilung des Diagramms in die einzelnen Diagrammteile + Verknüpfug mit der jeweiligen Tabelle (Infos zu Modul, ECTS, usw.)
+- 2-3 Tabellen (falls nötig)
 
 Gisela
-
-
+-hover-Effekt Diagrammteile
+- 2-3 Tabellen  (falls nötig)
 
 Andreas 
-
-
-
-
+- AJAX-Loader
+- 2-3 Tabellen (falls nötig)
