@@ -61,13 +61,12 @@ var svg = d3.select("body").append("svg")
     .append("g")
     .attr("transform", "translate(" + width / 2 + "," + height / 2 + ")");
 
-var path = svg.selectAll("path")
-    .data(pie(dataset.moduleDefinitions))
-  .enter().append("path")
-    .attr("fill", function(d, i) { return color(i); })
-    .attr("d", arc);
+<!-- var path = svg.selectAll("path")
+    <!-- .data(pie(dataset.moduleDefinitions)) -->
+  <!-- .enter().append("path") -->
+    <!-- .attr("fill", function(d, i) { return color(i); }) -->
+    <!-- .attr("d", arc); --> -->
 
-});
  </script>
 
 

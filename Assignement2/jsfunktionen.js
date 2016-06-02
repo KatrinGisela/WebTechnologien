@@ -1,28 +1,28 @@
-﻿<script src="/js/jquery-2.2.3.js" type="text/javascript"></script>
+﻿// <script src="/js/jquery-2.2.3.js" type="text/javascript"></script>
 	
 /* Hier irgendwo müssen per GET-Request (Kombi aus jQuery und AJAX) die .php-Dateien zu den Modulen eingebunden werden */ 
 
 /* Hier die dazugehörigen ids im Body bauen, die aufgerufen werden (einzelne ids= einzelne Donut-Abschnitte*/
 
-<script type="text/javascript">
-		$(function() {
-			$('#submit').click(function(){
-				var MyText = $('input[id=MeinText]').val();	 // id anpassen
+
+		// $(function() {
+			// $('#submit').click(function(){
+				// var MyText = $('input[id=MeinText]').val();	 // id anpassen
 				
-				$.get("moduleGroups.php",
-					  { text: MyText },									// anpassen
-				      function(data) {
-					     $('#result').html(data);						// was ist in dem Fall result? das Laden der entsprecheneden Infos zum Modul
-                         alert('Load was performed.');
-                      });
-			});
-		});
-</script>
+				// $.get("moduleGroups.php",
+					  // { text: MyText },									// anpassen
+				      // function(data) {
+					     // $('#result').html(data);						// was ist in dem Fall result? das Laden der entsprecheneden Infos zum Modul
+                         // alert('Load was performed.');
+                      // });
+			// });
+		// });
+
 
 	
 // vergleiche Kapitel 3 S. 79 
 function showLoaderGif() {
-	<img src="img/ajax-loader.gif" alt="Animation, während die Seite lädt" />
+	//<img src="img/ajax-loader.gif" alt="Animation, während die Seite lädt" />
 }
 
 
@@ -61,6 +61,7 @@ $.ajax({
 	},
 	success: function(content) {
 		$("#content").html(content);
+		document.write("Test" + content)
 	}
 });
 
