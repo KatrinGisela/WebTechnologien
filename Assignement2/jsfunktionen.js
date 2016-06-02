@@ -1,13 +1,4 @@
 ﻿<script src="/js/jquery-2.2.3.js" type="text/javascript"></script>
-
-
-$(document).ready(function(){
-    /* Hier der jQuery-Code */
-
-   $('a').attr({title: 'jQuery-Kurs', href: 'http://www.html-seminar.de/jquery.htm'});
-
-});
-
 	
 /* Hier irgendwo müssen per GET-Request (Kombi aus jQuery und AJAX) die .php-Dateien zu den Modulen eingebunden werden */ 
 
