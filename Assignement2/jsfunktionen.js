@@ -29,6 +29,7 @@ $(document).ready(function(){
 </script>
 
 	
+// vergleiche Kapitel 3 S. 79 
 function showLoaderGif() {
 	<img src="img/ajax-loader.gif" alt="Animation, während die Seite lädt" />
 }
