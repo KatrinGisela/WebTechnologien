@@ -1,0 +1,32 @@
+﻿<!DOCTYPE html>
+<html lang="de">
+<head>
+<meta charset="utf-8">
+<title> Index </title>
+<link rel="stylesheet" href="stylesheet.css"/> 
+<script src="/js/jquery-2.2.3.js" type="text/javascript"></script>
+<script src="/js/d3.js" type="text/javascript"></script>
+<script src="jsfunktionen.js" type="text/javascript">
+function wechsel(i){
+document.getElementById('bild").src=i;
+alert("Neu: Jetzt mit Bild" +i);
+}
+</script>
+
+
+</head>
+
+<body>
+
+<h1> BA Angewandte Informatik </h1>
+<img src= "testbild.jpeg" id="bild"/>
+<p>
+Wählen Sie das Bild:
+<button onclick="wechsel('testbild.jpeg')"> Bild1 </button> oder
+<button onclick="wechsel('testbild2.jpg')">Bild2 </button> 
+</p>
+
+
+</body>
+</html>
+
