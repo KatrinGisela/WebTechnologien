@@ -19,5 +19,11 @@ Gisela
 - 2-3 Tabellen  (falls nötig)
 
 Andreas 
-- AJAX-Loader
-- 2-3 Tabellen (falls nötig)
+	
+	- AJAX-Loader
+	- 2-3 Tabellen (falls nötig)
+
+
+Frage: 
+
+	– warum liegt die jsfunktionen eigentlich nicht im Ordner js? 
