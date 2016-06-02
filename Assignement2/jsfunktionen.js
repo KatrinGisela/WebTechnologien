@@ -37,9 +37,7 @@ $("button#ajaxCall_template").click(function() {
 $.ajax({
 	type: "GET",
 	url: "moduleDefinitions.php",
-	data: {
-		//method: "load_template"
-	},
+	data: {},
 	success: function(content) {
 		$("#content").html(content);
 	}
@@ -54,7 +52,7 @@ return false;
 // Id wird dann hier eingebunden
 
 
-$("button#ajaxCall_template").click(function() {
+$("button#ajaxCall_a1").click(function() {
 $.ajax({
 	type: "GET",
 	url: "moduleDefinitions.php",
