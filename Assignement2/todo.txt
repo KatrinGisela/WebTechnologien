@@ -22,8 +22,14 @@ Andreas
 	
 	- AJAX-Loader
 	- 2-3 Tabellen (falls nötig)
-
-
+	– mit Entwickler-Werkzeuge -> Konsole -> console.log 
+	– in d3s: class=doughnut, und bei Aufteilung id=$Modul (z. B. id=A1) 
+	
 Frage: 
 
-	– warum liegt die jsfunktionen eigentlich nicht im Ordner js? 
+	– warum liegt die jsfunktionen.js eigentlich nicht im Ordner js? 
+	– Fehler: SyntaxError: expected expression, got '}' in index.html:69:19
+	– warum ist in jsfunktionen.js html-Code wie 
+		• <script type="text/javascript"> oder 
+		• <script src="/js/jquery-2.2.3.js" type="text/javascript"></script> ?
+	

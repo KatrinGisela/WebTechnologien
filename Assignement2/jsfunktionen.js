@@ -9,8 +9,7 @@ $(document).ready(function(){
 });
 
 	
-	<!-- /* Hier irgendwo müssen per GET-Request (Kombi aus jQuery und AJAX)  
-die .php-Dateien zu den Modulen eingebunden werden */ -->
+/* Hier irgendwo müssen per GET-Request (Kombi aus jQuery und AJAX) die .php-Dateien zu den Modulen eingebunden werden */ 
 
 /* Hier die dazugehörigen ids im Body bauen, die aufgerufen werden (einzelne ids= einzelne Donut-Abschnitte*/
 
@@ -27,54 +26,54 @@ die .php-Dateien zu den Modulen eingebunden werden */ -->
                       });
 			});
 		});
-	</script>
+</script>
+
 	
-	function showLoaderGif() {
-		<img src="img/ajax-loader.gif" alt="Animation, während die Seite lädt" />
-		
+function showLoaderGif() {
+	<img src="img/ajax-loader.gif" alt="Animation, während die Seite lädt" />
+}
+
+
+
+// Laden von Daten mittels AJAX-Befehl 
+// https://xuad.net/artikel/vom-einfachen-ajax-request-zum-komplexen-objektaustausch-mit-json-mittels-jquery/ 
+
+// erster Aufruf onload
+
+$("button#ajaxCall_template").click(function() {
+
+$.ajax({
+	type: "GET",
+	url: "moduleDefinitions.php",
+	data: {
+		//method: "load_template"
+	},
+	success: function(content) {
+		$("#content").html(content);
 	}
-	
+});
 
-	
-	// Laden von Daten mittels AJAX-Befehl 
-	// https://xuad.net/artikel/vom-einfachen-ajax-request-zum-komplexen-objektaustausch-mit-json-mittels-jquery/ 
-	
-	// erster Aufruf onload
-	
-	$("button#ajaxCall_template").click(function() {
+return false;
+});
 
-        $.ajax({
-            type: "GET",
-            url: "moduleDefinitions.php",
-            data: {
-                //method: "load_template"
-            },
-            success: function(content) {
-                $("#content").html(content);
-            }
-        });
 
-        return false;
-    });
-	
-	
-	// bei der Erstellung der einzelnen Elemente des Donut-Diagrammms werden Ids übergeben und wenn diese dann angeklickt werden,
-	// dann werden die entsprechenden A1/A2/A3 etc. aufgerufen
-	// Id wird dann hier eingebunden
-	
-	
-	$("button#ajaxCall_template").click(function() {
-        $.ajax({
-            type: "GET",
-            url: "moduleDefinitions.php",
-            data: {
-                module_details:"A1" 	// alternativ: Variable außerhalb definieren und hier einbeziehen // ID hier eingeben
-            },
-            success: function(content) {
-                $("#content").html(content);
-            }
-        });
+// bei der Erstellung der einzelnen Elemente des Donut-Diagrammms werden Ids übergeben und wenn diese dann angeklickt werden,
+// dann werden die entsprechenden A1/A2/A3 etc. aufgerufen
+// Id wird dann hier eingebunden
 
-        return false;
-    });
+
+$("button#ajaxCall_template").click(function() {
+$.ajax({
+	type: "GET",
+	url: "moduleDefinitions.php",
+	data: {
+		module_details:"A1" 	// alternativ: Variable außerhalb definieren und hier einbeziehen // ID hier eingeben
+	},
+	success: function(content) {
+		$("#content").html(content);
+	}
+});
+
+return false;
+});
 
