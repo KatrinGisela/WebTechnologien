@@ -1,0 +1,56 @@
+﻿<!DOCTYPE html>
+<html lang="de">
+<head>
+<meta charset="utf-8">
+<title> Index </title>
+
+<script type="text/javascript">
+
+
+$("button#ajaxCall_template").click(function() {
+
+$.ajax({
+	type: "GET",
+	url: "\php\moduleDefinitions.php",
+	data: {},
+	success: function(content) {
+		$("#content").html(content);
+	}
+});
+
+return false;
+});
+
+$("button#ajaxCall_a1").click(function() {
+$.ajax({
+	type: "GET",
+	url: "moduleDefinitions.php",
+	data: {
+		module_details:"A1" 	// alternativ: Variable außerhalb definieren und hier einbeziehen // ID hier eingeben
+	},
+	success: function(content) {
+		$("#content").html(content);
+	}
+});
+
+return false;
+});
+</script>
+
+
+</head>
+
+<body>
+
+<h1> BA Angewandte Informatik </h1>
+<img src= "testbild.jpeg" id="bild"/>
+<p>
+Wählen Sie das Bild:
+<button id="ajaxCall" onclick="wechsel('testbild.jpeg')"> Bild1 </button> oder
+<button onclick="wechsel('testbild2.jpg')">Bild2 </button> 
+</p>
+
+
+</body>
+</html>
+
