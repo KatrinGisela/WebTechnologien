@@ -28,6 +28,12 @@ die .php-Dateien zu den Modulen eingebunden werden */ -->
 			});
 		});
 	</script>
+	
+	function showLoaderGif() {
+		<img src="img/ajax-loader.gif" alt="Animation, während die Seite lädt" />
+		
+	}
+	
 
 	
 	// Laden von Daten mittels AJAX-Befehl 
