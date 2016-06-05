@@ -12,7 +12,7 @@
 
 
 <script type="text/javascript">
-  window.onload = function () {
+  window.onload = function() {
     var chart = new CanvasJS.Chart("chartContainer",
     {
       title:{
@@ -22,7 +22,7 @@
 		{
 			type: "doughnut", 
 			dataPoints: [
-				{ label: "Feld1",  y: 10  },
+				{ label: "Feld1", y: 10  },
 				{ label: "Feld2", y: 15  },
 				{ label: "Feld3", y: 25  },
 				{ label: "Feld4",  y: 30  },
@@ -98,7 +98,26 @@ Hier wird irgendetwas aus der PHP-Datei eingelesen<br>
 <button type="button" id="ajaxCall_a1"> ajaxCall_a1 </button> 
 <button type="button" id="ajaxCall_template"> ajaxCall_template>  </button> 
 
+
+
+// ** CODE AUSPROBIEREN **//
+<button onclick="daten_laden()">Daten laden</button>
+
+ 
 </div>	
+
+<script>
+function daten_laden() {
+		$.get('moduleDefinitions.php', function(content) {
+				$("#content").html(content);
+		document.write("Test" + content)	
+		document.load("Test" + content)	
+		
+		})
+	}
+	</script>
+ 
+
 
 </body>
 </html>
