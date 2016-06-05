@@ -70,3 +70,33 @@ $.ajax({
 return false;
 });
 
+
+//  Aufruf  Detailinformationen A1
+$.getJSON('moduleDefinitions.php', function(data, textStatus, jqXHR) {
+	type: "GET",
+	url: "moduleGroups.php",
+	data: {
+		module_details:"/php/moduleGroups?module_details=A1" 	// alternativ: Variable außerhalb definieren und hier einbeziehen // ID hier eingeben
+	},
+	success: function a1_courses(content) {
+		$("#content").html(content);
+		document.write("Test" + content)
+	}
+});
+
+return false;
+});
+
+
+<button onclick="daten_laden()">Daten laden</button>
+
+function daten_laden() {
+		$.get('moduleDefinitions.php', function(content) {
+				$("#content").html(content);
+		document.write("Test" + content)	
+		})
+	}
+ 
+
+
+
