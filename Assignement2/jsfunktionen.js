@@ -46,7 +46,7 @@ $.ajax({
 return false;
 });
 
-// S92!!! getJSON!!!
+// S92!!! getJSON!
 
 
 // bei der Erstellung der einzelnen Elemente des Donut-Diagrammms werden Ids übergeben und wenn diese dann angeklickt werden,
