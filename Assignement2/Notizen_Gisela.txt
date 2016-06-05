@@ -3,7 +3,7 @@
     var chart = new CanvasJS.Chart("chartContainer",
     {
       title:{
-        text: "Top U.S Smartphone Operating Systems By Market Share, Q3 2012"
+        text: "Smartphone Operating Systems"
       },
       data: [
       {
@@ -23,3 +23,6 @@
   }
   </script>
   <script type="text/javascript" src="/assets/script/canvasjs.min.js"></script> //das muss noch eingebunden werden
+
+var myHeading = document.querySelector('div.ueberschrift');
+myHeading.textContent = 'A1';
