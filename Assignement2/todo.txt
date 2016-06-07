@@ -1,4 +1,4 @@
-TODO
+﻿TODO
 
 https://bl.ocks.org/mbostock/3887193
 
@@ -38,5 +38,5 @@ Frage:
 		
 		der sollte doch eigentlich in index.html, oder?
 		
-		
+	- wo genau kommt beim Methodenaufruf /php/moduleGroups?module_details=A1 hin?
 	
