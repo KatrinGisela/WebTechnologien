@@ -22,7 +22,7 @@
 	
 // vergleiche Kapitel 3 S. 79 
 function showLoaderGif() {
-	//<img src="img/ajax-loader.gif" alt="Animation, während die Seite lädt" />
+	.html("body").append <img src="img/ajax-loader.gif" alt="Animation, während die Seite lädt" />
 }
 
 
@@ -72,20 +72,10 @@ return false;
 
 
 //  Aufruf  Detailinformationen zu A1
-$.getJSON('moduleDefinitions.php', function(data, textStatus, jqXHR) {
-	type: "GET",
-	url: "/php/moduleGroups?module_details=A1",
-	data: {
-		module_details:"A1" 	// alternativ: Variable außerhalb definieren und hier einbeziehen // ID hier eingeben
-	},
-	success: function a1_courses(content) {
-		$("#content").html(content);
-		document.write("Test" + content)
-	}
+$.getJSON('/php/moduleGroups?module_details=A1', function(data, textStatus, jqXHR) {
+	alert("Geht"); 
 });
 
-return false;
-});
 
 //  Aufruf  Detailinformationen zu A2
 $.getJSON('moduleDefinitions.php', function(data, textStatus, jqXHR) {
@@ -157,7 +147,7 @@ return false;
 });
 
 //  Aufruf  Detailinformationen zu A6
-$.getJSON('moduleDefinitions.php', function(data, textStatus, jqXHR) {
+$.getJSON('/php/moduleGroups?module_details=A6', function(data, textStatus, jqXHR) {
 	type: "GET",
 	url: "moduleGroups.php",
 	data: {
