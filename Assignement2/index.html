@@ -117,7 +117,12 @@ function daten_laden() {
 		})
 	}
 	</script>
- 
+ <script type="text/javascript">
+
+function daten_laden() {$.getJSON('/php/moduleGroups?module_details=A1', function(data, textStatus, jqXHR) {
+	alert("Geht"); 
+});}
+</script> 
 
  
  
