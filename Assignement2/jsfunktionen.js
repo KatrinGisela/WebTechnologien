@@ -22,7 +22,7 @@
 	
 // vergleiche Kapitel 3 S. 79 
 function showLoaderGif() {
-	//<img src="img/ajax-loader.gif" alt="Animation, während die Seite lädt" />
+	.html("body").append <img src="img/ajax-loader.gif" alt="Animation, während die Seite lädt" />
 }
 
 
@@ -72,16 +72,85 @@ return false;
 
 
 //  Aufruf  Detailinformationen zu A1
+
 $.getJSON('moduleDefinitions.php', function(data, textStatus, jqXHR) {
 	type: "GET";
 	url: "php/moduleGroups?module_details=A1";
 	data: {
 		module_details:"A1" 	// alternativ: Variable außerhalb definieren und hier einbeziehen // ID hier eingeben
 	};
+
+$.getJSON('/php/moduleGroups?module_details=A1', function(data, textStatus, jqXHR) {
+	alert("Geht"); 
+});
+
+
+//  Aufruf  Detailinformationen zu A2
+$.getJSON('moduleDefinitions.php', function(data, textStatus, jqXHR) {
+	type: "GET",
+	url: "moduleGroups.php",
+	data: {
+		module_details:"/php/moduleGroups?module_details=A2" 	// alternativ: Variable außerhalb definieren und hier einbeziehen // ID hier eingeben
+	},
 	success: function a1_courses(content) {
 		$("#content").html(content);
 		document.write("Test" + content)
 	}
+});
+
+return false;
+});
+
+//  Aufruf  Detailinformationen zu A3
+$.getJSON('moduleDefinitions.php', function(data, textStatus, jqXHR) {
+	type: "GET",
+	url: "moduleGroups.php",
+	data: {
+		module_details:"/php/moduleGroups?module_details=A3" 	// alternativ: Variable außerhalb definieren und hier einbeziehen // ID hier eingeben
+	},
+	success: function a1_courses(content) {
+		$("#content").html(content);
+		document.write("Test" + content)
+	}
+});
+
+return false;
+});
+
+
+
+
+
+//  Aufruf  Detailinformationen zu A4
+$.getJSON('moduleDefinitions.php', function(data, textStatus, jqXHR) {
+	type: "GET",
+	url: "moduleGroups.php",
+	data: {
+		module_details:"/php/moduleGroups?module_details=A4" 	// alternativ: Variable außerhalb definieren und hier einbeziehen // ID hier eingeben
+	},
+	success: function a1_courses(content) {
+		$("#content").html(content);
+		document.write("Test" + content)
+	}
+});
+
+return false;
+});
+
+
+//  Aufruf  Detailinformationen zu A5
+$.getJSON('moduleDefinitions.php', function(data, textStatus, jqXHR) {
+	type: "GET",
+	url: "moduleGroups.php",
+	data: {
+		module_details:"/php/moduleGroups?module_details=A5" 	// alternativ: Variable außerhalb definieren und hier einbeziehen // ID hier eingeben
+	},
+>>>>>>> origin/master
+	success: function a1_courses(content) {
+		$("#content").html(content);
+		document.write("Test" + content)
+	}
+
 	
 	return false;
 });
@@ -173,10 +242,33 @@ $.getJSON('moduleDefinitions.php', function(data, textStatus, jqXHR) {
 
 // return false;
 // });
+=======
+});
+
+return false;
+});
+
+//  Aufruf  Detailinformationen zu A6
+$.getJSON('/php/moduleGroups?module_details=A6', function(data, textStatus, jqXHR) {
+	type: "GET",
+	url: "moduleGroups.php",
+	data: {
+		module_details:"/php/moduleGroups?module_details=A6" 	// alternativ: Variable außerhalb definieren und hier einbeziehen // ID hier eingeben
+	},
+	success: function a1_courses(content) {
+		$("#content").html(content);
+		document.write("Test" + content)
+	}
+});
+
+return false;
+});
+>>>>>>> origin/master
 
 
 
 
+<<<<<<< HEAD
 // //  Aufruf  Detailinformationen zu A7
 // $.getJSON('moduleDefinitions.php', function(data, textStatus, jqXHR) {
 	// type: "GET",
@@ -192,6 +284,23 @@ $.getJSON('moduleDefinitions.php', function(data, textStatus, jqXHR) {
 
 // return false;
 // });
+
+//  Aufruf  Detailinformationen zu A7
+$.getJSON('moduleDefinitions.php', function(data, textStatus, jqXHR) {
+	type: "GET",
+	url: "moduleGroups.php",
+	data: {
+		module_details:"/php/moduleGroups?module_details=A7" 	// alternativ: Variable außerhalb definieren und hier einbeziehen // ID hier eingeben
+	},
+	success: function a1_courses(content) {
+		$("#content").html(content);
+		document.write("Test" + content)
+	}
+});
+
+return false;
+});
+>>>>>>> origin/master
 
 function daten_laden() {
 		$.get('moduleDefinitions.php', function(content) {
