@@ -21,9 +21,9 @@
 
 	
 // vergleiche Kapitel 3 S. 79 
-function showLoaderGif() {
-	.html("body").append <img src="img/ajax-loader.gif" alt="Animation, während die Seite lädt" />
-}
+// function showLoaderGif() {
+	// .html("body").append <img src="img/ajax-loader.gif" alt="Animation, während die Seite lädt" />
+// }
 
 
 
