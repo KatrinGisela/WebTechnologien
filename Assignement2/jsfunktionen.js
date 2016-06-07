@@ -1,28 +1,28 @@
-﻿<script src="/js/jquery-2.2.3.js" type="text/javascript"></script>
+﻿// <script src="/js/jquery-2.2.3.js" type="text/javascript"></script>
 	
 /* Hier irgendwo müssen per GET-Request (Kombi aus jQuery und AJAX) die .php-Dateien zu den Modulen eingebunden werden */ 
 
 /* Hier die dazugehörigen ids im Body bauen, die aufgerufen werden (einzelne ids= einzelne Donut-Abschnitte*/
 
-<script type="text/javascript">
-		$(function() {
-			$('#submit').click(function(){
-				var MyText = $('input[id=MeinText]').val();	 // id anpassen
+
+		// $(function() {
+			// $('#submit').click(function(){
+				// var MyText = $('input[id=MeinText]').val();	 // id anpassen
 				
-				$.get("moduleGroups.php",
-					  { text: MyText },									// anpassen
-				      function(data) {
-					     $('#result').html(data);						// was ist in dem Fall result? das Laden der entsprecheneden Infos zum Modul
-                         alert('Load was performed.');
-                      });
-			});
-		});
-</script>
+				// $.get("moduleGroups.php",
+					  // { text: MyText },									// anpassen
+				      // function(data) {
+					     // $('#result').html(data);						// was ist in dem Fall result? das Laden der entsprecheneden Infos zum Modul
+                         // alert('Load was performed.');
+                      // });
+			// });
+		// });
+
 
 	
 // vergleiche Kapitel 3 S. 79 
 function showLoaderGif() {
-	<img src="img/ajax-loader.gif" alt="Animation, während die Seite lädt" />
+	//<img src="img/ajax-loader.gif" alt="Animation, während die Seite lädt" />
 }
 
 
@@ -46,6 +46,8 @@ $.ajax({
 return false;
 });
 
+// S92!!! getJSON!
+
 
 // bei der Erstellung der einzelnen Elemente des Donut-Diagrammms werden Ids übergeben und wenn diese dann angeklickt werden,
 // dann werden die entsprechenden A1/A2/A3 etc. aufgerufen
@@ -61,9 +63,141 @@ $.ajax({
 	},
 	success: function(content) {
 		$("#content").html(content);
+		document.write("Test" + content)
 	}
 });
 
 return false;
 });
+
+
+//  Aufruf  Detailinformationen zu A1
+$.getJSON('moduleDefinitions.php', function(data, textStatus, jqXHR) {
+	type: "GET",
+	url: "/php/moduleGroups?module_details=A1",
+	data: {
+		module_details:"A1" 	// alternativ: Variable außerhalb definieren und hier einbeziehen // ID hier eingeben
+	},
+	success: function a1_courses(content) {
+		$("#content").html(content);
+		document.write("Test" + content)
+	}
+});
+
+return false;
+});
+
+//  Aufruf  Detailinformationen zu A2
+$.getJSON('moduleDefinitions.php', function(data, textStatus, jqXHR) {
+	type: "GET",
+	url: "moduleGroups.php",
+	data: {
+		module_details:"/php/moduleGroups?module_details=A2" 	// alternativ: Variable außerhalb definieren und hier einbeziehen // ID hier eingeben
+	},
+	success: function a1_courses(content) {
+		$("#content").html(content);
+		document.write("Test" + content)
+	}
+});
+
+return false;
+});
+
+//  Aufruf  Detailinformationen zu A3
+$.getJSON('moduleDefinitions.php', function(data, textStatus, jqXHR) {
+	type: "GET",
+	url: "moduleGroups.php",
+	data: {
+		module_details:"/php/moduleGroups?module_details=A3" 	// alternativ: Variable außerhalb definieren und hier einbeziehen // ID hier eingeben
+	},
+	success: function a1_courses(content) {
+		$("#content").html(content);
+		document.write("Test" + content)
+	}
+});
+
+return false;
+});
+
+
+
+
+
+//  Aufruf  Detailinformationen zu A4
+$.getJSON('moduleDefinitions.php', function(data, textStatus, jqXHR) {
+	type: "GET",
+	url: "moduleGroups.php",
+	data: {
+		module_details:"/php/moduleGroups?module_details=A4" 	// alternativ: Variable außerhalb definieren und hier einbeziehen // ID hier eingeben
+	},
+	success: function a1_courses(content) {
+		$("#content").html(content);
+		document.write("Test" + content)
+	}
+});
+
+return false;
+});
+
+
+//  Aufruf  Detailinformationen zu A5
+$.getJSON('moduleDefinitions.php', function(data, textStatus, jqXHR) {
+	type: "GET",
+	url: "moduleGroups.php",
+	data: {
+		module_details:"/php/moduleGroups?module_details=A5" 	// alternativ: Variable außerhalb definieren und hier einbeziehen // ID hier eingeben
+	},
+	success: function a1_courses(content) {
+		$("#content").html(content);
+		document.write("Test" + content)
+	}
+});
+
+return false;
+});
+
+//  Aufruf  Detailinformationen zu A6
+$.getJSON('moduleDefinitions.php', function(data, textStatus, jqXHR) {
+	type: "GET",
+	url: "moduleGroups.php",
+	data: {
+		module_details:"/php/moduleGroups?module_details=A6" 	// alternativ: Variable außerhalb definieren und hier einbeziehen // ID hier eingeben
+	},
+	success: function a1_courses(content) {
+		$("#content").html(content);
+		document.write("Test" + content)
+	}
+});
+
+return false;
+});
+
+
+
+
+//  Aufruf  Detailinformationen zu A7
+$.getJSON('moduleDefinitions.php', function(data, textStatus, jqXHR) {
+	type: "GET",
+	url: "moduleGroups.php",
+	data: {
+		module_details:"/php/moduleGroups?module_details=A7" 	// alternativ: Variable außerhalb definieren und hier einbeziehen // ID hier eingeben
+	},
+	success: function a1_courses(content) {
+		$("#content").html(content);
+		document.write("Test" + content)
+	}
+});
+
+return false;
+});
+
+function daten_laden() {
+		$.get('moduleDefinitions.php', function(content) {
+				$("#content").html(content);
+		document.write("Test" + content)	
+		})
+	}
+ 
+
+
 

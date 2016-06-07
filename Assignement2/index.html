@@ -1,36 +1,52 @@
 ﻿<!DOCTYPE html>
 <html lang="de">
 <head>
+
 <meta charset="utf-8">
 <title> Index </title>
 <link rel="stylesheet" href="stylesheet.css"/> 
-<script src="/js/jquery-2.2.3.js" type="text/javascript"></script>
-<script src="/js/d3.js" type="text/javascript"></script>
+<script src="js/jquery-2.2.3.js" type="text/javascript"></script>
+<script src="js/d3.js" type="text/javascript"></script>
 <script src="jsfunktionen.js" type="text/javascript"></script>
+<script src="canvasjs.min.js"></script>
 
+
+<script type="text/javascript">
+  window.onload = function() {
+    var chart = new CanvasJS.Chart("chartContainer",
+    {
+      title:{
+        text: "Donught Diagramm AI"
+      },
+     data: [              
+		{
+			type: "doughnut", 
+			dataPoints: [
+				{ label: "Feld1", y: 10  },
+				{ label: "Feld2", y: 15  },
+				{ label: "Feld3", y: 25  },
+				{ label: "Feld4",  y: 30  },
+				{ label: "Feld5",  y: 28  }
+			]
+		}
+		]
+   });
+    chart.render();
+  }
+  
+
+  </script>
 
 </head>
 
 <body>
-
 <h1> BA Angewandte Informatik </h1>
 <div class="mainDiv">	
 <div class="left">
 
 <div class="item html" onload="showLoaderGif()">
-    <h2> AI </h2>
-    <svg width="160" height="160" xmlns="http://www.w3.org/2000/svg">
-     <g>
-      <title>Layer 1</title>
-      <circle id="circle" class="circle_animation" r="69.85699" cy="81" cx="81" stroke-width="18" stroke="#6fdb6f" fill="none"/>
-     </g>
-    </svg>
-</div>
-</div>
-
-
-<button type="button" id="ajaxCall_a1"> ajaxCall_a1 </button> 
-<button type="button" id="ajaxCall_template"> ajaxCall_template>  </button> 
+  
+<div id="chartContainer" style="height: 300px; width: 100%;"></div>
 
 <!-- Effekt einbauen, dass beim Reinfahren mit der Maus  die entsprechende Modul-ID eingeblendet wird und beim Rausfahren wieder verschwindet  -->
  
@@ -39,7 +55,11 @@
  <script type="text/javascript">
   
   var dataset = {
-  moduleDefinitions: [a1_courses, a2_courses, a3_courses, a4_courses, a5_courses, a6_courses, a7_courses],
+  moduleDefinitions: [1,2,3,4,5,6],	
+};
+
+  var dataset2 = {
+  [1,2,3,4,5,6],	
 };
 
 var width = 460,
@@ -61,21 +81,49 @@ var svg = d3.select("body").append("svg")
     .append("g")
     .attr("transform", "translate(" + width / 2 + "," + height / 2 + ")");
 
-var path = svg.selectAll("path")
-    .data(pie(dataset.moduleDefinitions))
-  .enter().append("path")
-    .attr("fill", function(d, i) { return color(i); })
-    .attr("d", arc);
+ var path = svg.selectAll("path")
+    .data(pie(dataset2))
+   .enter().append("path")
+     .attr("fill", function(d, i) { return color(i); })
+     .attr("d", arc); 
 
-});
  </script>
 
 
+
+ </div>
+</div>   	
 <div class="right">
-Hier wird irgendetwas aus der PHP-Datei eingelesen
+Hier wird irgendetwas aus der PHP-Datei eingelesen<br>
 
 
+<button type="button" id="ajaxCall_a1"> ajaxCall_a1 </button> 
+<button type="button" id="ajaxCall_template"> ajaxCall_template>  </button> 
+
+<button onclick="daten_laden()">Daten laden</button>
+
+ 
 </div>	
+
+<script>
+
+// Funktion zum Laden der Daten -> geht aber irgendwie nicht
+function daten_laden() {
+		$.get('moduleDefinitions.php', function(content) {
+				$("#content").html(content);
+		document.write("Test" + content)	
+		document.load("Test" + content)	
+		
+		})
+	}
+	</script>
+ 
+
+ 
+ 
+ 
+ 
+ 
 
 </body>
 </html>
