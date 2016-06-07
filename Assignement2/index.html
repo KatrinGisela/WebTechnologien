@@ -33,6 +33,8 @@
    });
     chart.render();
   }
+  
+
   </script>
 
 </head>
@@ -98,15 +100,14 @@ Hier wird irgendetwas aus der PHP-Datei eingelesen<br>
 <button type="button" id="ajaxCall_a1"> ajaxCall_a1 </button> 
 <button type="button" id="ajaxCall_template"> ajaxCall_template>  </button> 
 
-
-
-// ** CODE AUSPROBIEREN **//
 <button onclick="daten_laden()">Daten laden</button>
 
  
 </div>	
 
 <script>
+
+// Funktion zum Laden der Daten -> geht aber irgendwie nicht
 function daten_laden() {
 		$.get('moduleDefinitions.php', function(content) {
 				$("#content").html(content);
@@ -118,6 +119,11 @@ function daten_laden() {
 	</script>
  
 
+ 
+ 
+ 
+ 
+ 
 
 </body>
 </html>
