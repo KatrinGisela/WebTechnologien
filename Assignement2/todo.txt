@@ -3,7 +3,7 @@ TODO
 Schritte: 
 
 	1. html5 + css3
-	2. jQuery und d3s.js in html-Struktur einbinden
+	2. jQuery & AJAX und d3s.js in html-Struktur einbinden
 	3. GET-request mittels jQuery 
 
 
@@ -20,10 +20,19 @@ Gisela
 
 Andreas 
 	
+	– die Beispiele im VC anschauen
+	– .getJSON verwenden 
+	– Folie 92 hier sinnvoll? 
+	– Fehlerbehandlung? 
 	- AJAX-Loader
 	- 2-3 Tabellen (falls nötig)
 	– mit Entwickler-Werkzeuge -> Konsole -> console.log 
-	– in d3s: class=doughnut, und bei Aufteilung id=$Modul (z. B. id=A1) 
+	– in d3js: class=doughnut, und bei Aufteilung id=$Modul (z. B. id=A1) 
+		laut Folie 105: 
+		• erster Aufruf mit .enter()
+		• alle weiteren mit .update() 
+		• bei neuem Modul vorher Alles mit .exit() wieder löschen?  
+		• .scale.linear().domain (cf. Werte- & Definitionsbereich)
 	
 Frage: 
 
