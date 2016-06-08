@@ -41,9 +41,8 @@ $.getJSON('/php/moduleGroups.php', function(data) {
 		
 		// maxECTS 
 	}
-	
 	)
-		
+	return ergebnisArray; 
 )
 
 
