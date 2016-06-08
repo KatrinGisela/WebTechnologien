@@ -59,7 +59,7 @@ $.ajax({
 	type: "GET",
 	url: "moduleDefinitions.php",
 	data: {
-	[module_details:"A1"	// alternativ: Variable außerhalb definieren und hier einbeziehen // ID hier eingeben
+	module_details:"A1"	// alternativ: Variable außerhalb definieren und hier einbeziehen // ID hier eingeben
 	},
 	success: function(content) {
 		$("#content").html(content);
@@ -145,7 +145,7 @@ $.getJSON('moduleDefinitions.php', function(data, textStatus, jqXHR) {
 	data: {
 		module_details:"/php/moduleGroups?module_details=A5" 	// alternativ: Variable außerhalb definieren und hier einbeziehen // ID hier eingeben
 	},
->>>>>>> origin/master
+
 	success: function a1_courses(content) {
 		$("#content").html(content);
 		document.write("Test" + content)
@@ -242,11 +242,11 @@ $.getJSON('moduleDefinitions.php', function(data, textStatus, jqXHR) {
 
 // return false;
 // });
-=======
-});
 
-return false;
-});
+// });
+
+// return false;
+// });
 
 //  Aufruf  Detailinformationen zu A6
 $.getJSON('/php/moduleGroups?module_details=A6', function(data, textStatus, jqXHR) {
@@ -263,12 +263,11 @@ $.getJSON('/php/moduleGroups?module_details=A6', function(data, textStatus, jqXH
 
 return false;
 });
->>>>>>> origin/master
 
 
 
 
-<<<<<<< HEAD
+
 // //  Aufruf  Detailinformationen zu A7
 // $.getJSON('moduleDefinitions.php', function(data, textStatus, jqXHR) {
 	// type: "GET",
@@ -300,7 +299,7 @@ $.getJSON('moduleDefinitions.php', function(data, textStatus, jqXHR) {
 
 return false;
 });
->>>>>>> origin/master
+
 
 function daten_laden() {
 		$.get('moduleDefinitions.php', function(content) {
