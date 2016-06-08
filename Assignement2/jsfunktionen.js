@@ -21,11 +21,7 @@
 
 	
 // vergleiche Kapitel 3 S. 79 
-// function showLoaderGif() {
-	// .html("body").append <img src="img/ajax-loader.gif" alt="Animation, während die Seite lädt" />
-// }
-
-
+$('<img src="img/ajax-loader.gif" alt="Animation, während die Seite lädt"/>').insertAfter('body'); 
 
 // Laden von Daten mittels AJAX-Befehl 
 // https://xuad.net/artikel/vom-einfachen-ajax-request-zum-komplexen-objektaustausch-mit-json-mittels-jquery/ 
@@ -82,6 +78,9 @@ $.getJSON('moduleDefinitions.php', function(data, textStatus, jqXHR) {
 
 $.getJSON('/php/moduleGroups?module_details=A1', function(data, textStatus, jqXHR) {
 	alert("Geht"); 
+	document.writeln("Jetzt aber");
+	echo("Ausgabe"); 
+	return window.open("localhost"); 
 });
 
 
@@ -243,6 +242,9 @@ $.getJSON('moduleDefinitions.php', function(data, textStatus, jqXHR) {
 // return false;
 // });
 
+
+});
+
 // });
 
 // return false;
@@ -263,9 +265,6 @@ $.getJSON('/php/moduleGroups?module_details=A6', function(data, textStatus, jqXH
 
 return false;
 });
-
-
-
 
 
 // //  Aufruf  Detailinformationen zu A7
