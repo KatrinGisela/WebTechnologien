@@ -148,7 +148,6 @@ $.getJSON('moduleDefinitions.php', function(data, textStatus, jqXHR) {
 	data: {
 		module_details:"/php/moduleGroups?module_details=A5" 	// alternativ: Variable außerhalb definieren und hier einbeziehen // ID hier eingeben
 	},
->>>>>>> origin/master
 	success: function a1_courses(content) {
 		$("#content").html(content);
 		document.write("Test" + content)
@@ -245,7 +244,7 @@ $.getJSON('moduleDefinitions.php', function(data, textStatus, jqXHR) {
 
 // return false;
 // });
-=======
+
 });
 
 return false;
@@ -266,12 +265,8 @@ $.getJSON('/php/moduleGroups?module_details=A6', function(data, textStatus, jqXH
 
 return false;
 });
->>>>>>> origin/master
 
 
-
-
-<<<<<<< HEAD
 // //  Aufruf  Detailinformationen zu A7
 // $.getJSON('moduleDefinitions.php', function(data, textStatus, jqXHR) {
 	// type: "GET",
@@ -303,7 +298,7 @@ $.getJSON('moduleDefinitions.php', function(data, textStatus, jqXHR) {
 
 return false;
 });
->>>>>>> origin/master
+
 
 function daten_laden() {
 		$.get('moduleDefinitions.php', function(content) {
