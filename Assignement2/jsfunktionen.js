@@ -23,10 +23,14 @@
 // vergleiche Kapitel 3 S. 79 
 $('<img src="img/ajax-loader.gif" alt="Animation, während die Seite lädt"/>').insertAfter('body'); 
 
-// Laden von Daten mittels AJAX-Befehl 
-// https://xuad.net/artikel/vom-einfachen-ajax-request-zum-komplexen-objektaustausch-mit-json-mittels-jquery/ 
-
+// Laden von Daten mittels AJAX-Befehl: https://xuad.net/artikel/vom-einfachen-ajax-request-zum-komplexen-objektaustausch-mit-json-mittels-jquery/ 
 // erster Aufruf onload
+// S92!!! getJSON!
+
+$.getJSON('/php/moduleGroups.php', function()
+
+)
+
 
 $("button#ajaxCall_template").click(function() {
 
@@ -42,7 +46,7 @@ $.ajax({
 return false;
 });
 
-// S92!!! getJSON!
+
 
 
 // bei der Erstellung der einzelnen Elemente des Donut-Diagrammms werden Ids übergeben und wenn diese dann angeklickt werden,
