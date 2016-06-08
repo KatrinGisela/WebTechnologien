@@ -40,11 +40,8 @@ $.getJSON('/php/moduleGroups.php', function(data) {
 		minECTSArray = minECTSArray.append(group.minECTS); 
 		
 		// maxECTS 
-	}
-	
-	)
-		
-)
+	}); 
+}); 
 
 
 
