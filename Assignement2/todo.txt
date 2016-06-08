@@ -24,11 +24,10 @@ Gisela
 Andreas 
 	
 	– die Beispiele im VC anschauen
-	– .getJSON verwenden 
+	– .getJSON verwenden. Das kommt zurück: "A1", "Mathematische Grundlagen", 27, 27 
 	– Folie 92 hier sinnvoll? 
 	– Fehlerbehandlung? 
 	- AJAX-Loader
-	- 2-3 Tabellen (falls nötig)
 	– mit Entwickler-Werkzeuge -> Konsole -> console.log 
 	– in d3js: class=doughnut, und bei Aufteilung id=$Modul (z. B. id=A1) 
 		laut Folie 105: 
