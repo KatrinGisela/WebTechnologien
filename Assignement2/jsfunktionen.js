@@ -27,9 +27,55 @@ $('<img src="img/ajax-loader.gif" alt="Animation, während die Seite lädt"/>').
 // erster Aufruf onload
 // S92!!! getJSON!
 
-$.getJSON('/php/moduleGroups.php', function()
-
+$.getJSON('/php/moduleGroups.php', function(data) {
+	var ergebnisArray = []; 
+		
+	// Zugriff z. B. über data.groups[1].id 
+	$.each( data.groups, function( index, group ){
+		// group.id
+		idArray = idArray.append(group.id); 
+		// group.name
+		
+		// minECTS
+		minECTSArray = minECTSArray.append(group.minECTS); 
+		
+		// maxECTS 
+	}
+	
+	)
+		
 )
+
+
+
+d3.select("body").selectAll("p").data(dataset).enter().append("p").text(function(d){return"Neuer Paragraph mit Wert: "+d;});
+
+
+var width = 460,
+    height = 300,
+    radius = Math.min(width, height) / 2;
+
+var color = d3.scale.category20();
+
+var pie = d3.layout.pie()
+    .sort(null);
+
+var arc = d3.svg.arc()
+    .innerRadius(radius - 100)
+    .outerRadius(radius - 50);
+
+var svg = d3.select("body").append("svg")
+    .attr("width", width)
+    .attr("height", height)
+    .append("g")
+    .attr("transform", "translate(" + width / 2 + "," + height / 2 + ")");
+
+ var path = svg.selectAll("path")
+    .data(pie(minECTSArray))
+   .enter().append("path")
+     .attr("fill", function(d, i) { return color(i); })
+     .attr("d", arc); 
+
 
 
 $("button#ajaxCall_template").click(function() {
