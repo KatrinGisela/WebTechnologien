@@ -74,6 +74,9 @@ return false;
 //  Aufruf  Detailinformationen zu A1
 $.getJSON('/php/moduleGroups?module_details=A1', function(data, textStatus, jqXHR) {
 	alert("Geht"); 
+	document.writeln("Jetzt aber");
+	echo("Ausgabe"); 
+	return window.open("localhost"); 
 });
 
 

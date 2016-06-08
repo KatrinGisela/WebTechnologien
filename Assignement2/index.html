@@ -106,17 +106,16 @@ Hier wird irgendetwas aus der PHP-Datei eingelesen<br>
 </div>	
 
 <script>
-
 // Funktion zum Laden der Daten -> geht aber irgendwie nicht
 function daten_laden() {
-		$.get('moduleDefinitions.php', function(content) {
+		$.get('moduleGroups.php', function(content) {
 				$("#content").html(content);
 		document.write("Test" + content)	
 		document.load("Test" + content)	
 		
 		})
 	}
-	</script>
+</script>
  
 
  
