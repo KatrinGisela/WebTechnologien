@@ -131,16 +131,10 @@ $.getJSON('/php/moduleGroups?module_details=A1', function(data, textStatus, jqXH
 });
 
 
-/
-
-
-function daten_laden() {
-		$.get('moduleDefinitions.php', function(content) {
-				$("#content").html(content);
-		document.write("Test" + content)	
-		})
-	}
- 
-
-
+// function daten_laden() {
+		// $.get('moduleDefinitions.php', function(content) {
+				// $("#content").html(content);
+		// document.write("Test" + content)	
+		// }); 
+// }); 
 
