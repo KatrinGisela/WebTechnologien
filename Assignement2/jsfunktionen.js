@@ -21,11 +21,7 @@
 
 	
 // vergleiche Kapitel 3 S. 79 
-// function showLoaderGif() {
-	// .html("body").append <img src="img/ajax-loader.gif" alt="Animation, während die Seite lädt" />
-// }
-
-
+$('<img src="img/ajax-loader.gif" alt="Animation, während die Seite lädt"/>').insertAfter('body'); 
 
 // Laden von Daten mittels AJAX-Befehl 
 // https://xuad.net/artikel/vom-einfachen-ajax-request-zum-komplexen-objektaustausch-mit-json-mittels-jquery/ 
