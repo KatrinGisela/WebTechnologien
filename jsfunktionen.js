@@ -19,7 +19,7 @@
 		// });
 
 
-/*	
+	
 // vergleiche Kapitel 3 S. 79 
 $('<img src="img/ajax-loader.gif" alt="Animation, während die Seite lädt"/>').insertAfter('body'); 
 
@@ -27,7 +27,7 @@ $('<img src="img/ajax-loader.gif" alt="Animation, während die Seite lädt"/>').
 // erster Aufruf onload
 // S92!!! getJSON!
 
- 
+/*  
 var minECTSArray = []; 
 
 $("button#ajaxCall_template").click(function() { $.getJSON('/php/moduleGroups.php', function(data) {
@@ -113,7 +113,7 @@ $.ajax({
 	},
 	success: function(content) {
 		$("#content").html(content);
-		document.write("Test" + content)
+	//	$("#content").write("Test" + content)
 	}
 });
 
