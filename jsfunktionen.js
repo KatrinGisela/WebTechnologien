@@ -21,13 +21,13 @@
 
 	
 // vergleiche Kapitel 3 S. 79 
-$('<img src="img/ajax-loader.gif" alt="Animation, während die Seite lädt"/>').insertAfter('body'); 
+$('<img src="img/ajax-loader.gif" alt="Animation, während die Seite lädt"/>').insertAfter('h1');
+$(document).ready( function() {$( "<p>Test</p>" ).insertAfter( ".inner" ); }); 
 
 // Laden von Daten mittels AJAX-Befehl: https://xuad.net/artikel/vom-einfachen-ajax-request-zum-komplexen-objektaustausch-mit-json-mittels-jquery/ 
 // erster Aufruf onload
 // S92!!! getJSON!
 
-/*  
 var minECTSArray = []; 
 
 $("button#ajaxCall_template").click(function() { $.getJSON('/php/moduleGroups.php', function(data) {
@@ -101,7 +101,6 @@ return false;
 // dann werden die entsprechenden A1/A2/A3 etc. aufgerufen
 // Id wird dann hier eingebunden
 
-*/
 
 $(document).ready(function() {
 console.log("irgendein String"); 

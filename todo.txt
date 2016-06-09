@@ -1,0 +1,39 @@
+﻿TODO
+
+https://bl.ocks.org/mbostock/3887193
+
+Andreas
+-Arithmetische Mittelwerte der ECTS-Punkte der 7 Module in ein Array/oder 7 Variablen?
+-Diagramm
+- AJAX-Loader
+
+Sladjana
+-hover-Effekt Diagrammteile
+-Dynamische Größe des Diagramms
+
+Gisela
+-Textanzeige in Tabelle rechts durch Klicken auf Diagrammteile 
+
+
+Notizen Andreas
+	– Fehlerbehandlung? 
+	– mit Entwickler-Werkzeuge -> Konsole -> console.log 
+	– in d3js: class=doughnut, und bei Aufteilung id=$Modul (z. B. id=A1) 
+		laut Folie 105: 
+		• erster Aufruf mit .enter()
+		• alle weiteren mit .update() 
+		• bei neuem Modul vorher Alles mit .exit() wieder löschen?  
+		• .scale.linear().domain (cf. Werte- & Definitionsbereich)
+	
+Frage: 
+
+	– warum liegt die jsfunktionen.js eigentlich nicht im Ordner js? 
+	– Fehler: SyntaxError: expected expression, got '}' in index.html Zeile 69 Stelle/Spalte (Col) 19
+	– warum ist in jsfunktionen.js html-Code wie 
+		• <script type="text/javascript"> oder 
+		• <script src="/js/jquery-2.2.3.js" type="text/javascript"></script> 
+		
+		der sollte doch eigentlich in index.html, oder?
+		
+	- wo genau kommt beim Methodenaufruf /php/moduleGroups?module_details=A1 hin?
+	

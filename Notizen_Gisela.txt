@@ -1,0 +1,28 @@
+<script type="text/javascript">
+  window.onload = function () {
+    var chart = new CanvasJS.Chart("chartContainer",
+    {
+      title:{
+        text: "Smartphone Operating Systems"
+      },
+      data: [
+      {
+       type: "doughnut",
+       dataPoints: [
+       {  y: 53.37, indexLabel: "Android" },
+       {  y: 35.0, indexLabel: "Apple iOS" },
+       {  y: 7, indexLabel: "Blackberry" },
+       {  y: 2, indexLabel: "Windows Phone" },
+       {  y: 5, indexLabel: "Others" }
+       ]
+     }
+     ]
+   });
+
+    chart.render();
+  }
+  </script>
+  <script type="text/javascript" src="/assets/script/canvasjs.min.js"></script> //das muss noch eingebunden werden
+
+var myHeading = document.querySelector('div.ueberschrift');
+myHeading.textContent = 'A1';
