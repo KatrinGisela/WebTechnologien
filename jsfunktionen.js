@@ -21,34 +21,35 @@
 
 	
 // vergleiche Kapitel 3 S. 79 
-$('<img src="img/ajax-loader.gif" alt="Animation, während die Seite lädt"/>').insertAfter('h1');
-$(document).ready( function() {$( "<p>Test</p>" ).insertAfter( ".inner" ); }); 
+$(document).ready( function() {$('<img id="ajax-loader" src="img/ajax-loader.gif" alt="Animation, während die Seite lädt"/>').insertAfter('h1'); }); 
+// $(document).ready( function() {$( "<p>Test</p>" ).insertAfter( ".inner" ); }); 
 
 // Laden von Daten mittels AJAX-Befehl: https://xuad.net/artikel/vom-einfachen-ajax-request-zum-komplexen-objektaustausch-mit-json-mittels-jquery/ 
 // erster Aufruf onload
 // S92!!! getJSON!
 
+var groupsArray = [];
+var idArray = []; 
 var minECTSArray = []; 
 
-$("button#ajaxCall_template").click(function() { $.getJSON('/php/moduleGroups.php', function(data) {
-	var ergebnisArray = [];
-	
-	alert("arrayBefüllung"); 
-	
-	// Zugriff z. B. über data.groups[1].id 
-	$.each( data.groups, function( index, group ){
-		// group.id
-		idArray = idArray.append(group.id); 
-		// group.name
+$(document).ready( 
+	function() { $.getJSON('/php/moduleGroups.php', 
+		function(data) {
+			// Zugriff z. B. über data.groups[1].id 
+			$.each( data.groups, function( index, group ){
+				// group.id
+				idArray = idArray.append(group.id); 
+				// group.name
 		
-		// minECTS
-		minECTSArray = minECTSArray.append(group.minECTS); 
+				// minECTS
+				minECTSArray = minECTSArray.append(group.minECTS); 
 		
-		// maxECTS 
-	}); 
-}); 
-});
+				// maxECTS
 
+				}); 
+			$('#ajax-loader').hide(); 
+		}); 
+	});
 
 //d3.select("body").selectAll("p").data(dataset).enter().append("p").text(function(d){return"Neuer Paragraph mit Wert: "+d;});
 
