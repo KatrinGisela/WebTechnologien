@@ -27,8 +27,11 @@ $('<img src="img/ajax-loader.gif" alt="Animation, während die Seite lädt"/>').
 // erster Aufruf onload
 // S92!!! getJSON!
 
+ 
+var minECTSArray = []; 
+
 $.getJSON('/php/moduleGroups.php', function(data) {
-	var ergebnisArray = []; 
+	var ergebnisArray = [];
 		
 	// Zugriff z. B. über data.groups[1].id 
 	$.each( data.groups, function( index, group ){
@@ -45,7 +48,7 @@ $.getJSON('/php/moduleGroups.php', function(data) {
 
 
 
-d3.select("body").selectAll("p").data(dataset).enter().append("p").text(function(d){return"Neuer Paragraph mit Wert: "+d;});
+//d3.select("body").selectAll("p").data(dataset).enter().append("p").text(function(d){return"Neuer Paragraph mit Wert: "+d;});
 
 
 var width = 460,
@@ -97,7 +100,7 @@ return false;
 // Id wird dann hier eingebunden
 
 
-$("button#ajaxCall_a1").click(function() {
+/* $("button#ajaxCall_a1").click(function() {
 $.ajax({
 	type: "GET",
 	url: "moduleDefinitions.php",
@@ -128,7 +131,7 @@ $.getJSON('/php/moduleGroups?module_details=A1', function(data, textStatus, jqXH
 	document.writeln("Jetzt aber");
 	echo("Ausgabe"); 
 	return window.open("localhost"); 
-});
+}); */
 
 
 // function daten_laden() {
