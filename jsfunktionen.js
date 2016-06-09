@@ -22,7 +22,6 @@
 	
 // vergleiche Kapitel 3 S. 79 
 $(document).ready( function() {$('<img id="ajax-loader" src="img/ajax-loader.gif" alt="Animation, während die Seite lädt"/>').insertAfter('h1'); }); 
-// $(document).ready( function() {$( "<p>Test</p>" ).insertAfter( ".inner" ); }); 
 
 // Laden von Daten mittels AJAX-Befehl: https://xuad.net/artikel/vom-einfachen-ajax-request-zum-komplexen-objektaustausch-mit-json-mittels-jquery/ 
 // erster Aufruf onload
@@ -35,14 +34,12 @@ var minECTSArray = [];
 $(document).ready( 
 	function() { $.getJSON('/php/moduleGroups.php', 
 		function(data) {
+			groupsArray = data.groups; 
 			// Zugriff z. B. über data.groups[1].id 
 			$.each( data.groups, function( index, group ){
 				// group.id
-				idArray = idArray.append(group.id); 
-				// group.name
-		
 				// minECTS
-				minECTSArray = minECTSArray.append(group.minECTS); 
+				// minECTSArray = minECTSArray.append(group.minECTS); 
 		
 				// maxECTS
 
@@ -53,8 +50,25 @@ $(document).ready(
 
 //d3.select("body").selectAll("p").data(dataset).enter().append("p").text(function(d){return"Neuer Paragraph mit Wert: "+d;});
 
+$(document).ready( function() {
 
-var width = 460,
+// Categorical Colors laut: https://github.com/d3/d4/wiki/Ordinal-Scales
+var colors = d3.scale.category10(); 
+
+var vis = d3.select("#diagram"); 
+var arc = d3.svg.arc() 
+	.innerRadius(50) 
+	.outerRadius(100) 
+	.startAngle(0) 
+	.endAngle(1.5*Math.PI);
+
+vis.append("path") 
+	.attr("d", arc) 
+//	.attr("transform", "translate(300,200)")
+	.style("fill", function(d){return d[2];}) .attr("transform", "translate(300,200)");
+}); 
+
+/* var width = 460,
     height = 300,
     radius = Math.min(width, height) / 2;
 
@@ -67,7 +81,8 @@ var arc = d3.svg.arc()
     .innerRadius(radius - 100)
     .outerRadius(radius - 50);
 
-var svg = d3.select("body").append("svg")
+
+.append("svg")
     .attr("width", width)
     .attr("height", height)
     .append("g")
@@ -78,7 +93,7 @@ var svg = d3.select("body").append("svg")
    .enter().append("path")
      .attr("fill", function(d, i) { return color(i); })
      .attr("d", arc); 
-
+*/
 
 
 $("button#ajaxCall_template").click(function() {

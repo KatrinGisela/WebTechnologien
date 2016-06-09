@@ -10,7 +10,6 @@
 <script src="jsfunktionen.js" type="text/javascript"></script>
 
 
-
  <!-- canvas ist nicht erlaubt -->
 <!-- <script src="canvasjs.min.js"></script>
 
@@ -48,16 +47,13 @@
 <body>
 <h1> BA Angewandte Informatik </h1>
 
+
 <div class="inner">Hello</div>
-
-
-
 <div class="mainDiv">	
 <div class="left">
+<div id="chartContainer"></div>
 
-<div class="item html" onload="showLoaderGif()">
-  
-<div id="chartContainer" style="height: 300px; width: 100%;"></div>
+	<svg id="diagram" width="200" height="200"></svg> 
 
 <!-- Effekt einbauen, dass beim Reinfahren mit der Maus  die entsprechende Modul-ID eingeblendet wird und beim Rausfahren wieder verschwindet  -->
  
@@ -65,7 +61,6 @@
  </div>
 </div>   	
 <div class="right">
-Hier wird irgendetwas aus der PHP-Datei eingelesen<br>
 
 <button type="button" id="ajaxCall_a1"> ajaxCall_a1 </button> 
 <button type="button" id="ajaxCall_template"> ajaxCall_template>  </button> 
