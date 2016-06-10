@@ -57,7 +57,7 @@ var arc = d3.svg.arc()
     height = 300,
     radius = Math.min(width, height) / 2;
 
-var color = d3.scale.category20b(); //Gisela hat das b hinzugefügt, testen, ob es ohne besser wäre
+var color = d3.scale.category20();
 
 var pie = d3.layout.pie()
     .sort(null);
