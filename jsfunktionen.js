@@ -77,12 +77,12 @@ elem.addEventListener('mouseout', mouseOut);
 
 function mouseOver() {
 	ausgabe.innerHTML = 'Ich bin dynamisch!';	// hier eigentlich nichts, oder?
-	elem.innerHTML = 'Drüber!';							// ausgegeben werden ID (z.B. „A1“), die Bezeichnung (z.B. „Mathematische Grundlagen“) und die Anzahl der benötigten ECTS-Punkte (z.B. „[27 ECTS-Punkte]“)
+	elem.innerHTML = 'ID<br>Name<br>ECTS!';							// ausgegeben werden ID (z.B. „A1“), die Bezeichnung (z.B. „Mathematische Grundlagen“) und die Anzahl der benötigten ECTS-Punkte (z.B. „[27 ECTS-Punkte]“)
 }
 
 function mouseOut() {
 	ausgabe.innerHTML = ' ';
-	elem.innerHTML = 'Wieder weg!';
+	elem.innerHTML = ' ';
 }
 
 
@@ -100,13 +100,13 @@ elem.addEventListener("mouseleave", mouseLeave);
 function mouseEnter() {
 	ausgabe.innerHTML = 'Ich bin dynamisch!';
 	ausgabe.style.color = "red";
-	elem.innerHTML = 'Enter!<br>(Drüber)';	//<br> hilft uns, das in separate Zeilen zu füllen 
+	elem.innerHTML = 'ID<br>Name<br>ECTS';	//<br> hilft uns, das in separate Zeilen zu füllen 
 }
 
 function mouseLeave() {
-	ausgabe.innerHTML = 'Wieder weg!';
-	ausgabe.style.color = "black";
-	elem.innerHTML = 'Leave!<br>(wieder weg!)';
+	ausgabe.innerHTML = ' ';
+	ausgabe.style.color = "black"; // SCHRIFTFARBE
+	elem.innerHTML = ' ';
 }
 
 
