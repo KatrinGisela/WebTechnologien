@@ -1,5 +1,3 @@
-﻿// <script src="/js/jquery-2.2.3.js" type="text/javascript"></script>
-	
 /* Hier irgendwo müssen per GET-Request (Kombi aus jQuery und AJAX) die .php-Dateien zu den Modulen eingebunden werden */ 
 
 /* Hier die dazugehörigen ids im Body bauen, die aufgerufen werden (einzelne ids= einzelne Donut-Abschnitte*/
@@ -43,8 +41,6 @@ console.log(total);
 
 
 
-
-
 $(document).ready( function() {
 
 // Categorical Colors laut: https://github.com/d3/d4/wiki/Ordinal-Scales
@@ -56,6 +52,8 @@ var arc = d3.svg.arc()
 	.outerRadius(100) 
 	.startAngle(0) 
 	.endAngle(1.5*Math.PI);
+
+}); 
 	
 	var pie_data=[];
 for( var a=0;a<data.length;a++){ 			// simple logic to calculate percentage data for the pie
@@ -110,12 +108,11 @@ function mouseLeave() {
 }
 
 
-
 //vis.append("path") 
 	//.attr("d", arc) 
 //	.attr("transform", "translate(300,200)")
 	//.style("fill", function(d){return d[2];}) .attr("transform", "translate(300,200)");
-}); 
+//}); 
 
 /* var width = 460,
     height = 300,
@@ -143,6 +140,7 @@ var arc = d3.svg.arc()
      .attr("fill", function(d, i) { return color(i); })
      .attr("d", arc); 
 */
+
 
 
 // bei der Erstellung der einzelnen Elemente des Donut-Diagrammms werden Ids übergeben und wenn diese dann angeklickt werden,
