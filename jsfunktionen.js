@@ -35,6 +35,16 @@ $(document).ready(
 
 //d3.select("body").selectAll("p").data(dataset).enter().append("p").text(function(d){return"Neuer Paragraph mit Wert: "+d;});
 
+
+
+total=total+parseInt(data[a].count); // simple logic to calculate total of data count value
+console.log(total);
+
+
+
+
+
+
 $(document).ready( function() {
 
 // Categorical Colors laut: https://github.com/d3/d4/wiki/Ordinal-Scales
@@ -46,6 +56,60 @@ var arc = d3.svg.arc()
 	.outerRadius(100) 
 	.startAngle(0) 
 	.endAngle(1.5*Math.PI);
+	
+	var pie_data=[];
+for( var a=0;a<data.length;a++){ 			// simple logic to calculate percentage data for the pie
+pie_data[a]=(data[a].count/total)*100;
+
+
+
+/*
+* MAUS-HOVER-EFFEKT
+*
+* Die Werte noch anpassen 
+* - Eingabe und Ausgabe
+*/
+
+var elem = document.getElementById('Eingabe');			
+var ausgabe = document.getElementById('Ausgabe');
+elem.addEventListener('mouseover', mouseOver);
+elem.addEventListener('mouseout', mouseOut);
+
+function mouseOver() {
+	ausgabe.innerHTML = 'Ich bin dynamisch!';	// hier eigentlich nichts, oder?
+	elem.innerHTML = 'ID<br>Name<br>ECTS!';							// ausgegeben werden ID (z.B. „A1“), die Bezeichnung (z.B. „Mathematische Grundlagen“) und die Anzahl der benötigten ECTS-Punkte (z.B. „[27 ECTS-Punkte]“)
+}
+
+function mouseOut() {
+	ausgabe.innerHTML = ' ';
+	elem.innerHTML = ' ';
+}
+
+
+
+/*
+* ODER DIESE ALTERNATIVE? 
+* (Mouseenter, welche automatisch MouseLeave auslöst, sobald die Fläche verlassen wird)
+*/
+
+var elem = document.getElementById("Eingabe");
+var ausgabe = document.getElementById("Ausgabe");
+elem.addEventListener("mouseenter", mouseEnter);
+elem.addEventListener("mouseleave", mouseLeave);
+
+function mouseEnter() {
+	ausgabe.innerHTML = 'Ich bin dynamisch!';
+	ausgabe.style.color = "red";
+	elem.innerHTML = 'ID<br>Name<br>ECTS';	//<br> hilft uns, das in separate Zeilen zu füllen 
+}
+
+function mouseLeave() {
+	ausgabe.innerHTML = ' ';
+	ausgabe.style.color = "black"; // SCHRIFTFARBE
+	elem.innerHTML = ' ';
+}
+
+
 
 //vis.append("path") 
 	//.attr("d", arc) 
