@@ -6,7 +6,7 @@
 
 	
 // vergleiche Kapitel 3 S. 79 
-$(document).ready( function() {$('<img id="ajax-loader" src="img/ajax-loader.gif" alt="Animation, während die Seite lädt"/>').insertAfter('h1'); }); 
+//$(document).ready( function() {$('<img id="ajax-loader" src="img/ajax-loader.gif" alt="Animation, während die Seite lädt"/>').insertAfter('h1'); }); 
 
 // Laden von Daten mittels AJAX-Befehl: https://xuad.net/artikel/vom-einfachen-ajax-request-zum-komplexen-objektaustausch-mit-json-mittels-jquery/ 
 // erster Aufruf onload
@@ -35,57 +35,53 @@ $(document).ready(
 
 //d3.select("body").selectAll("p").data(dataset).enter().append("p").text(function(d){return"Neuer Paragraph mit Wert: "+d;});
 
-$(document).ready( function() {
-
-// Categorical Colors laut: https://github.com/d3/d4/wiki/Ordinal-Scales
-var colors = d3.scale.category10(); 
-
-var vis = d3.select("#diagram"); 
-var arc = d3.svg.arc() 
-	.innerRadius(50) 
-	.outerRadius(100) 
-	.startAngle(0) 
-	.endAngle(1.5*Math.PI);
-
-//vis.append("path") 
-	//.attr("d", arc) 
-//	.attr("transform", "translate(300,200)")
-	//.style("fill", function(d){return d[2];}) .attr("transform", "translate(300,200)");
+$(document).ready( 
+	function() {
+'use strict';
+               var dataset = [
+          { label: 'Abulia', count: 10 }, 
+          { label: 'Betelgeuse', count: 20 },
+          { label: 'Cantaloupe', count: 30 },
+          { label: 'Dijkstra', count: 40 }
+        ];
+	   
+        var width = 360;
+        var height = 360;
+        var radius = Math.min(width, height) / 2;
+		var donutWidth = 75;
+        var color = d3.scale.category20b();
+        var svg = d3.select('#chart')
+          .append('svg')
+          .attr('width', width)
+          .attr('height', height)
+          .append('g')
+          .attr('transform', 'translate(' + (width / 2) + 
+            ',' + (height / 2) + ')');
+        var arc = d3.svg.arc()
+		.innerRadius(radius - donutWidth) 
+          .outerRadius(radius);
+        var pie = d3.layout.pie()
+          .value(function(d) { return d.count; })
+          .sort(null);
+		      
+        var path = svg.selectAll('path')
+          .data(pie(dataset))
+          .enter()
+          .append('path')
+          .attr('d', arc)
+          .attr('fill', function(d, i) { 
+            return color(d.data.label);
+		       
+}); 
 }); 
 
-/* var width = 460,
-    height = 300,
-    radius = Math.min(width, height) / 2;
-
-var color = d3.scale.category20();
-
-var pie = d3.layout.pie()
-    .sort(null);
-
-var arc = d3.svg.arc()
-    .innerRadius(radius - 100)
-    .outerRadius(radius - 50);
-
-
-.append("svg")
-    .attr("width", width)
-    .attr("height", height)
-    .append("g")
-    .attr("transform", "translate(" + width / 2 + "," + height / 2 + ")");
-
- var path = svg.selectAll("path")
-    .data(pie(minECTSArray))
-   .enter().append("path")
-     .attr("fill", function(d, i) { return color(i); })
-     .attr("d", arc); 
-*/
 
 
 // bei der Erstellung der einzelnen Elemente des Donut-Diagrammms werden Ids übergeben und wenn diese dann angeklickt werden,
 // dann werden die entsprechenden A1/A2/A3 etc. aufgerufen
 // Id wird dann hier eingebunden
 
-
+/*
 $(document).ready(function() {
 console.log("irgendein String"); 
 $.ajax({
@@ -102,7 +98,7 @@ $.ajax({
 
 return false;
 });
-
+*/
 /*
 //  Aufruf  Detailinformationen zu A1
 
