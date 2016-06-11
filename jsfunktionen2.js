@@ -71,8 +71,23 @@ $(document).ready(
           .attr('d', arc)
           .attr('fill', function(d, i) { 
             return color(d.data.label);
-		       
-}); 
+		 }); 
+		path.on('click', function(){
+		$.ajax({
+			type: "GET",
+			url: "php/moduleGroups.php",
+			data: {
+			module_details:"A1"
+			
+			},
+			success: function(content) {
+				$("#content").html(content);
+			}
+			});
+		
+		});
+		
+		
 }); 
 
 
