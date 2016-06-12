@@ -51,12 +51,22 @@ $.getJSON('/php/moduleGroups.php',
 			      return color(d.data.mittelwert);
 				});
 
-			// 	g.append("p")
-			// 	.text('ID: ');
+
+			g.on('mouseover', function(f){
+				$("#content").html(f.data.id);			
+				$("#content").html(f.data.name);			
+			});
+
+			g.on('click', function(d){
+				$("#content").html(d.data.id);			
+			});
+
+
+
 
 			// event: onmouseover
 			// $( "selector" ).mousover( function … 
-	});
-}); 
+	}); 
+});
 
 
