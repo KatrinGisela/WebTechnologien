@@ -52,23 +52,27 @@ $.getJSON('/php/moduleGroups.php',
 				});
 
 
-			g.on('mouseover', function(f){
-			
+			g.on('mouseover', function(d){
+				g.append("text")
+			        .text(d.data.id + ' ' + d.data.name)
 			});
 
+			g.on('mouseout', function(d){
+				$("text").hide();
+				// folgende Zeile wird gebraucht, da sich die text-Element aus g.on('mouseover', …) sonst in der html-Datei ansammlen
+				d3.selectAll("text").remove(); 
+			});
 
 
 			g.on('click', function(d){
-				$("#content").html(d.data.id);			
+				$('#ajax-loader').show(); 
 				$.getJSON('/php/moduleGroups.php?module_details=' + d.data.id, function(data_details){
-
-			details = data_details.details; 	
-			
-			$("#content").html('<h2><em>' +  details.id + ' </em> ' + details.name + '</h2>');			
-			$("#content").append('<p>' + details.description + '</p>');			
+					details = data_details.details; 	
+					$("#content").html('<h2><em>' +  details.id + ' </em> ' + details.name + '</h2>'); 
+					$("#content").append('<p>' + details.description + '</p>');			
+					$('#ajax-loader').hide(); 
+				});
 			});
-			});
-
 	}); 
 });
 
