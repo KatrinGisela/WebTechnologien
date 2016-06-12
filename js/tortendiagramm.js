@@ -53,19 +53,22 @@ $.getJSON('/php/moduleGroups.php',
 
 
 			g.on('mouseover', function(f){
-				$("#content").html(f.data.id);			
-				$("#content").html(f.data.name);			
+			
 			});
+
+
 
 			g.on('click', function(d){
 				$("#content").html(d.data.id);			
+				$.getJSON('/php/moduleGroups.php?module_details=' + d.data.id, function(data_details){
+
+			details = data_details.details; 	
+			
+			$("#content").html('<h2><em>' +  details.id + ' </em> ' + details.name + '</h2>');			
+			$("#content").append('<p>' + details.description + '</p>');			
+			});
 			});
 
-
-
-
-			// event: onmouseover
-			// $( "selector" ).mousover( function … 
 	}); 
 });
 
