@@ -51,7 +51,6 @@ $.getJSON('/php/moduleGroups.php',
 			      return color(d.data.mittelwert);
 				});
 
-
 			g.on('mouseover', function(d){
 				g.append("text")
 			        .text(d.data.id + ' ' + d.data.name)
@@ -63,7 +62,6 @@ $.getJSON('/php/moduleGroups.php',
 				d3.selectAll("text").remove(); 
 			});
 
-
 			g.on('click', function(d){
 				$('#ajax-loader').show(); 
 				$.getJSON('/php/moduleGroups.php?module_details=' + d.data.id, function(data_details){
@@ -74,6 +72,6 @@ $.getJSON('/php/moduleGroups.php',
 				});
 			});
 	}); 
-});
+}) 
 
 

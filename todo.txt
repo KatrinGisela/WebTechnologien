@@ -4,7 +4,9 @@ https://bl.ocks.org/mbostock/3887193
 
 Andreas
 -Arithmetische Mittelwerte der ECTS-Punkte der 7 Module in ein Array/oder 7 Variablen?
--Diagramm
+-Diagramm: Schnittstellen über id (z. B. id=A1) einbauen und Grafik dynamisieren z. B. mit 
+	• https://wiki.selfhtml.org/wiki/SVG/responsiv#externe_Vektorgrafiken_responsiv_darstellen 
+	• http://stackoverflow.com/questions/16265123/resize-svg-when-window-is-resized-in-d3-js
 - AJAX-Loader an die richtige Stelle verschieben 
 
 Sladjana
