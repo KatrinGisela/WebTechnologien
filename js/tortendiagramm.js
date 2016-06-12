@@ -53,6 +53,7 @@ $.getJSON('/php/moduleGroups.php',
 
 
 			g.on('mouseover', function(f){
+<<<<<<< HEAD
 				//var thisindex=g;
 				 g.append("text")
         //.attr("dx", function(d){return -20}) zur Verschiebung
@@ -68,9 +69,17 @@ $.getJSON('/php/moduleGroups.php',
 
 
 
+			g.on('click', function(d){
+				$("#content").html(d.data.id);			
+				$.getJSON('/php/moduleGroups.php?module_details=' + d.data.id, function(data_details){
 
-			// event: onmouseover
-			// $( "selector" ).mousover( function … 
+			details = data_details.details; 	
+			
+			$("#content").html('<h2><em>' +  details.id + ' </em> ' + details.name + '</h2>');			
+			$("#content").append('<p>' + details.description + '</p>');			
+			});
+			});
+
 	}); 
 }) 
 
