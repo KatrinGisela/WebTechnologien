@@ -36,6 +36,7 @@ $.getJSON('/php/moduleGroups.php',
 			var svg = d3.select("#chartContainer").append("svg")
 			    .attr("width", width)
 			    .attr("height", height)
+			.attr("class" ,"svg-klasse")
 			    .append("g")
 			    .attr("transform", "translate(" + width / 2 + "," + height / 2 + ")"); 
 
@@ -62,12 +63,53 @@ $.getJSON('/php/moduleGroups.php',
 				d3.selectAll("text").remove(); 
 			});
 
+
+$(function() {$("#überschrift-pflichtmodule").append('<h3> Pflichtmodule </h3>');	
+					$("#überschrift-wahlmodule").append('<h3> Wahlmodule </h3>');
+				$("#überschrift-pflichtmodule").hide(); 
+				$("#überschrift-wahlmodule").hide(); 
+			});
+
+
 			g.on('click', function(d){
 				$('#ajax-loader').show(); 
 				$.getJSON('/php/moduleGroups.php?module_details=' + d.data.id, function(data_details){
-					details = data_details.details; 	
+					details = data_details.details; 
+
+					// html-Funktion ersetzen mit einer Funktion, die vor #überschrift-pflichtmodule einfügt 
+	
 					$("#content").html('<h2><em>' +  details.id + ' </em> ' + details.name + '</h2>'); 
-					$("#content").append('<p>' + details.description + '</p>');			
+					$("#content").append('<p>' + details.minECTS + ' – ' + details.maxECTS + ' ECTS-Punkte </p>');
+					$("#content").append('<p>' + details.description + '</p>');
+
+					console.log(); 
+
+					$.each( details.courses, function( index, course ){
+							console.log(course.short_name); 
+						if(course.mandatory == true){
+							console.log("mandatory == false : " + course.mandatory); 
+							$("#überschrift-pflichtmodule").show(); 
+							$("#content").append('<p>' + course.short_name + '</p>');
+						 }
+
+						if(course.mandatory == false){
+							console.log("mandatory == false : " + course.mandatory); 
+							$("#überschrift-wahlmodule").show(); 
+							$("#content").append('<p>' + course.short_name + '</p>');
+						}
+
+						
+
+
+
+
+					//<table> <tr> <td>Inhalt</td> </tr> </table> 
+
+
+			});
+
+					console.log(details.courses); 
+
 					$('#ajax-loader').hide(); 
 				});
 			});
