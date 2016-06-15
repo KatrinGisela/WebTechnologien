@@ -78,6 +78,10 @@ $.getJSON('/php/moduleGroups.php',
 
 					// .replaceWith nutzen? 
 					$("#details").empty();
+					$("#tabelle-pflichtmodule").empty(); 
+					$("#tabelle-wahlmodule").empty(); 
+					$("#überschrift-pflichtmodule").hide(); 
+					$("#überschrift-wahlmodule").hide(); 
 					$("#details").append('<h2><em>' +  details.id + ' </em> ' + details.name + '</h2>'); 
 					$("#details").append('<p>' + details.minECTS + ' – ' + details.maxECTS + ' ECTS-Punkte </p>');
 					$("#details").append('<p>' + details.description + '</p>');
@@ -85,11 +89,12 @@ $.getJSON('/php/moduleGroups.php',
 					$.each( details.courses, function( index, course ){
 						if(course.mandatory == true){
 							$("#überschrift-pflichtmodule").show(); 
-							$("#überschrift-pflichtmodule").append('<p>' + course.short_name + '</p>');
+							$("#tabelle-pflichtmodule").append('<p>' + course.short_name + '</p>');
 						 }
+
 						if(course.mandatory == false){
 							$("#überschrift-wahlmodule").show(); 
-							$("#überschrift-wahlmodule").append('<p>' + course.short_name + '</p>');
+							$("#tabelle-wahlmodule").append('<p>' + course.short_name + '</p>');
 						}
 					});
 
