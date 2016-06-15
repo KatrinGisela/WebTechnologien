@@ -1,6 +1,6 @@
 // Tortendiagramm 
 
-$(function() {$('<img id="ajax-loader" src="img/ajax-loader.gif" alt="Animation, während die Seite lädt"/>').insertAfter('div.right');
+$(function() {$('<img id="ajax-loader" src="img/ajax-loader.gif" alt="Animation, während die Seite lädt"/>').insertAfter('div#right');
 
 // Laden von Daten mittels AJAX-Befehl: https://xuad.net/artikel/vom-einfachen-ajax-request-zum-komplexen-objektaustausch-mit-json-mittels-jquery/ 
 // erster Aufruf onload
@@ -33,13 +33,12 @@ $.getJSON('/php/moduleGroups.php',
 			    return d.mittelwert;
 			});
 
-			var svg = d3.select("#chartContainer").append("svg")
-			    .attr("width", width)
-			    .attr("height", height)
-			.attr("class" ,"svg-klasse")
-			    .append("g")
-			    .attr("transform", "translate(" + width / 2 + "," + height / 2 + ")"); 
-
+			var svg = d3.select("#left").append("svg")
+				.attr("width", width)
+				.attr("height", height)
+				.attr("class" ,"svg-klasse")
+				.append("g")
+				.attr("transform", "translate(" + width / 2 + "," + height / 2 + ")"); 
 
 			var g = svg.selectAll(".arc")
 				.data(pie(groups))
@@ -52,10 +51,14 @@ $.getJSON('/php/moduleGroups.php',
 			      return color(d.data.mittelwert);
 				});
 
-			g.on('mouseover', function(d){
+				g.on('mouseover', function(d){
 				g.append("text")
 			        .text(d.data.id + ' ' +  d.data.name +" [" + d.data.minECTS + " - " + d.data.maxECTS + " ECTS-Punkte]")
 			         .attr("text-anchor", "middle")
+
+			        .text(d.data.id + " \n" + d.data.name + " \n"+' ['+ d.data.minECTS+' - '+d.data.maxECTS+ ' ECTS-Punkte]')
+
+
 			});
 
 			g.on('mouseout', function(d){
@@ -64,31 +67,64 @@ $.getJSON('/php/moduleGroups.php',
 				d3.selectAll("text").remove(); 
 			});
 
+
+			$(function() {
+				$("#überschrift-pflichtmodule").append('<h3> Pflichtmodule </h3>');	
+				$("#überschrift-pflichtmodule").hide(); 
+				$("#überschrift-wahlmodule").append('<h3> Wahlmodule </h3>');
+				$("#überschrift-wahlmodule").hide(); 
+				});
+
+
 			g.on('click', function(d){
 				$('#ajax-loader').show(); 
 				$.getJSON('/php/moduleGroups.php?module_details=' + d.data.id, function(data_details){
-					details = data_details.details; 	
-					$("#content").html('<h2><em>' +  details.id + ' </em> ' + details.name + '</h2>'); 
-					$("#content").append('<p>' + details.description + '</p>');
-					$("#content").append('<p>' + details.minECTS + '</p>');
-					$("#content").append('<p>' + details.maxECTS + '</p>');
+					details = data_details.details; 
 
-					// eindeutiger Kurszugriff über short_name
-					// Pflichtmodul: mandatory = true 
+
+					// html-Funktion ersetzen mit einer Funktion, die vor #überschrift-pflichtmodule einfügt 
+	
+					// .replaceWith nutzen? 
+					$("#details").empty();
+					$("#tabelle-pflichtmodule").empty(); 
+					$("#tabelle-wahlmodule").empty(); 
+					$("#überschrift-pflichtmodule").hide(); 
+					$("#überschrift-wahlmodule").hide(); 
+					
+					$("#details").append('<p><h2 id="h2right"><em>' +  details.id + ' </em> ' + details.name + '</h2>'+' ['+ d.data.minECTS+' - '+d.data.maxECTS+ ' ECTS-Punkte] </p>'); 
+					$("#details").append('<p>' + details.description + '</p>');
+		
+//tabelle-pflichtmodule, diesen tag einbauen
 					$.each( details.courses, function( index, course ){
-						if(course.mandatory == true){ alert("kurs"); 
-							$("#content").html('<h3>Pflichtmodule</h3>'); 
-							$("#content").append('<p>' + course.short_name + '</p>');
-						 }
-			});
+							var counter = 0;
+						if(course.mandatory == true|| counter==0){
+							$("#überschrift-pflichtmodule").show(); 
+							$("#right").append('<table> <th> Kürzel</th><th>Bezeichnung</th><th>Semester</th><th>ECTS</th>');
+						counter=1;
+						};
+						if(course.mandatory == true){
+						$("#right").append('<tr><td>' + course.short_name +'</td><td>'+ course.full_name+'</td><td>'+course.semester+'</td><td>'+course.ects+'</td></tr>');		
+						};
+					});
+						$("#right").append('</table> ');
+						/*$.each( details.courses, function( index, course ){
 
-					console.log(details.courses); 
+						if(course.mandatory == false){
+							$("#überschrift-wahlmodule").show(); 
+							$("#tabelle-wahlmodule").append('<p>' + course.short_name + '</p>');
+						}
+
+						*/
+						
+
+					});
+
 
 					$('#ajax-loader').hide(); 
 				});
 			});
 	}); 
-}) 
+
 
 
 var tab=new Array();

@@ -30,9 +30,12 @@ position: absolute;
 	color: yellow; 
 }
 
+.arc {
+white-space: pre-line;
 
-
-
-
+}
+#details h2{
+display:inline;
+}
 
 
