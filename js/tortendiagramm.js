@@ -36,6 +36,7 @@ $.getJSON('/php/moduleGroups.php',
 			var svg = d3.select("#chartContainer").append("svg")
 			    .attr("width", width)
 			    .attr("height", height)
+			.attr("class" ,"svg-klasse")
 			    .append("g")
 			    .attr("transform", "translate(" + width / 2 + "," + height / 2 + ")"); 
 
@@ -53,7 +54,7 @@ $.getJSON('/php/moduleGroups.php',
 
 			g.on('mouseover', function(d){
 				g.append("text")
-			        .text(d.data.id + ' ' + d.data.name)
+			        .text(d.data.id + '' + d.data.name)
 			});
 
 			g.on('mouseout', function(d){
@@ -67,7 +68,21 @@ $.getJSON('/php/moduleGroups.php',
 				$.getJSON('/php/moduleGroups.php?module_details=' + d.data.id, function(data_details){
 					details = data_details.details; 	
 					$("#content").html('<h2><em>' +  details.id + ' </em> ' + details.name + '</h2>'); 
-					$("#content").append('<p>' + details.description + '</p>');			
+					$("#content").append('<p>' + details.description + '</p>');
+					$("#content").append('<p>' + details.minECTS + '</p>');
+					$("#content").append('<p>' + details.maxECTS + '</p>');
+
+					// eindeutiger Kurszugriff über short_name
+					// Pflichtmodul: mandatory = true 
+					$.each( details.courses, function( index, course ){
+						if(course.mandatory == true){ alert("kurs"); 
+							$("#content").html('<h3>Pflichtmodule</h3>'); 
+							$("#content").append('<p>' + course.short_name + '</p>');
+						 }
+			});
+
+					console.log(details.courses); 
+
 					$('#ajax-loader').hide(); 
 				});
 			});
