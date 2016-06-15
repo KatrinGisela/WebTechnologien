@@ -76,33 +76,27 @@ $(function() {$("#überschrift-pflichtmodule").append('<h3> Pflichtmodule </h3>'
 				$.getJSON('/php/moduleGroups.php?module_details=' + d.data.id, function(data_details){
 					details = data_details.details; 
 
-					// html-Funktion ersetzen mit einer Funktion, die vor #überschrift-pflichtmodule einfügt 
+					$("#right").empty; 
+					$("#überschrift-pflichtmodule").empty; 
 	
-					$("#right").html('<h2><em>' +  details.id + ' </em> ' + details.name + '</h2>'); 
-					$("#right").append('<p>' + details.minECTS + ' – ' + details.maxECTS + ' ECTS-Punkte </p>');
-					$("#right").append('<p>' + details.description + '</p>');
+					$("#überschrift-pflichtmodule").before('<h2><em>' +  details.id + ' </em> ' + details.name + '</h2>'); 
+					$("#überschrift-pflichtmodule").before('<p>' + details.minECTS + ' – ' + details.maxECTS + ' ECTS-Punkte </p>');
+					$("#überschrift-pflichtmodule").before('<p>' + details.description + '</p>');
 
 					console.log(); 
 
 					$.each( details.courses, function( index, course ){
-							console.log(course.short_name); 
 						if(course.mandatory == true){
-							console.log("mandatory == false : " + course.mandatory); 
 							$("#überschrift-pflichtmodule").show(); 
 							$("#right").append('<p>' + course.short_name + '</p>');
 						 }
 
 						if(course.mandatory == false){
-							console.log("mandatory == false : " + course.mandatory); 
 							$("#überschrift-wahlmodule").show(); 
 							$("#right").append('<p>' + course.short_name + '</p>');
 						}
 
 						
-
-
-
-
 					//<table> <tr> <td>Inhalt</td> </tr> </table> 
 
 
