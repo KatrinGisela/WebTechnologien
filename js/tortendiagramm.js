@@ -1,6 +1,6 @@
 // Tortendiagramm 
 
-$(function() {$('<img id="ajax-loader" src="img/ajax-loader.gif" alt="Animation, während die Seite lädt"/>').insertAfter('div#right');
+$(function() {$('<img id="ajax-loader" src="img/ajax-loader.gif" alt="Animation, während die Seite lädt"/>').insertAfter('h1');
 
 // Laden von Daten mittels AJAX-Befehl: https://xuad.net/artikel/vom-einfachen-ajax-request-zum-komplexen-objektaustausch-mit-json-mittels-jquery/ 
 // erster Aufruf onload
@@ -14,7 +14,6 @@ $.getJSON('/php/moduleGroups.php',
 				groups[index].mittelwert = (groups[index].minECTS+groups[index].maxECTS)/2; 
 			});
  
-			$('#ajax-loader').hide(); 
 
 			var categorical_colors = d3.scale.category10(); 
 			var width = 500,
@@ -63,7 +62,8 @@ $.getJSON('/php/moduleGroups.php',
 				d3.selectAll("text").remove(); 
 			});
 
-
+			$('#ajax-loader').hide();
+ 
 			$(function() {
 				$("#überschrift-pflichtmodule").append('<h3> Pflichtmodule </h3>');	
 				$("#überschrift-pflichtmodule").hide(); 
@@ -77,9 +77,6 @@ $.getJSON('/php/moduleGroups.php',
 				$.getJSON('/php/moduleGroups.php?module_details=' + d.data.id, function(data_details){
 					details = data_details.details; 
 
-
-					// html-Funktion ersetzen mit einer Funktion, die vor #überschrift-pflichtmodule einfügt 
-	
 					// .replaceWith nutzen? 
 					$("#details").empty();
 					$("#tabelle-pflichtmodule").empty(); 
@@ -87,22 +84,25 @@ $.getJSON('/php/moduleGroups.php',
 					$("#überschrift-pflichtmodule").hide(); 
 					$("#überschrift-wahlmodule").hide(); 
 					
-					$("#details").append('<p><h2 id="h2right"><em>' +  details.id + ' </em> ' + details.name + '</h2>'+' ['+ d.data.minECTS+' - '+d.data.maxECTS+ ' ECTS-Punkte] </p>'); 
+					$("#details")
+						.append('<p><h2 id="h2right"><em>' + details.id + ' </em> ' + details.name + '</h2>'+' ['+ d.data.minECTS+' – '+d.data.maxECTS+ ' ECTS-Punkte]</p>'); 
 					$("#details").append('<p>' + details.description + '</p>');
 		
-//tabelle-pflichtmodule, diesen tag einbauen
+//tabelle-pflichtmodule, diese id einbauen
+					var ersterDurchlauf = true;
 					$.each( details.courses, function( index, course ){
-							var counter = 0;
-						if(course.mandatory == true|| counter==0){
-							$("#überschrift-pflichtmodule").show(); 
-							$("#right").append('<table> <th> Kürzel</th><th>Bezeichnung</th><th>Semester</th><th>ECTS</th>');
-						counter=1;
-						};
-						if(course.mandatory == true){
-						$("#right").append('<tr><td>' + course.short_name +'</td><td>'+ course.full_name+'</td><td>'+course.semester+'</td><td>'+course.ects+'</td></tr>');		
+						if(course.mandatory == true && ersterDurchlauf==true){
+							$("#überschrift-pflichtmodule").show();
+							$("#tabelle-pflichtmodule").append('<table> <th> Kürzel</th><th>Bezeichnung</th><th>Semester</th><th>ECTS</th>');
+							ersterDurchlauf=false;
 						};
 					});
-						$("#right").append('</table> ');
+					$.each( details.courses, function( index, course ){
+						if(course.mandatory == true){
+						$("#tabelle-pflichtmodule").append('<tr><td>' + course.short_name +'</td><td>'+ course.full_name+'</td><td>'+course.semester+'</td><td>'+course.ects+'</td></tr>');		
+						$("#tabelle-pflichtmodule").append('</table> ');
+						};
+					});
 						/*$.each( details.courses, function( index, course ){
 
 						if(course.mandatory == false){
@@ -112,9 +112,7 @@ $.getJSON('/php/moduleGroups.php',
 
 						*/
 						
-
 					});
-
 
 					$('#ajax-loader').hide(); 
 				});
