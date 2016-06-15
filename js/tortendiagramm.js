@@ -1,6 +1,6 @@
 // Tortendiagramm 
 
-$(function() {$('<img id="ajax-loader" src="img/ajax-loader.gif" alt="Animation, während die Seite lädt"/>').insertAfter('div.right');
+$(function() {$('<img id="ajax-loader" src="img/ajax-loader.gif" alt="Animation, während die Seite lädt"/>').insertAfter('div#right');
 
 // Laden von Daten mittels AJAX-Befehl: https://xuad.net/artikel/vom-einfachen-ajax-request-zum-komplexen-objektaustausch-mit-json-mittels-jquery/ 
 // erster Aufruf onload
@@ -34,12 +34,11 @@ $.getJSON('/php/moduleGroups.php',
 			});
 
 			var svg = d3.select("#left").append("svg")
-			    .attr("width", width)
-			    .attr("height", height)
-			.attr("class" ,"svg-klasse")
-			    .append("g")
-			    .attr("transform", "translate(" + width / 2 + "," + height / 2 + ")"); 
-
+				.attr("width", width)
+				.attr("height", height)
+				.attr("class" ,"svg-klasse")
+				.append("g")
+				.attr("transform", "translate(" + width / 2 + "," + height / 2 + ")"); 
 
 			var g = svg.selectAll(".arc")
 				.data(pie(groups))
@@ -52,9 +51,9 @@ $.getJSON('/php/moduleGroups.php',
 			      return color(d.data.mittelwert);
 				});
 
-			g.on('mouseover', function(d){
+				g.on('mouseover', function(d){
 				g.append("text")
-			        .text(d.data.id + " \n" + d.data.name + " \n"+" ["+ d.data.minECTS+" - "+d.data.maxECTS+ " ECTS-Punkte]")
+			        	.text(d.data.id + " \n" + d.data.name + " \n"+" ["+ d.data.minECTS+" - "+d.data.maxECTS+ " ECTS-Punkte]")
 			});
 
 			g.on('mouseout', function(d){
@@ -64,11 +63,12 @@ $.getJSON('/php/moduleGroups.php',
 			});
 
 
-$(function() {$("#überschrift-pflichtmodule").append('<h3> Pflichtmodule </h3>');	
-					$("#überschrift-wahlmodule").append('<h3> Wahlmodule </h3>');
+			$(function() {
+				$("#überschrift-pflichtmodule").append('<h3> Pflichtmodule </h3>');	
 				$("#überschrift-pflichtmodule").hide(); 
+				$("#überschrift-wahlmodule").append('<h3> Wahlmodule </h3>');
 				$("#überschrift-wahlmodule").hide(); 
-			});
+				});
 
 
 			g.on('click', function(d){
@@ -76,33 +76,22 @@ $(function() {$("#überschrift-pflichtmodule").append('<h3> Pflichtmodule </h3>'
 				$.getJSON('/php/moduleGroups.php?module_details=' + d.data.id, function(data_details){
 					details = data_details.details; 
 
-					$("#right").empty; 
-					$("#überschrift-pflichtmodule").empty; 
-	
-					$("#überschrift-pflichtmodule").before('<h2><em>' +  details.id + ' </em> ' + details.name + '</h2>'); 
-					$("#überschrift-pflichtmodule").before('<p>' + details.minECTS + ' – ' + details.maxECTS + ' ECTS-Punkte </p>');
-					$("#überschrift-pflichtmodule").before('<p>' + details.description + '</p>');
-
-					console.log(); 
+					// .replaceWith nutzen? 
+					$("#details").empty();
+					$("#details").append('<h2><em>' +  details.id + ' </em> ' + details.name + '</h2>'); 
+					$("#details").append('<p>' + details.minECTS + ' – ' + details.maxECTS + ' ECTS-Punkte </p>');
+					$("#details").append('<p>' + details.description + '</p>');
 
 					$.each( details.courses, function( index, course ){
 						if(course.mandatory == true){
 							$("#überschrift-pflichtmodule").show(); 
-							$("#right").append('<p>' + course.short_name + '</p>');
+							$("#überschrift-pflichtmodule").append('<p>' + course.short_name + '</p>');
 						 }
-
 						if(course.mandatory == false){
 							$("#überschrift-wahlmodule").show(); 
-							$("#right").append('<p>' + course.short_name + '</p>');
+							$("#überschrift-wahlmodule").append('<p>' + course.short_name + '</p>');
 						}
-
-						
-					//<table> <tr> <td>Inhalt</td> </tr> </table> 
-
-
-			});
-
-					console.log(details.courses); 
+					});
 
 					$('#ajax-loader').hide(); 
 				});
