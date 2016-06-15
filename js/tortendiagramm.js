@@ -53,7 +53,7 @@ $.getJSON('/php/moduleGroups.php',
 
 			g.on('mouseover', function(d){
 				g.append("text")
-			        .text(d.data.id + ' ' + d.data.name)
+			        .html(d.data.id + " \n" + d.data.name)
 			});
 
 			g.on('mouseout', function(d){
