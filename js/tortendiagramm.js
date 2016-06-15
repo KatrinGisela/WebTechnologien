@@ -54,7 +54,7 @@ $.getJSON('/php/moduleGroups.php',
 
 			g.on('mouseover', function(d){
 				g.append("text")
-			        .html(d.data.id + " \n" + d.data.name)
+			        .text(d.data.id + " \n" + d.data.name + " \n"+" ["+ d.data.minECTS+" - "+d.data.maxECTS+ " ECTS-Punkte]")
 			});
 
 			g.on('mouseout', function(d){
