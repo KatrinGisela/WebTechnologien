@@ -54,7 +54,7 @@ $.getJSON('/php/moduleGroups.php',
 
 			g.on('mouseover', function(d){
 				g.append("text")
-			        .text(d.data.id + " \n" + d.data.name + " \n"+" ["+ d.data.minECTS+" - "+d.data.maxECTS+ " ECTS-Punkte]")
+			        .text(d.data.id + " \n" + d.data.name + " \n"+' ['+ d.data.minECTS+' - '+d.data.maxECTS+ ' ECTS-Punkte]')
 			});
 
 			g.on('mouseout', function(d){
@@ -78,36 +78,30 @@ $(function() {$("#überschrift-pflichtmodule").append('<h3> Pflichtmodule </h3>'
 
 					// html-Funktion ersetzen mit einer Funktion, die vor #überschrift-pflichtmodule einfügt 
 	
-					$("#right").html('<h2><em>' +  details.id + ' </em> ' + details.name + '</h2>'); 
-					$("#right").append('<p>' + details.minECTS + ' – ' + details.maxECTS + ' ECTS-Punkte </p>');
+					$("#right").html('<p><h2 id="h2right"><em>' +  details.id + ' </em> ' + details.name + '</h2>'+' ['+ d.data.minECTS+' - '+d.data.maxECTS+ ' ECTS-Punkte] </p>'); 
 					$("#right").append('<p>' + details.description + '</p>');
-
-					console.log(); 
+					$("#right").append('<hr />');					
 
 					$.each( details.courses, function( index, course ){
-							console.log(course.short_name); 
-						if(course.mandatory == true){
-							console.log("mandatory == false : " + course.mandatory); 
+							var counter = 0;
+						if(course.mandatory == true|| counter==0){
 							$("#überschrift-pflichtmodule").show(); 
-							$("#right").append('<p>' + course.short_name + '</p>');
-						 }
-
+							$("#right").append('<table> <th> Kürzel</th><th>Bezeichnung</th><th>Semester</th><th>ECTS</th>');
+						counter=1;
+						};
+						if(course.mandatory == true){
+						$("#right").append('<tr><td>' + course.short_name +'</td><td>'+ course.full_name+'</td><td>'+course.semester+'</td><td>'+course.ects+'</td></tr>');		
+						};
+					});
+						$("#right").append('</table> ');
+						/*$.each( details.courses, function( index, course ){
 						if(course.mandatory == false){
 							console.log("mandatory == false : " + course.mandatory); 
 							$("#überschrift-wahlmodule").show(); 
 							$("#right").append('<p>' + course.short_name + '</p>');
 						}
-
+						*/
 						
-
-
-
-
-					//<table> <tr> <td>Inhalt</td> </tr> </table> 
-
-
-			});
-
 					console.log(details.courses); 
 
 					$('#ajax-loader').hide(); 
