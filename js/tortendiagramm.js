@@ -79,12 +79,12 @@ $.getJSON('/php/moduleGroups.php',
 						.append('<p>' + details.description + '</p>');
 		
 //tabelle-pflichtmodule, diese id einbauen
-					var ersterDurchlauf = true;
+					var ersterDurchlaufPflicht = true;
 					$.each( details.courses, function( index, course ){
-						if(course.mandatory == true && ersterDurchlauf==true){
+						if(course.mandatory == true && ersterDurchlaufPflicht==true){
 							$("#überschrift-pflichtmodule").show();
 							$("#tabelle-pflichtmodule").append('<table> <th> Kürzel</th><th>Bezeichnung</th><th>Semester</th><th>ECTS</th>');
-							ersterDurchlauf=false;
+							ersterDurchlaufPflicht=false;
 						};
 					});
 					
@@ -92,10 +92,26 @@ $.getJSON('/php/moduleGroups.php',
 					
 					$.each( details.courses, function( index, course ){
 						if(course.mandatory == true){
-						$("#tabelle-pflichtmodule").append('<tr><td>' + course.short_name +'</td><td>'+ course.full_name+'</td><td>'+course.semester+'</td><td>'+course.ects+'</td></tr>');		
-						$("#tabelle-pflichtmodule").append('</table> ');
+						$('table').append('<tr><td>' + course.short_name +'</td><td>'+ course.full_name+'</td><td>'+course.semester+'</td><td>'+course.ects+'</td></tr>');		
+						
 						};
 					});
+					
+					var ersterDurchlaufWahl = true;
+					$.each( details.courses, function( index, course ){
+						if(course.mandatory == false && ersterDurchlaufWahl==true){
+							$("#überschrift-wahlmodule").show();
+							$("#tabelle-wahlmodule").append('<table> <th> Kürzel</th><th>Bezeichnung</th><th>Semester</th><th>ECTS</th>');
+							ersterDurchlaufWahl=false;
+						};
+					});
+					$.each( details.courses, function( index, course ){
+						if(course.mandatory == false){
+						$('table').append('<tr><td>' + course.short_name +'</td><td>'+ course.full_name+'</td><td>'+course.semester+'</td><td>'+course.ects+'</td></tr>');		
+						
+						};
+					});
+					
 						/*$.each( details.courses, function( index, course ){
 
 						if(course.mandatory == false){
@@ -108,29 +124,4 @@ $.getJSON('/php/moduleGroups.php',
 				});
 			});
 	}); 
-
-/*
-var tab=new Array();
-document.write("<table cellspacing='2' cellpadding='5' border='2' width='100%'>");
-for(i=0;i<groups.length;i++)
-   {
-   
-      tab=groups[i].split("/");
-      document.write("<tr>");
-      document.write("<td>" + tab[0] + "</td>");
-      document.write("<td>" + tab[1] + "</td>");
-      document.write("<td>" + tab[2] + "</td>");
-      document.write("<td>" + tab[3] + "</td>");
-      document.write("</tr>");
-      }
-   }
-document.write("</table>");
-
-CreateTable("unsereTabelle", hierTabelleRein, ["Kurse", "ECTS", "Modul"]);
-
-function createTable (id, where, data){
-	var table = '<table id=" '+ id +' + "<thead><tr>';
-	for (var i = 0; )
-}
-*/
 

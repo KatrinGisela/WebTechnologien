@@ -31,4 +31,14 @@
 	display:inline;
 }
 
+@media screen and (min-width: 540px) {
+ #left {width: 70%; float:left;}
+ #right {width: 30%; float:left;}
+ }
+
+ 
+
+th {
+    text-align: left;
+}
 
