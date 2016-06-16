@@ -38,7 +38,7 @@ white-space: pre-line;
 display:inline;
 }
 
-@media screen and (min-width: 540px) {
+@media screen and (min-width: 840px) {
  #left {width: 70%; float:left;}
  #right {width: 30%; float:left;}
  }
