@@ -18,24 +18,17 @@
     width: 100%;
 }
 
-
-
 #right{
-position: absolute;
+	position: absolute;
 
-}
-
-
-.data.id {
-	color: yellow; 
 }
 
 .arc {
-white-space: pre-line;
-
+	white-space: pre-line;
 }
+
 #details h2{
-display:inline;
+	display:inline;
 }
 
 

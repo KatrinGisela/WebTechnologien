@@ -29,6 +29,7 @@ $.getJSON('/php/moduleGroups.php',
 				.attr("width", width)
 				.attr("height", height)
 				.attr("class" ,"svg-klasse")
+				.attr("text-anchor", "middle")
 				.append("g")
 				.attr("transform", "translate(" + width / 2 + "," + height / 2 + ")"); 
 
@@ -45,7 +46,6 @@ $.getJSON('/php/moduleGroups.php',
 
 				g.on('mouseover', function(d){
 				g.append("text")
-				        .attr("text-anchor", "middle")
 				        .text(d.data.id + '\n' + d.data.name + '\n' + ' [' + d.data.minECTS + ' – ' + d.data.maxECTS + ' ECTS-Punkte]')
 			});
 
@@ -65,7 +65,7 @@ $.getJSON('/php/moduleGroups.php',
 				});
 
 			g.on('click', function(d){
-				$('#ajax-loader').show(); 
+				$('h1#ajax-loader').show(); 
 				$.getJSON('/php/moduleGroups.php?module_details=' + d.data.id, function(data_details){
 					details = data_details.details; 
 
