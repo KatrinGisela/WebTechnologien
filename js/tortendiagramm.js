@@ -46,10 +46,10 @@ $.getJSON('/php/moduleGroups.php',
 
 				g.on('mouseover', function(d){
 				g.append("text")
-			        .text(d.data.id + ' ' +  d.data.name +" [" + d.data.minECTS + " - " + d.data.maxECTS + " ECTS-Punkte]")
-			         .attr("text-anchor", "middle")
+			    //    .text(d.data.id + ' ' +  d.data.name +" [" + d.data.minECTS + " - " + d.data.maxECTS + " ECTS-Punkte]")
+				//	 .attr("text-anchor", "middle")
 
-			        .text(d.data.id + " \n" + d.data.name + " \n"+' ['+ d.data.minECTS+' - '+d.data.maxECTS+ ' ECTS-Punkte]')
+			       .text(d.data.id + " \n" + d.data.name + " \n"+' ['+ d.data.minECTS+' - '+d.data.maxECTS+ ' ECTS-Punkte]')
 
 
 			});
