@@ -1,10 +1,7 @@
-﻿
-.mainDiv {
+﻿.mainDiv {
 	display: flex;
 	justify-content: space-between;
 }
-
-/*left*/
 
 .item {
     position: relative;
@@ -23,22 +20,27 @@
 
 }
 
-.arc {
-	white-space: pre-line;
-}
-
 #details h2{
 	display: inline;
 }
 
+.arc {
+	white-space: pre-line;
+}
+
 .tspan {
-	text-anchor: middle;
-	text-align: center; 
+}
+
+#modul_id{
+	text-anchor: middle; 
+}
+
+#name{
+
 }
 
 #ects{
-	text-align: center; 
-	text-anchor: middle;
+
 }
 
 
