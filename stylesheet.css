@@ -32,14 +32,13 @@
 }
 
 .tspan {
-	text-anchor: center;
+	text-anchor: middle;
 	text-align: center; 
 }
 
 #ects{
 	text-align: center; 
-	text-anchor: center;
+	text-anchor: middle;
 }
-
 
 
