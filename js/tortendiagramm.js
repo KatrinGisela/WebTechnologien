@@ -97,10 +97,11 @@ $.getJSON('/php/moduleGroups.php',
 					});
 					$.each( details.courses, function( index, course ){
 						if(course.mandatory == true){
-						$("#tabelle-pflichtmodule").append('<tr><td>' + course.short_name +'</td><td>'+ course.full_name+'</td><td>'+course.semester+'</td><td>'+course.ects+'</td></tr>');		
-						$("#tabelle-pflichtmodule").append('</table> ');
+						$('table').append('<tr><td>' + course.short_name +'</td><td>'+ course.full_name+'</td><td>'+course.semester+'</td><td>'+course.ects+'</td></tr>');		
+						
 						};
 					});
+					
 						/*$.each( details.courses, function( index, course ){
 
 						if(course.mandatory == false){
