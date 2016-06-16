@@ -1,10 +1,4 @@
-// Tortendiagramm 
-
 $(function() {$('<img id="ajax-loader" src="img/ajax-loader.gif" alt="Animation, während die Seite lädt"/>').insertAfter('h1');
-
-// Laden von Daten mittels AJAX-Befehl: https://xuad.net/artikel/vom-einfachen-ajax-request-zum-komplexen-objektaustausch-mit-json-mittels-jquery/ 
-// erster Aufruf onload
-// S92!!! getJSON!
 
 $.getJSON('/php/moduleGroups.php', 
 		function(data) {
@@ -124,7 +118,7 @@ $.getJSON('/php/moduleGroups.php',
 	}); 
 
 
-
+/*
 var tab=new Array();
 document.write("<table cellspacing='2' cellpadding='5' border='2' width='100%'>");
 for(i=0;i<groups.length;i++)
@@ -148,4 +142,4 @@ function createTable (id, where, data){
 	for (var i = 0; )
 }
 
-
+*/
