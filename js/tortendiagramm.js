@@ -45,10 +45,8 @@ $.getJSON('/php/moduleGroups.php',
 
 				g.on('mouseover', function(d){
 				g.append("text")
-			        	.text(d.data.id + ' ' +  d.data.name +" [" + d.data.minECTS + " - " + d.data.maxECTS + " ECTS-Punkte]")
 				        .attr("text-anchor", "middle")
 				        .text(d.data.id + '\n' + d.data.name + '\n' + ' [' + d.data.minECTS + ' – ' + d.data.maxECTS + ' ECTS-Punkte]')
-
 
 			});
 
@@ -115,6 +113,7 @@ $.getJSON('/php/moduleGroups.php',
 
 
 
+/* 
 var tab=new Array();
 document.write("<table cellspacing='2' cellpadding='5' border='2' width='100%'>");
 for(i=0;i<groups.length;i++)
@@ -137,5 +136,5 @@ function createTable (id, where, data){
 	var table = '<table id=" '+ id +' + "<thead><tr>';
 	for (var i = 0; )
 }
-
+*/
 
