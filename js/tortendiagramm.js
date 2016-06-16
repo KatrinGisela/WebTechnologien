@@ -88,15 +88,12 @@ $.getJSON('/php/moduleGroups.php',
 						};
 					});
 					
-					$('#ajax-loader').hide(); 
-					
 					$.each( details.courses, function( index, course ){
 						if(course.mandatory == true){
 						$('table').append('<tr><td>' + course.short_name +'</td><td>'+ course.full_name+'</td><td>'+course.semester+'</td><td>'+course.ects+'</td></tr>');		
 						
 						};
 					});
-					
 					var ersterDurchlaufWahl = true;
 					$.each( details.courses, function( index, course ){
 						if(course.mandatory == false && ersterDurchlaufWahl==true){
@@ -110,18 +107,11 @@ $.getJSON('/php/moduleGroups.php',
 						$('table').append('<tr><td>' + course.short_name +'</td><td>'+ course.full_name+'</td><td>'+course.semester+'</td><td>'+course.ects+'</td></tr>');		
 						
 						};
-					});
-					
-						/*$.each( details.courses, function( index, course ){
 
-						if(course.mandatory == false){
-							$("#überschrift-wahlmodule").show(); 
-							$("#tabelle-wahlmodule").append('<p>' + course.short_name + '</p>');
-						}
-						*/
-						
 					});
+					$('#ajax-loader').hide(); 
 				});
 			});
+		});
 	}); 
 
