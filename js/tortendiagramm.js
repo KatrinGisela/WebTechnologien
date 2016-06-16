@@ -81,16 +81,31 @@ $.getJSON('/php/moduleGroups.php',
 						.append('<p>' + details.description + '</p>');
 		
 //tabelle-pflichtmodule, diese id einbauen
-					var ersterDurchlauf = true;
+					var ersterDurchlaufPflicht = true;
 					$.each( details.courses, function( index, course ){
-						if(course.mandatory == true && ersterDurchlauf==true){
+						if(course.mandatory == true && ersterDurchlaufPflicht==true){
 							$("#überschrift-pflichtmodule").show();
 							$("#tabelle-pflichtmodule").append('<table> <th> Kürzel</th><th>Bezeichnung</th><th>Semester</th><th>ECTS</th>');
-							ersterDurchlauf=false;
+							ersterDurchlaufPflicht=false;
 						};
 					});
 					$.each( details.courses, function( index, course ){
 						if(course.mandatory == true){
+						$('table').append('<tr><td>' + course.short_name +'</td><td>'+ course.full_name+'</td><td>'+course.semester+'</td><td>'+course.ects+'</td></tr>');		
+						
+						};
+					});
+					
+					var ersterDurchlaufWahl = true;
+					$.each( details.courses, function( index, course ){
+						if(course.mandatory == false && ersterDurchlaufWahl==true){
+							$("#überschrift-wahlmodule").show();
+							$("#tabelle-wahlmodule").append('<table> <th> Kürzel</th><th>Bezeichnung</th><th>Semester</th><th>ECTS</th>');
+							ersterDurchlaufWahl=false;
+						};
+					});
+					$.each( details.courses, function( index, course ){
+						if(course.mandatory == false){
 						$('table').append('<tr><td>' + course.short_name +'</td><td>'+ course.full_name+'</td><td>'+course.semester+'</td><td>'+course.ects+'</td></tr>');		
 						
 						};
