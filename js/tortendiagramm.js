@@ -9,15 +9,15 @@ $.getJSON('/php/moduleGroups.php',
 			});
  
 			var categorical_colors = d3.scale.category10(); 
-			var width = 500,
-			    height = 250,
+			var width = 400,
+			    height = 400,
 			    radius = Math.min(width, height) / 2;
 
 			var color = d3.scale.category10(); 
 
 			var arc = d3.svg.arc()
 			    .outerRadius(radius - 10)
-			    .innerRadius(radius - 50);
+			    .innerRadius(radius - 80);
 
 			var pie = d3.layout.pie()
 			    .sort(null)
@@ -29,6 +29,7 @@ $.getJSON('/php/moduleGroups.php',
 				.attr("width", width)
 				.attr("height", height)
 				.attr("class" ,"svg-klasse")
+				.attr("text-anchor", "middle")
 				.append("g")
 				.attr("transform", "translate(" + width / 2 + "," + height / 2 + ")"); 
 
@@ -44,6 +45,7 @@ $.getJSON('/php/moduleGroups.php',
 				});
 
 				g.on('mouseover', function(d){
+
 				var legend = g.append("text");
 				        //legend.attr("text-anchor", "middle") DAS GEHT IRGENDWIE NICHT
 				        legend.append("tspan").text(d.data.id + '\n' )
@@ -71,15 +73,13 @@ $.getJSON('/php/moduleGroups.php',
 
 			g.on('click', function(d){
 				$('#ajax-loader').show(); 
+				$("#details").empty();
+				$("#tabelle-pflichtmodule").empty(); 
+				$("#tabelle-wahlmodule").empty(); 
+				$("#überschrift-pflichtmodule").hide(); 
+				$("#überschrift-wahlmodule").hide(); 
 				$.getJSON('/php/moduleGroups.php?module_details=' + d.data.id, function(data_details){
 					details = data_details.details; 
-
-					$("#details").empty();
-					$("#tabelle-pflichtmodule").empty(); 
-					$("#tabelle-wahlmodule").empty(); 
-					$("#überschrift-pflichtmodule").hide(); 
-					$("#überschrift-wahlmodule").hide(); 
-					
 					$("#details")
 						.append('<p><h2 id="h2right"><em>' + details.id + ' </em> ' + details.name + '</h2>'+' ['+ d.data.minECTS+' – '+d.data.maxECTS+ ' ECTS-Punkte]</p>'); 
 					$("#details")
@@ -94,13 +94,13 @@ $.getJSON('/php/moduleGroups.php',
 							ersterDurchlaufPflicht=false;
 						};
 					});
+					
 					$.each( details.courses, function( index, course ){
 						if(course.mandatory == true){
 						$('table').append('<tr><td>' + course.short_name +'</td><td>'+ course.full_name+'</td><td>'+course.semester+'</td><td>'+course.ects+'</td></tr>');		
 						
 						};
 					});
-					
 					var ersterDurchlaufWahl = true;
 					$.each( details.courses, function( index, course ){
 						if(course.mandatory == false && ersterDurchlaufWahl==true){
@@ -114,11 +114,15 @@ $.getJSON('/php/moduleGroups.php',
 						$('table').append('<tr><td>' + course.short_name +'</td><td>'+ course.full_name+'</td><td>'+course.semester+'</td><td>'+course.ects+'</td></tr>');		
 						
 						};
+<<<<<<< HEAD
 					});
-					});
+=======
 
+>>>>>>> origin/master
+					});
 					$('#ajax-loader').hide(); 
 				});
 			});
+		});
 	}); 
 
