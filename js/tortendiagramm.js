@@ -114,11 +114,9 @@ $.getJSON('/php/moduleGroups.php',
 						$('table').append('<tr><td>' + course.short_name +'</td><td>'+ course.full_name+'</td><td>'+course.semester+'</td><td>'+course.ects+'</td></tr>');		
 						
 						};
-<<<<<<< HEAD
-					});
-=======
 
->>>>>>> origin/master
+				
+
 					});
 					$('#ajax-loader').hide(); 
 				});
