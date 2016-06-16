@@ -17,7 +17,7 @@ $.getJSON('/php/moduleGroups.php',
 
 			var arc = d3.svg.arc()
 			    .outerRadius(radius - 10)
-			    .innerRadius(radius - 80);
+			    .innerRadius(radius - 70);
 
 			var pie = d3.layout.pie()
 			    .sort(null)
@@ -29,7 +29,6 @@ $.getJSON('/php/moduleGroups.php',
 				.attr("width", width)
 				.attr("height", height)
 				.attr("class" ,"svg-klasse")
-				.attr("text-anchor", "middle")
 				.append("g")
 				.attr("transform", "translate(" + width / 2 + "," + height / 2 + ")"); 
 
@@ -44,16 +43,14 @@ $.getJSON('/php/moduleGroups.php',
 				      return color(d.data.mittelwert);
 				});
 
-				g.on('mouseover', function(d){
-
-				var legend = g.append("text");
-				        //legend.attr("text-anchor", "middle") DAS GEHT IRGENDWIE NICHT
-				        legend.append("tspan").text(d.data.id + '\n' )
-						.attr("id","hierKannstDuEineIDVergebenDieDuBenutzenKannst")
-						legend.append("tspan").text(d.data.name + '\n' )
-						.attr("id","hierKannstDuEineIDVergebenDieDuBenutzenKannst2")
-						legend.append("tspan").text(' [' + d.data.minECTS + ' – ' + d.data.maxECTS + ' ECTS-Punkte]' )
-						.attr("id","hierKannstDuEineIDVergebenDieDuBenutzenKannst3")
+			g.on('mouseover', function(d){
+				var hovertext = g.append("text");
+			        hovertext.append("tspan").text(d.data.id + '\n' )
+					.attr("id","id")
+				hovertext.append("tspan").text(d.data.name + '\n' )
+					.attr("id","name")
+				hovertext.append("tspan").text('[' + d.data.minECTS + ' – ' + d.data.maxECTS + ' ECTS-Punkte]' )
+					.attr("id","ects")
 			});
 
 			g.on('mouseout', function(d){
