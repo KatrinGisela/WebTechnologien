@@ -111,28 +111,3 @@ $.getJSON('/php/moduleGroups.php',
 			});
 	}); 
 
-/*
-var tab=new Array();
-document.write("<table cellspacing='2' cellpadding='5' border='2' width='100%'>");
-for(i=0;i<groups.length;i++)
-   {
-   
-      tab=groups[i].split("/");
-      document.write("<tr>");
-      document.write("<td>" + tab[0] + "</td>");
-      document.write("<td>" + tab[1] + "</td>");
-      document.write("<td>" + tab[2] + "</td>");
-      document.write("<td>" + tab[3] + "</td>");
-      document.write("</tr>");
-      }
-   }
-document.write("</table>");
-
-CreateTable("unsereTabelle", hierTabelleRein, ["Kurse", "ECTS", "Modul"]);
-
-function createTable (id, where, data){
-	var table = '<table id=" '+ id +' + "<thead><tr>';
-	for (var i = 0; )
-}
-*/
-
