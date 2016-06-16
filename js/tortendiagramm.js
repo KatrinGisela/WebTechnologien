@@ -63,8 +63,6 @@ $.getJSON('/php/moduleGroups.php',
 
 			g.on('mouseout', function(d){
 				$("text").hide();
-				// folgende Zeile wird gebraucht, da sich die text-Element aus g.on('mouseover', …) sonst in der html-Datei ansammlen
-//				d3.selectAll("text").remove(); 
 			});
 
 			$('#ajax-loader').hide();
@@ -90,7 +88,7 @@ $.getJSON('/php/moduleGroups.php',
 					$("#details")
 						.append('<p>' + details.description + '</p>');
 		
-//tabelle-pflichtmodule, diese id einbauen
+		
 					var ersterDurchlaufPflicht = true;
 					$.each( details.courses, function( index, course ){
 						if(course.mandatory == true && ersterDurchlaufPflicht==true){
