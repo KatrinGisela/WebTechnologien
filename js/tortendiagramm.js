@@ -46,16 +46,12 @@ $.getJSON('/php/moduleGroups.php',
 			g.on('mouseover', function(d){
 				var hovertext = g.append("text");
 			        hovertext.append("tspan").text(d.data.id + '\n' )
-					.attr("id","modulid")
+					.attr("id","id")
 				hovertext.append("tspan").text(d.data.name + '\n' )
 					.attr("id","name")
 				hovertext.append("tspan").text('[' + d.data.minECTS + ' – ' + d.data.maxECTS + ' ECTS-Punkte]' )
-					.attr("id","ects");
- 					 
+					.attr("id","ects")
 			});
-
-	  
-	 
 
 			g.on('mouseout', function(d){
 				$("text").hide();
