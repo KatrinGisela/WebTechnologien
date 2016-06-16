@@ -65,16 +65,14 @@ $.getJSON('/php/moduleGroups.php',
 				});
 
 			g.on('click', function(d){
-				$('h1#ajax-loader').show(); 
+				$('#ajax-loader').show(); 
+				$("#details").empty();
+				$("#tabelle-pflichtmodule").empty(); 
+				$("#tabelle-wahlmodule").empty(); 
+				$("#überschrift-pflichtmodule").hide(); 
+				$("#überschrift-wahlmodule").hide(); 
 				$.getJSON('/php/moduleGroups.php?module_details=' + d.data.id, function(data_details){
 					details = data_details.details; 
-
-					$("#details").empty();
-					$("#tabelle-pflichtmodule").empty(); 
-					$("#tabelle-wahlmodule").empty(); 
-					$("#überschrift-pflichtmodule").hide(); 
-					$("#überschrift-wahlmodule").hide(); 
-					
 					$("#details")
 						.append('<p><h2 id="h2right"><em>' + details.id + ' </em> ' + details.name + '</h2>'+' ['+ d.data.minECTS+' – '+d.data.maxECTS+ ' ECTS-Punkte]</p>'); 
 					$("#details")
@@ -89,6 +87,9 @@ $.getJSON('/php/moduleGroups.php',
 							ersterDurchlauf=false;
 						};
 					});
+					
+					$('#ajax-loader').hide(); 
+					
 					$.each( details.courses, function( index, course ){
 						if(course.mandatory == true){
 						$("#tabelle-pflichtmodule").append('<tr><td>' + course.short_name +'</td><td>'+ course.full_name+'</td><td>'+course.semester+'</td><td>'+course.ects+'</td></tr>');		
@@ -104,8 +105,6 @@ $.getJSON('/php/moduleGroups.php',
 						*/
 						
 					});
-
-					$('#ajax-loader').hide(); 
 				});
 			});
 	}); 
