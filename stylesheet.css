@@ -38,4 +38,6 @@ white-space: pre-line;
 display:inline;
 }
 
-
+th {
+    text-align: left;
+}
