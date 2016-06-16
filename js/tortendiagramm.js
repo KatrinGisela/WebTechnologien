@@ -47,7 +47,6 @@ $.getJSON('/php/moduleGroups.php',
 				g.append("text")
 				        .attr("text-anchor", "middle")
 				        .text(d.data.id + '\n' + d.data.name + '\n' + ' [' + d.data.minECTS + ' – ' + d.data.maxECTS + ' ECTS-Punkte]')
-
 			});
 
 			g.on('mouseout', function(d){
@@ -111,9 +110,7 @@ $.getJSON('/php/moduleGroups.php',
 			});
 	}); 
 
-
-
-/* 
+/*
 var tab=new Array();
 document.write("<table cellspacing='2' cellpadding='5' border='2' width='100%'>");
 for(i=0;i<groups.length;i++)
