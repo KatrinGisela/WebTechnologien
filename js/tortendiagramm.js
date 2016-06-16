@@ -43,15 +43,22 @@ $.getJSON('/php/moduleGroups.php',
 				});
 
 			g.on('mouseover', function(d){
-				var hovertext = g.append("text");
+				var hovertext = g.append("text")
+					.attr("text-anchor","middle");
+
 			        hovertext.append("tspan").text(d.data.id + '\n' )
 					.attr("id","modul_id")
-					.style("text-align","center")
+					.style("font-weight", "bold")
+					.attr("text-anchor","middle");
+
 				hovertext.append("tspan").text(d.data.name + '\n' )
 					.attr("id","name")
+					.attr("text-anchor","middle");
+
 				hovertext.append("tspan").text('[' + d.data.minECTS + ' – ' + d.data.maxECTS + ' ECTS-Punkte]' )
 					.attr("id","ects") 
-					.style("fill","grey");
+					.style("fill","grey")
+					.attr("text-anchor","middle");
 			});
 
 			g.on('mouseout', function(d){
