@@ -1,10 +1,4 @@
-// Tortendiagramm 
-
 $(function() {$('<img id="ajax-loader" src="img/ajax-loader.gif" alt="Animation, während die Seite lädt"/>').insertAfter('h1');
-
-// Laden von Daten mittels AJAX-Befehl: https://xuad.net/artikel/vom-einfachen-ajax-request-zum-komplexen-objektaustausch-mit-json-mittels-jquery/ 
-// erster Aufruf onload
-// S92!!! getJSON!
 
 $.getJSON('/php/moduleGroups.php', 
 		function(data) {
@@ -14,7 +8,6 @@ $.getJSON('/php/moduleGroups.php',
 				groups[index].mittelwert = (groups[index].minECTS+groups[index].maxECTS)/2; 
 			});
  
-
 			var categorical_colors = d3.scale.category10(); 
 			var width = 500,
 			    height = 250,
@@ -29,7 +22,7 @@ $.getJSON('/php/moduleGroups.php',
 			var pie = d3.layout.pie()
 			    .sort(null)
 			    .value(function (d) {
-			    return d.mittelwert;
+				    return d.mittelwert;
 			});
 
 			var svg = d3.select("#left").append("svg")
@@ -47,15 +40,14 @@ $.getJSON('/php/moduleGroups.php',
 			    g.append("path")
 			        .attr("d", arc)
 			        .style("fill", function (d) {
-			      return color(d.data.mittelwert);
+				      return color(d.data.mittelwert);
 				});
 
 				g.on('mouseover', function(d){
 				g.append("text")
-			        .text(d.data.id + ' ' +  d.data.name +" [" + d.data.minECTS + " - " + d.data.maxECTS + " ECTS-Punkte]")
-			         .attr("text-anchor", "middle")
-
-			        .text(d.data.id + " \n" + d.data.name + " \n"+' ['+ d.data.minECTS+' - '+d.data.maxECTS+ ' ECTS-Punkte]')
+			        	.text(d.data.id + ' ' +  d.data.name +" [" + d.data.minECTS + " - " + d.data.maxECTS + " ECTS-Punkte]")
+				        .attr("text-anchor", "middle")
+				        .text(d.data.id + '\n' + d.data.name + '\n' + ' [' + d.data.minECTS + ' – ' + d.data.maxECTS + ' ECTS-Punkte]')
 
 
 			});
@@ -75,13 +67,11 @@ $.getJSON('/php/moduleGroups.php',
 				$("#überschrift-wahlmodule").hide(); 
 				});
 
-
 			g.on('click', function(d){
 				$('#ajax-loader').show(); 
 				$.getJSON('/php/moduleGroups.php?module_details=' + d.data.id, function(data_details){
 					details = data_details.details; 
 
-					// .replaceWith nutzen? 
 					$("#details").empty();
 					$("#tabelle-pflichtmodule").empty(); 
 					$("#tabelle-wahlmodule").empty(); 
@@ -90,7 +80,8 @@ $.getJSON('/php/moduleGroups.php',
 					
 					$("#details")
 						.append('<p><h2 id="h2right"><em>' + details.id + ' </em> ' + details.name + '</h2>'+' ['+ d.data.minECTS+' – '+d.data.maxECTS+ ' ECTS-Punkte]</p>'); 
-					$("#details").append('<p>' + details.description + '</p>');
+					$("#details")
+						.append('<p>' + details.description + '</p>');
 		
 //tabelle-pflichtmodule, diese id einbauen
 					var ersterDurchlauf = true;
@@ -113,7 +104,6 @@ $.getJSON('/php/moduleGroups.php',
 							$("#überschrift-wahlmodule").show(); 
 							$("#tabelle-wahlmodule").append('<p>' + course.short_name + '</p>');
 						}
-
 						*/
 						
 					});
