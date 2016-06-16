@@ -9,15 +9,15 @@ $.getJSON('/php/moduleGroups.php',
 			});
  
 			var categorical_colors = d3.scale.category10(); 
-			var width = 500,
-			    height = 250,
+			var width = 400,
+			    height = 400,
 			    radius = Math.min(width, height) / 2;
 
 			var color = d3.scale.category10(); 
 
 			var arc = d3.svg.arc()
 			    .outerRadius(radius - 10)
-			    .innerRadius(radius - 50);
+			    .innerRadius(radius - 70);
 
 			var pie = d3.layout.pie()
 			    .sort(null)
@@ -43,10 +43,14 @@ $.getJSON('/php/moduleGroups.php',
 				      return color(d.data.mittelwert);
 				});
 
-				g.on('mouseover', function(d){
-				g.append("text")
-				        .attr("text-anchor", "middle")
-				        .text(d.data.id + '\n' + d.data.name + '\n' + ' [' + d.data.minECTS + ' – ' + d.data.maxECTS + ' ECTS-Punkte]')
+			g.on('mouseover', function(d){
+				var hovertext = g.append("text");
+			        hovertext.append("tspan").text(d.data.id + '\n' )
+					.attr("id","id")
+				hovertext.append("tspan").text(d.data.name + '\n' )
+					.attr("id","name")
+				hovertext.append("tspan").text('[' + d.data.minECTS + ' – ' + d.data.maxECTS + ' ECTS-Punkte]' )
+					.attr("id","ects")
 			});
 
 			g.on('mouseout', function(d){
@@ -66,15 +70,13 @@ $.getJSON('/php/moduleGroups.php',
 
 			g.on('click', function(d){
 				$('#ajax-loader').show(); 
+				$("#details").empty();
+				$("#tabelle-pflichtmodule").empty(); 
+				$("#tabelle-wahlmodule").empty(); 
+				$("#überschrift-pflichtmodule").hide(); 
+				$("#überschrift-wahlmodule").hide(); 
 				$.getJSON('/php/moduleGroups.php?module_details=' + d.data.id, function(data_details){
 					details = data_details.details; 
-
-					$("#details").empty();
-					$("#tabelle-pflichtmodule").empty(); 
-					$("#tabelle-wahlmodule").empty(); 
-					$("#überschrift-pflichtmodule").hide(); 
-					$("#überschrift-wahlmodule").hide(); 
-					
 					$("#details")
 						.append('<p><h2 id="h2right"><em>' + details.id + ' </em> ' + details.name + '</h2>'+' ['+ d.data.minECTS+' – '+d.data.maxECTS+ ' ECTS-Punkte]</p>'); 
 					$("#details")
@@ -89,13 +91,13 @@ $.getJSON('/php/moduleGroups.php',
 							ersterDurchlaufPflicht=false;
 						};
 					});
+					
 					$.each( details.courses, function( index, course ){
 						if(course.mandatory == true){
 						$('table').append('<tr><td>' + course.short_name +'</td><td>'+ course.full_name+'</td><td>'+course.semester+'</td><td>'+course.ects+'</td></tr>');		
 						
 						};
 					});
-					
 					var ersterDurchlaufWahl = true;
 					$.each( details.courses, function( index, course ){
 						if(course.mandatory == false && ersterDurchlaufWahl==true){
@@ -109,20 +111,13 @@ $.getJSON('/php/moduleGroups.php',
 						$('table').append('<tr><td>' + course.short_name +'</td><td>'+ course.full_name+'</td><td>'+course.semester+'</td><td>'+course.ects+'</td></tr>');		
 						
 						};
-					});
-					
-						/*$.each( details.courses, function( index, course ){
 
-						if(course.mandatory == false){
-							$("#überschrift-wahlmodule").show(); 
-							$("#tabelle-wahlmodule").append('<p>' + course.short_name + '</p>');
-						}
-						*/
-						
-					});
+				
 
+					});
 					$('#ajax-loader').hide(); 
 				});
 			});
+		});
 	}); 
 
