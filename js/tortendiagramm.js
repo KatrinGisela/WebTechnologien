@@ -9,15 +9,15 @@ $.getJSON('/php/moduleGroups.php',
 			});
  
 			var categorical_colors = d3.scale.category10(); 
-			var width = 500,
-			    height = 250,
+			var width = 400,
+			    height = 400,
 			    radius = Math.min(width, height) / 2;
 
 			var color = d3.scale.category10(); 
 
 			var arc = d3.svg.arc()
 			    .outerRadius(radius - 10)
-			    .innerRadius(radius - 50);
+			    .innerRadius(radius - 80);
 
 			var pie = d3.layout.pie()
 			    .sort(null)
