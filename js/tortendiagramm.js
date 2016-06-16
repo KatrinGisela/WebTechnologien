@@ -44,9 +44,14 @@ $.getJSON('/php/moduleGroups.php',
 				});
 
 				g.on('mouseover', function(d){
-				g.append("text")
-				        .attr("text-anchor", "middle")
-				        .text(d.data.id + '\n' + d.data.name + '\n' + ' [' + d.data.minECTS + ' – ' + d.data.maxECTS + ' ECTS-Punkte]')
+				var legend = g.append("text");
+				        //legend.attr("text-anchor", "middle") DAS GEHT IRGENDWIE NICHT
+				        legend.append("tspan").text(d.data.id + '\n' )
+						.attr("id","hierKannstDuEineIDVergebenDieDuBenutzenKannst")
+						legend.append("tspan").text(d.data.name + '\n' )
+						.attr("id","hierKannstDuEineIDVergebenDieDuBenutzenKannst2")
+						legend.append("tspan").text(' [' + d.data.minECTS + ' – ' + d.data.maxECTS + ' ECTS-Punkte]' )
+						.attr("id","hierKannstDuEineIDVergebenDieDuBenutzenKannst3")
 			});
 
 			g.on('mouseout', function(d){
@@ -110,15 +115,6 @@ $.getJSON('/php/moduleGroups.php',
 						
 						};
 					});
-					
-						/*$.each( details.courses, function( index, course ){
-
-						if(course.mandatory == false){
-							$("#überschrift-wahlmodule").show(); 
-							$("#tabelle-wahlmodule").append('<p>' + course.short_name + '</p>');
-						}
-						*/
-						
 					});
 
 					$('#ajax-loader').hide(); 
