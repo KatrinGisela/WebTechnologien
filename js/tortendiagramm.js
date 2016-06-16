@@ -26,8 +26,7 @@ $.getJSON('/php/moduleGroups.php',
 			});
 
 			var svg = d3.select("#left").append("svg")
-				.attr("width", width)
-				.attr("height", height)
+				.attr("viewBox", "0 0 "+ width + " " + height)
 				.attr("class" ,"svg-klasse")
 				.append("g")
 				.attr("transform", "translate(" + width / 2 + "," + height / 2 + ")"); 
@@ -46,17 +45,19 @@ $.getJSON('/php/moduleGroups.php',
 			g.on('mouseover', function(d){
 				var hovertext = g.append("text");
 			        hovertext.append("tspan").text(d.data.id + '\n' )
-					.attr("id","id")
+					.attr("id","modul_id")
+					.style("text-align","center")
 				hovertext.append("tspan").text(d.data.name + '\n' )
 					.attr("id","name")
 				hovertext.append("tspan").text('[' + d.data.minECTS + ' – ' + d.data.maxECTS + ' ECTS-Punkte]' )
-					.attr("id","ects")
+					.attr("id","ects") 
+					.style("fill","grey");
 			});
 
 			g.on('mouseout', function(d){
 				$("text").hide();
 				// folgende Zeile wird gebraucht, da sich die text-Element aus g.on('mouseover', …) sonst in der html-Datei ansammlen
-				d3.selectAll("text").remove(); 
+//				d3.selectAll("text").remove(); 
 			});
 
 			$('#ajax-loader').hide();
@@ -98,24 +99,24 @@ $.getJSON('/php/moduleGroups.php',
 						
 						};
 					});
+
 					var ersterDurchlaufWahl = true;
 					$.each( details.courses, function( index, course ){
 						if(course.mandatory == false && ersterDurchlaufWahl==true){
 							$("#überschrift-wahlmodule").show();
-							$("#tabelle-wahlmodule").append('<table> <th> Kürzel</th><th>Bezeichnung</th><th>Semester</th><th>ECTS</th>');
+							$("#tabelle-wahlmodule").append('<table id="wahlmodule"> <th> Kürzel</th><th>Bezeichnung</th><th>Semester</th><th>ECTS</th>');
 							ersterDurchlaufWahl=false;
 						};
-					});
+					}); 
+
 					$.each( details.courses, function( index, course ){
 						if(course.mandatory == false){
-						$('table').append('<tr><td>' + course.short_name +'</td><td>'+ course.full_name+'</td><td>'+course.semester+'</td><td>'+course.ects+'</td></tr>');		
-						
+						$('table#wahlmodule').append('<tr><td>' + course.short_name +'</td><td>'+ course.full_name+'</td><td>'+course.semester+'</td><td>'+course.ects+'</td></tr>');		
 						};
+					}); 
 
-				
-
-					});
 					$('#ajax-loader').hide(); 
+
 				});
 			});
 		});

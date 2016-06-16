@@ -1,10 +1,7 @@
 ﻿.mainDiv {
 	display: flex;
 	justify-content: space-between;
-	width:1000px;
 }
-
-/*left*/
 
 .item {
     position: relative;
@@ -23,22 +20,27 @@
 
 }
 
+#details h2{
+	display: inline;
+}
+
 .arc {
 	white-space: pre-line;
 }
 
-#details h2{
-	display:inline;
+.tspan {
 }
 
-@media screen and (min-width: 840px) {
- #left {width: 70%; float:left;}
- #right {width: 30%; float:left;}
- }
-
- 
-
-th {
-    text-align: left;
+#modul_id{
+	text-anchor: middle; 
 }
+
+#name{
+
+}
+
+#ects{
+
+}
+
 
