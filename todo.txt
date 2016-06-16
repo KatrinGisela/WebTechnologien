@@ -3,11 +3,10 @@
 https://bl.ocks.org/mbostock/3887193
 
 Andreas
--Arithmetische Mittelwerte der ECTS-Punkte der 7 Module in ein Array/oder 7 Variablen?
--Diagramm: Schnittstellen über id (z. B. id=A1) einbauen und Grafik dynamisieren z. B. mit 
-	• https://wiki.selfhtml.org/wiki/SVG/responsiv#externe_Vektorgrafiken_responsiv_darstellen 
-	• http://stackoverflow.com/questions/16265123/resize-svg-when-window-is-resized-in-d3-js
-- AJAX-Loader an die richtige Stelle verschieben 
+	– in den Tabellen Wahlmodule aus den Pflichtmodulen rausnehmen 
+	– verschiedene Textstile für hovertext
+	– svg dynamisch
+
 
 Sladjana
 -hover-Effekt Diagrammteile
@@ -18,16 +17,8 @@ Gisela
 
 
 Notizen Andreas
-	– Fehlerbehandlung? 
-	– mit Entwickler-Werkzeuge -> Konsole -> console.log 
 	– in d3js: class=doughnut, und bei Aufteilung id=$Modul (z. B. id=A1) 
 		laut Folie 105: 
-		• erster Aufruf mit .enter()
-		• alle weiteren mit .update() 
-		• bei neuem Modul vorher Alles mit .exit() wieder löschen?  
 		• .scale.linear().domain (cf. Werte- & Definitionsbereich)
 	
-Frage: 
-
-	– warum liegt die jsfunktionen.js eigentlich nicht im Ordner js? 
 		
