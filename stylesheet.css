@@ -36,9 +36,21 @@
  #right {width: 30%; float:left;}
  }
 
- 
 
-th {
+.th {
     text-align: left;
 }
 
+
+#modulid{
+    text: h2;
+    color: blue;
+}
+
+#name {
+    color: blue;
+}
+
+#ects{
+    color: grey;
+}
