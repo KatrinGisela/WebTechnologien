@@ -1,0 +1,32 @@
+@(formType: String, recipeForm: Form[Recipe], ingredients: List[models.Ingredient]) 
+
+@import helper._ 
+
+@main(formType + " Recipe") {
+	<h1>@formType Recipe</h1>
+	@form(routes.RecipesCtrl.storeRecipe()) {
+		<input type="hidden" id="@recipeForm("rid").id"
+		name="@recipeForm("rid").name" 
+		value='@recipeForm("rid").value' />
+	@inputText(recipeForm("name"))
+	<div>
+		<div>
+			<strong>Ingredients</strong>
+		</div>
+	<div>
+	@for(ingredient <- ingredients) { 
+		<label class="checkbox"> 
+		<input type="checkbox" name="ingredients.iid[]" value="@ingredient.iid"
+			@if(recipeForm.value.isDefined &&
+				recipeForm.value.get.ingredients.contains(ingredient)) {			
+					checked="checked" 
+			}
+		/>
+		@ingredient.name
+		</label> }
+	</div>
+</div>
+@textarea(field = recipeForm("description"), args = 'rows -> 3, 'cols -> 50)
+<input type="submit" value="Save">
+	} 
+}

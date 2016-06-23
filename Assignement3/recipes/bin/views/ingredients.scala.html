@@ -1,0 +1,24 @@
+@(ingredients: List[Ingredient]) 
+
+@main("Ingredients") {
+
+	<h1>List of ingredients</h1>
+	
+	<a href="@routes.IngredientsCtrl.createIngredient()">Create	Ingredient</a>
+	<table>
+	@for(ingredient <- ingredients) {
+		<tr>
+			<td>@ingredient.name</td>
+			<td>@ingredient.description</td>
+			<td>@helper.form(action =
+				routes.IngredientsCtrl.updateIngredient(ingredient.iid)) { <input
+				type="submit" value="Update"> }
+			</td>
+			<td>@helper.form(action =
+				routes.IngredientsCtrl.deleteIngredient(ingredient.iid)) { <input
+				type="submit" value="Delete"> }
+			</td>
+		</tr>
+	}
+</table>
+}
