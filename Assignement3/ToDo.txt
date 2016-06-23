@@ -1,0 +1,4 @@
+TODOS:
+Sladjana: Partie Ctrl, Partie View
+Andreas: Partie Ctrl, Stadion View
+Gisela: Stadion Ctrl
