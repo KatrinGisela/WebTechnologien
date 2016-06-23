@@ -1,0 +1,22 @@
+﻿TODO
+
+https://bl.ocks.org/mbostock/3887193
+
+Andreas
+	– verschiedene Textstile für hovertext
+
+
+Sladjana
+-hover-Effekt Diagrammteile
+-Dynamische Größe des Diagramms
+
+Gisela
+-Textanzeige in Tabelle rechts durch Klicken auf Diagrammteile 
+
+
+Notizen Andreas
+	– in d3js: class=doughnut, und bei Aufteilung id=$Modul (z. B. id=A1) 
+		laut Folie 105: 
+		• .scale.linear().domain (cf. Werte- & Definitionsbereich)
+	
+		

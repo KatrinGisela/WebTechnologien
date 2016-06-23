@@ -1,2 +1,0 @@
-# WebTechnologien
-Assignements

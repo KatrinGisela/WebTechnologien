@@ -1,0 +1,38 @@
+// $(function() {
+			// $('#submit').click(function(){
+				// var MyText = $('input[id=MeinText]').val();	 // id anpassen
+				
+				// $.get("moduleGroups.php",
+					  // { text: MyText },									// anpassen
+				      // function(data) {
+					     // $('#result').html(data);						// was ist in dem Fall result? das Laden der entsprecheneden Infos zum Modul
+                         // alert('Load was performed.');
+                      // });
+			// });
+		// });
+
+		
+		$("button#ajaxCall_template").click(function() {
+
+$.ajax({
+	type: "GET",
+	url: "moduleDefinitions.php",
+	data: {},
+	success: function(content) {
+		$("#content").html(content);
+	}
+});
+
+return false;
+});
+
+
+
+
+// function daten_laden() {
+		// $.get('moduleDefinitions.php', function(content) {
+				// $("#content").html(content);
+		// document.write("Test" + content)	
+		// }); 
+// }); 
+
