@@ -4,9 +4,16 @@ Andreas: Partie Ctrl, Stadion View
 Gisela: Stadion Ctrl
 
 
+
+	*** HINWEIS AN EUCH***
+
+Ein Import in Eclipse hat leider nicht funktioniert, daher habe ich simple models-Ordner anstatt Packages angelegt (habe im simplen Editor arbeiten müssen)
+
 weitere todos:
+
 - Models anlegen:
 	- Stadion
 	- Partie (aktuelles erweitern, verbessern..)
 
 - in der Datenbank mindestens drei Stadien erzeugen (passiert im ApplicationTimer)
+- Routen immer jeweils anpassen, nachdem Ctrl/ View erzuegt wurden
