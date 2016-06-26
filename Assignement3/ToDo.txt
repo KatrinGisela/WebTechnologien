@@ -2,3 +2,11 @@ TODOS:
 Sladjana: Partie Ctrl, Partie View
 Andreas: Partie Ctrl, Stadion View
 Gisela: Stadion Ctrl
+
+
+weitere todos:
+- Models anlegen:
+	- Stadion
+	- Partie (aktuelles erweitern, verbessern..)
+
+- in der Datenbank mindestens drei Stadien erzeugen (passiert im ApplicationTimer)
