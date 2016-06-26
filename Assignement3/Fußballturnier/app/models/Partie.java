@@ -44,6 +44,7 @@ public class Partie extends Model   {
  	}
   
  	public static void delete(Long PartieID) {
+    // Fehlerabhandlung und Nutzerwarnung!
     find.ref(PartieID).delete();
  	}
   
