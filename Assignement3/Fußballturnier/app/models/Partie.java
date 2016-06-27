@@ -32,10 +32,13 @@ public class Partie extends Model   {
   
  	public static void create(Partie partie) {
     	// if (mindestens ein Stadion existiert in der Datenbank)
+      Partie partie = Form.form(Partie.class).bindFromRequest().get();  // das hier evtl auch? Oder in Ctrl?
   		partie.save();
+     return redirect(routes.Partie.index());
  	}
   
- 	public static List<Partie> read() {
+ 	  public static List<Partie> read() {
+    List<Partie> parties = new Model.Finder(String.class, Partie.class).all(); // Laut Tutorial (aber in Ctrl)
   		return find.all();
   	}
   
