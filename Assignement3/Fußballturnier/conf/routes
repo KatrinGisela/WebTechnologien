@@ -11,3 +11,11 @@ GET     /message                    controllers.AsyncController.message
 
 # Map static resources from the /public folder to the /assets URL path
 GET     /assets/*file               controllers.Assets.versioned(path="/public", file: Asset)
+
+
+#### AB HIER BEZIEHEN SICH DIE GET/POST BEFEHLE AUF UNSERE TL ####
+
+
+POST	/partie					controllers.PartieCtrl.createPartie()
+
+GET		/partie 				controllers.PartieCtrl.readParties()
