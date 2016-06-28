@@ -22815,3 +22815,389 @@ sha1 OK for https://repo.scala-sbt.org/scalasbt/sbt-plugin-releases/com.typesafe
 downloading https://repo.scala-sbt.org/scalasbt/sbt-plugin-releases/com.typesafe.sbt/sbt-native-packager/scala_2.10/sbt_0.13/1.0.3/jars/sbt-native-packager.jar ...
 	sbt-plugin-releases: downloading https://repo.scala-sbt.org/scalasbt/sbt-plugin-releases/com.typesafe.sbt/sbt-native-packager/scala_2.10/sbt_0.13/1.0.3/jars/sbt-native-packager.jar
 	sbt-plugin-releases: downloading https://repo.scala-sbt.org/scalasbt/sbt-plugin-releases/com.typesafe.sbt/sbt-native-packager/scala_2.10/sbt_0.13/1.0.3/jars/sbt-native-packager.jar.sha1
+sha1 OK for https://repo.scala-sbt.org/scalasbt/sbt-plugin-releases/com.typesafe.sbt/sbt-native-packager/scala_2.10/sbt_0.13/1.0.3/jars/sbt-native-packager.jar
+[info] 	[SUCCESSFUL ] com.typesafe.sbt#sbt-native-packager;1.0.3!sbt-native-packager.jar (12586ms)
+	[SUCCESSFUL ] com.typesafe.sbt#sbt-native-packager;1.0.3!sbt-native-packager.jar (12586ms)
+		tried https://repo.scala-sbt.org/scalasbt/sbt-plugin-releases/com.typesafe.sbt/sbt-web/scala_2.10/sbt_0.13/1.3.0/jars/sbt-web.jar
+[info] downloading https://repo.scala-sbt.org/scalasbt/sbt-plugin-releases/com.typesafe.sbt/sbt-web/scala_2.10/sbt_0.13/1.3.0/jars/sbt-web.jar ...
+downloading https://repo.scala-sbt.org/scalasbt/sbt-plugin-releases/com.typesafe.sbt/sbt-web/scala_2.10/sbt_0.13/1.3.0/jars/sbt-web.jar ...
+	sbt-plugin-releases: downloading https://repo.scala-sbt.org/scalasbt/sbt-plugin-releases/com.typesafe.sbt/sbt-web/scala_2.10/sbt_0.13/1.3.0/jars/sbt-web.jar
+	sbt-plugin-releases: downloading https://repo.scala-sbt.org/scalasbt/sbt-plugin-releases/com.typesafe.sbt/sbt-web/scala_2.10/sbt_0.13/1.3.0/jars/sbt-web.jar.sha1
+sha1 OK for https://repo.scala-sbt.org/scalasbt/sbt-plugin-releases/com.typesafe.sbt/sbt-web/scala_2.10/sbt_0.13/1.3.0/jars/sbt-web.jar
+[info] 	[SUCCESSFUL ] com.typesafe.sbt#sbt-web;1.3.0!sbt-web.jar (5883ms)
+	[SUCCESSFUL ] com.typesafe.sbt#sbt-web;1.3.0!sbt-web.jar (5883ms)
+		tried https://repo.scala-sbt.org/scalasbt/sbt-plugin-releases/com.typesafe.sbt/sbt-js-engine/scala_2.10/sbt_0.13/1.1.3/jars/sbt-js-engine.jar
+[info] downloading https://repo.scala-sbt.org/scalasbt/sbt-plugin-releases/com.typesafe.sbt/sbt-js-engine/scala_2.10/sbt_0.13/1.1.3/jars/sbt-js-engine.jar ...
+downloading https://repo.scala-sbt.org/scalasbt/sbt-plugin-releases/com.typesafe.sbt/sbt-js-engine/scala_2.10/sbt_0.13/1.1.3/jars/sbt-js-engine.jar ...
+	sbt-plugin-releases: downloading https://repo.scala-sbt.org/scalasbt/sbt-plugin-releases/com.typesafe.sbt/sbt-js-engine/scala_2.10/sbt_0.13/1.1.3/jars/sbt-js-engine.jar
+	sbt-plugin-releases: downloading https://repo.scala-sbt.org/scalasbt/sbt-plugin-releases/com.typesafe.sbt/sbt-js-engine/scala_2.10/sbt_0.13/1.1.3/jars/sbt-js-engine.jar.sha1
+sha1 OK for https://repo.scala-sbt.org/scalasbt/sbt-plugin-releases/com.typesafe.sbt/sbt-js-engine/scala_2.10/sbt_0.13/1.1.3/jars/sbt-js-engine.jar
+[info] 	[SUCCESSFUL ] com.typesafe.sbt#sbt-js-engine;1.1.3!sbt-js-engine.jar (2129ms)
+	[SUCCESSFUL ] com.typesafe.sbt#sbt-js-engine;1.1.3!sbt-js-engine.jar (2129ms)
+	[NOT REQUIRED] org.scala-lang#scala-library;2.10.4!scala-library.jar
+		tried D:\AA_Uni\Web-Technologien\activator-dist-1.3.10\repository\com.typesafe.play\twirl-api_2.10\1.1.1\jars\twirl-api_2.10.jar
+	[NOT REQUIRED] com.typesafe.play#twirl-api_2.10;1.1.1!twirl-api_2.10.jar
+		tried D:\AA_Uni\Web-Technologien\activator-dist-1.3.10\repository\commons-io\commons-io\2.4\jars\commons-io.jar
+	[NOT REQUIRED] commons-io#commons-io;2.4!commons-io.jar
+		tried D:\AA_Uni\Web-Technologien\activator-dist-1.3.10\repository\org.apache.commons\commons-lang3\3.4\jars\commons-lang3.jar
+	[NOT REQUIRED] org.apache.commons#commons-lang3;3.4!commons-lang3.jar
+		tried https://repo1.maven.org/maven2/com/typesafe/play/build-link/2.5.4/build-link-2.5.4.jar
+[info] downloading https://repo1.maven.org/maven2/com/typesafe/play/build-link/2.5.4/build-link-2.5.4.jar ...
+downloading https://repo1.maven.org/maven2/com/typesafe/play/build-link/2.5.4/build-link-2.5.4.jar ...
+	public: downloading https://repo1.maven.org/maven2/com/typesafe/play/build-link/2.5.4/build-link-2.5.4.jar
+	public: downloading https://repo1.maven.org/maven2/com/typesafe/play/build-link/2.5.4/build-link-2.5.4.jar.sha1
+sha1 OK for https://repo1.maven.org/maven2/com/typesafe/play/build-link/2.5.4/build-link-2.5.4.jar
+[info] 	[SUCCESSFUL ] com.typesafe.play#build-link;2.5.4!build-link.jar (276ms)
+	[SUCCESSFUL ] com.typesafe.play#build-link;2.5.4!build-link.jar (276ms)
+		tried D:\AA_Uni\Web-Technologien\activator-dist-1.3.10\repository\com.typesafe.play\twirl-compiler_2.10\1.1.1\jars\twirl-compiler_2.10.jar
+	[NOT REQUIRED] com.typesafe.play#twirl-compiler_2.10;1.1.1!twirl-compiler_2.10.jar
+		tried https://repo1.maven.org/maven2/com/typesafe/play/play-exceptions/2.5.4/play-exceptions-2.5.4.jar
+[info] downloading https://repo1.maven.org/maven2/com/typesafe/play/play-exceptions/2.5.4/play-exceptions-2.5.4.jar ...
+downloading https://repo1.maven.org/maven2/com/typesafe/play/play-exceptions/2.5.4/play-exceptions-2.5.4.jar ...
+	public: downloading https://repo1.maven.org/maven2/com/typesafe/play/play-exceptions/2.5.4/play-exceptions-2.5.4.jar
+	public: downloading https://repo1.maven.org/maven2/com/typesafe/play/play-exceptions/2.5.4/play-exceptions-2.5.4.jar.sha1
+sha1 OK for https://repo1.maven.org/maven2/com/typesafe/play/play-exceptions/2.5.4/play-exceptions-2.5.4.jar
+[info] 	[SUCCESSFUL ] com.typesafe.play#play-exceptions;2.5.4!play-exceptions.jar (181ms)
+	[SUCCESSFUL ] com.typesafe.play#play-exceptions;2.5.4!play-exceptions.jar (181ms)
+	[NOT REQUIRED] org.scala-lang#scala-compiler;2.10.4!scala-compiler.jar
+		tried D:\AA_Uni\Web-Technologien\activator-dist-1.3.10\repository\com.typesafe.play\twirl-parser_2.10\1.1.1\jars\twirl-parser_2.10.jar
+	[NOT REQUIRED] com.typesafe.play#twirl-parser_2.10;1.1.1!twirl-parser_2.10.jar
+	[NOT REQUIRED] org.scala-lang#scala-reflect;2.10.4!scala-reflect.jar
+		tried D:\AA_Uni\Web-Technologien\activator-dist-1.3.10\repository\org.vafer\jdeb\1.3\jars\jdeb.jar
+	[NOT REQUIRED] org.vafer#jdeb;1.3!jdeb.jar
+		tried D:\AA_Uni\Web-Technologien\activator-dist-1.3.10\repository\org.apache.maven\maven-core\3.2.2\jars\maven-core.jar
+	[NOT REQUIRED] org.apache.maven#maven-core;3.2.2!maven-core.jar
+		tried D:\AA_Uni\Web-Technologien\activator-dist-1.3.10\repository\org.apache.maven\maven-plugin-api\3.2.2\jars\maven-plugin-api.jar
+	[NOT REQUIRED] org.apache.maven#maven-plugin-api;3.2.2!maven-plugin-api.jar
+		tried D:\AA_Uni\Web-Technologien\activator-dist-1.3.10\repository\org.apache.ant\ant\1.9.3\jars\ant.jar
+	[NOT REQUIRED] org.apache.ant#ant;1.9.3!ant.jar
+		tried D:\AA_Uni\Web-Technologien\activator-dist-1.3.10\repository\org.bouncycastle\bcpg-jdk15on\1.51\jars\bcpg-jdk15on.jar
+	[NOT REQUIRED] org.bouncycastle#bcpg-jdk15on;1.51!bcpg-jdk15on.jar
+		tried D:\AA_Uni\Web-Technologien\activator-dist-1.3.10\repository\org.apache.maven\maven-model\3.2.2\jars\maven-model.jar
+	[NOT REQUIRED] org.apache.maven#maven-model;3.2.2!maven-model.jar
+		tried D:\AA_Uni\Web-Technologien\activator-dist-1.3.10\repository\org.apache.maven\maven-settings\3.2.2\jars\maven-settings.jar
+	[NOT REQUIRED] org.apache.maven#maven-settings;3.2.2!maven-settings.jar
+		tried D:\AA_Uni\Web-Technologien\activator-dist-1.3.10\repository\org.apache.maven\maven-settings-builder\3.2.2\jars\maven-settings-builder.jar
+	[NOT REQUIRED] org.apache.maven#maven-settings-builder;3.2.2!maven-settings-builder.jar
+		tried D:\AA_Uni\Web-Technologien\activator-dist-1.3.10\repository\org.apache.maven\maven-repository-metadata\3.2.2\jars\maven-repository-metadata.jar
+	[NOT REQUIRED] org.apache.maven#maven-repository-metadata;3.2.2!maven-repository-metadata.jar
+		tried D:\AA_Uni\Web-Technologien\activator-dist-1.3.10\repository\org.apache.maven\maven-artifact\3.2.2\jars\maven-artifact.jar
+	[NOT REQUIRED] org.apache.maven#maven-artifact;3.2.2!maven-artifact.jar
+		tried D:\AA_Uni\Web-Technologien\activator-dist-1.3.10\repository\org.apache.maven\maven-model-builder\3.2.2\jars\maven-model-builder.jar
+	[NOT REQUIRED] org.apache.maven#maven-model-builder;3.2.2!maven-model-builder.jar
+		tried D:\AA_Uni\Web-Technologien\activator-dist-1.3.10\repository\org.apache.maven\maven-aether-provider\3.2.2\jars\maven-aether-provider.jar
+	[NOT REQUIRED] org.apache.maven#maven-aether-provider;3.2.2!maven-aether-provider.jar
+		tried D:\AA_Uni\Web-Technologien\activator-dist-1.3.10\repository\org.eclipse.aether\aether-impl\0.9.0.M2\jars\aether-impl.jar
+	[NOT REQUIRED] org.eclipse.aether#aether-impl;0.9.0.M2!aether-impl.jar
+		tried D:\AA_Uni\Web-Technologien\activator-dist-1.3.10\repository\org.eclipse.aether\aether-api\0.9.0.M2\jars\aether-api.jar
+	[NOT REQUIRED] org.eclipse.aether#aether-api;0.9.0.M2!aether-api.jar
+		tried D:\AA_Uni\Web-Technologien\activator-dist-1.3.10\repository\org.eclipse.aether\aether-util\0.9.0.M2\jars\aether-util.jar
+	[NOT REQUIRED] org.eclipse.aether#aether-util;0.9.0.M2!aether-util.jar
+		tried D:\AA_Uni\Web-Technologien\activator-dist-1.3.10\repository\org.eclipse.sisu\org.eclipse.sisu.plexus\0.0.0.M5\eclipse-plugins\org.eclipse.sisu.plexus.jar
+	[NOT REQUIRED] org.eclipse.sisu#org.eclipse.sisu.plexus;0.0.0.M5!org.eclipse.sisu.plexus.jar(eclipse-plugin)
+		tried D:\AA_Uni\Web-Technologien\activator-dist-1.3.10\repository\org.codehaus.plexus\plexus-interpolation\1.19\jars\plexus-interpolation.jar
+	[NOT REQUIRED] org.codehaus.plexus#plexus-interpolation;1.19!plexus-interpolation.jar
+		tried D:\AA_Uni\Web-Technologien\activator-dist-1.3.10\repository\org.codehaus.plexus\plexus-utils\3.0.17\jars\plexus-utils.jar
+	[NOT REQUIRED] org.codehaus.plexus#plexus-utils;3.0.17!plexus-utils.jar
+		tried D:\AA_Uni\Web-Technologien\activator-dist-1.3.10\repository\org.codehaus.plexus\plexus-classworlds\2.5.1\bundles\plexus-classworlds.jar
+	[NOT REQUIRED] org.codehaus.plexus#plexus-classworlds;2.5.1!plexus-classworlds.jar(bundle)
+		tried D:\AA_Uni\Web-Technologien\activator-dist-1.3.10\repository\org.codehaus.plexus\plexus-component-annotations\1.5.5\jars\plexus-component-annotations.jar
+	[NOT REQUIRED] org.codehaus.plexus#plexus-component-annotations;1.5.5!plexus-component-annotations.jar
+		tried D:\AA_Uni\Web-Technologien\activator-dist-1.3.10\repository\org.sonatype.plexus\plexus-sec-dispatcher\1.3\jars\plexus-sec-dispatcher.jar
+	[NOT REQUIRED] org.sonatype.plexus#plexus-sec-dispatcher;1.3!plexus-sec-dispatcher.jar
+		tried D:\AA_Uni\Web-Technologien\activator-dist-1.3.10\repository\org.sonatype.plexus\plexus-cipher\1.4\jars\plexus-cipher.jar
+	[NOT REQUIRED] org.sonatype.plexus#plexus-cipher;1.4!plexus-cipher.jar
+		tried D:\AA_Uni\Web-Technologien\activator-dist-1.3.10\repository\javax.enterprise\cdi-api\1.0\jars\cdi-api.jar
+	[NOT REQUIRED] javax.enterprise#cdi-api;1.0!cdi-api.jar
+		tried D:\AA_Uni\Web-Technologien\activator-dist-1.3.10\repository\org.sonatype.sisu\sisu-guice\3.1.0\jars\sisu-guice-no_aop.jar
+	[NOT REQUIRED] org.sonatype.sisu#sisu-guice;3.1.0!sisu-guice.jar
+		tried D:\AA_Uni\Web-Technologien\activator-dist-1.3.10\repository\org.eclipse.sisu\org.eclipse.sisu.inject\0.0.0.M5\eclipse-plugins\org.eclipse.sisu.inject.jar
+	[NOT REQUIRED] org.eclipse.sisu#org.eclipse.sisu.inject;0.0.0.M5!org.eclipse.sisu.inject.jar(eclipse-plugin)
+		tried D:\AA_Uni\Web-Technologien\activator-dist-1.3.10\repository\javax.annotation\jsr250-api\1.0\jars\jsr250-api.jar
+	[NOT REQUIRED] javax.annotation#jsr250-api;1.0!jsr250-api.jar
+		tried D:\AA_Uni\Web-Technologien\activator-dist-1.3.10\repository\javax.inject\javax.inject\1\jars\javax.inject.jar
+	[NOT REQUIRED] javax.inject#javax.inject;1!javax.inject.jar
+		tried D:\AA_Uni\Web-Technologien\activator-dist-1.3.10\repository\com.google.code.findbugs\jsr305\1.3.9\jars\jsr305.jar
+	[NOT REQUIRED] com.google.code.findbugs#jsr305;1.3.9!jsr305.jar
+		tried D:\AA_Uni\Web-Technologien\activator-dist-1.3.10\repository\aopalliance\aopalliance\1.0\jars\aopalliance.jar
+	[NOT REQUIRED] aopalliance#aopalliance;1.0!aopalliance.jar
+		tried D:\AA_Uni\Web-Technologien\activator-dist-1.3.10\repository\org.eclipse.aether\aether-spi\0.9.0.M2\jars\aether-spi.jar
+	[NOT REQUIRED] org.eclipse.aether#aether-spi;0.9.0.M2!aether-spi.jar
+		tried D:\AA_Uni\Web-Technologien\activator-dist-1.3.10\repository\org.apache.ant\ant-launcher\1.9.3\jars\ant-launcher.jar
+	[NOT REQUIRED] org.apache.ant#ant-launcher;1.9.3!ant-launcher.jar
+		tried D:\AA_Uni\Web-Technologien\activator-dist-1.3.10\repository\org.bouncycastle\bcprov-jdk15on\1.51\jars\bcprov-jdk15on.jar
+	[NOT REQUIRED] org.bouncycastle#bcprov-jdk15on;1.51!bcprov-jdk15on.jar
+		tried D:\AA_Uni\Web-Technologien\activator-dist-1.3.10\repository\org.webjars\webjars-locator\0.26\jars\webjars-locator.jar
+	[NOT REQUIRED] org.webjars#webjars-locator;0.26!webjars-locator.jar
+		tried D:\AA_Uni\Web-Technologien\activator-dist-1.3.10\repository\org.webjars\webjars-locator-core\0.26\jars\webjars-locator-core.jar
+	[NOT REQUIRED] org.webjars#webjars-locator-core;0.26!webjars-locator-core.jar
+		tried D:\AA_Uni\Web-Technologien\activator-dist-1.3.10\repository\org.apache.commons\commons-compress\1.9\jars\commons-compress.jar
+	[NOT REQUIRED] org.apache.commons#commons-compress;1.9!commons-compress.jar
+		tried D:\AA_Uni\Web-Technologien\activator-dist-1.3.10\repository\com.typesafe\jse_2.10\1.1.2\jars\jse_2.10.jar
+	[NOT REQUIRED] com.typesafe#jse_2.10;1.1.2!jse_2.10.jar
+		tried D:\AA_Uni\Web-Technologien\activator-dist-1.3.10\repository\com.typesafe\npm_2.10\1.1.1\jars\npm_2.10.jar
+	[NOT REQUIRED] com.typesafe#npm_2.10;1.1.1!npm_2.10.jar
+		tried D:\AA_Uni\Web-Technologien\activator-dist-1.3.10\repository\com.typesafe.akka\akka-actor_2.10\2.3.11\jars\akka-actor_2.10.jar
+	[NOT REQUIRED] com.typesafe.akka#akka-actor_2.10;2.3.11!akka-actor_2.10.jar
+		tried D:\AA_Uni\Web-Technologien\activator-dist-1.3.10\repository\com.typesafe.akka\akka-contrib_2.10\2.3.11\jars\akka-contrib_2.10.jar
+	[NOT REQUIRED] com.typesafe.akka#akka-contrib_2.10;2.3.11!akka-contrib_2.10.jar
+		tried D:\AA_Uni\Web-Technologien\activator-dist-1.3.10\repository\io.apigee.trireme\trireme-core\0.8.5\jars\trireme-core.jar
+	[NOT REQUIRED] io.apigee.trireme#trireme-core;0.8.5!trireme-core.jar
+		tried D:\AA_Uni\Web-Technologien\activator-dist-1.3.10\repository\io.apigee.trireme\trireme-node10src\0.8.5\jars\trireme-node10src.jar
+	[NOT REQUIRED] io.apigee.trireme#trireme-node10src;0.8.5!trireme-node10src.jar
+		tried D:\AA_Uni\Web-Technologien\activator-dist-1.3.10\repository\io.spray\spray-json_2.10\1.3.2\bundles\spray-json_2.10.jar
+	[NOT REQUIRED] io.spray#spray-json_2.10;1.3.2!spray-json_2.10.jar(bundle)
+		tried D:\AA_Uni\Web-Technologien\activator-dist-1.3.10\repository\org.slf4j\slf4j-simple\1.7.12\jars\slf4j-simple.jar
+	[NOT REQUIRED] org.slf4j#slf4j-simple;1.7.12!slf4j-simple.jar
+		tried D:\AA_Uni\Web-Technologien\activator-dist-1.3.10\repository\com.typesafe.akka\akka-remote_2.10\2.3.11\jars\akka-remote_2.10.jar
+	[NOT REQUIRED] com.typesafe.akka#akka-remote_2.10;2.3.11!akka-remote_2.10.jar
+		tried D:\AA_Uni\Web-Technologien\activator-dist-1.3.10\repository\com.typesafe.akka\akka-cluster_2.10\2.3.11\jars\akka-cluster_2.10.jar
+	[NOT REQUIRED] com.typesafe.akka#akka-cluster_2.10;2.3.11!akka-cluster_2.10.jar
+		tried D:\AA_Uni\Web-Technologien\activator-dist-1.3.10\repository\com.typesafe.akka\akka-persistence-experimental_2.10\2.3.11\jars\akka-persistence-experimental_2.10.jar
+	[NOT REQUIRED] com.typesafe.akka#akka-persistence-experimental_2.10;2.3.11!akka-persistence-experimental_2.10.jar
+		tried D:\AA_Uni\Web-Technologien\activator-dist-1.3.10\repository\io.netty\netty\3.8.0.Final\bundles\netty.jar
+	[NOT REQUIRED] io.netty#netty;3.8.0.Final!netty.jar(bundle)
+	[NOT REQUIRED] com.google.protobuf#protobuf-java;2.5.0!protobuf-java.jar(bundle)
+		tried D:\AA_Uni\Web-Technologien\activator-dist-1.3.10\repository\org.uncommons.maths\uncommons-maths\1.2.2a\jars\uncommons-maths.jar
+	[NOT REQUIRED] org.uncommons.maths#uncommons-maths;1.2.2a!uncommons-maths.jar
+		tried D:\AA_Uni\Web-Technologien\activator-dist-1.3.10\repository\org.iq80.leveldb\leveldb\0.5\jars\leveldb.jar
+	[NOT REQUIRED] org.iq80.leveldb#leveldb;0.5!leveldb.jar
+		tried D:\AA_Uni\Web-Technologien\activator-dist-1.3.10\repository\org.fusesource.leveldbjni\leveldbjni-all\1.7\bundles\leveldbjni-all.jar
+	[NOT REQUIRED] org.fusesource.leveldbjni#leveldbjni-all;1.7!leveldbjni-all.jar(bundle)
+		tried D:\AA_Uni\Web-Technologien\activator-dist-1.3.10\repository\org.iq80.leveldb\leveldb-api\0.5\jars\leveldb-api.jar
+	[NOT REQUIRED] org.iq80.leveldb#leveldb-api;0.5!leveldb-api.jar
+		tried D:\AA_Uni\Web-Technologien\activator-dist-1.3.10\repository\com.google.guava\guava\12.0\jars\guava.jar
+	[NOT REQUIRED] com.google.guava#guava;12.0!guava.jar
+		tried D:\AA_Uni\Web-Technologien\activator-dist-1.3.10\repository\org.fusesource.leveldbjni\leveldbjni\1.7\jars\leveldbjni.jar
+	[NOT REQUIRED] org.fusesource.leveldbjni#leveldbjni;1.7!leveldbjni.jar
+		tried D:\AA_Uni\Web-Technologien\activator-dist-1.3.10\repository\org.fusesource.leveldbjni\leveldbjni-osx\1.5\jars\leveldbjni-osx.jar
+	[NOT REQUIRED] org.fusesource.leveldbjni#leveldbjni-osx;1.5!leveldbjni-osx.jar
+		tried D:\AA_Uni\Web-Technologien\activator-dist-1.3.10\repository\org.fusesource.leveldbjni\leveldbjni-linux32\1.5\jars\leveldbjni-linux32.jar
+	[NOT REQUIRED] org.fusesource.leveldbjni#leveldbjni-linux32;1.5!leveldbjni-linux32.jar
+		tried D:\AA_Uni\Web-Technologien\activator-dist-1.3.10\repository\org.fusesource.leveldbjni\leveldbjni-linux64\1.5\jars\leveldbjni-linux64.jar
+	[NOT REQUIRED] org.fusesource.leveldbjni#leveldbjni-linux64;1.5!leveldbjni-linux64.jar
+		tried D:\AA_Uni\Web-Technologien\activator-dist-1.3.10\repository\org.fusesource.leveldbjni\leveldbjni-win32\1.5\jars\leveldbjni-win32.jar
+	[NOT REQUIRED] org.fusesource.leveldbjni#leveldbjni-win32;1.5!leveldbjni-win32.jar
+		tried D:\AA_Uni\Web-Technologien\activator-dist-1.3.10\repository\org.fusesource.leveldbjni\leveldbjni-win64\1.5\jars\leveldbjni-win64.jar
+	[NOT REQUIRED] org.fusesource.leveldbjni#leveldbjni-win64;1.5!leveldbjni-win64.jar
+		tried D:\AA_Uni\Web-Technologien\activator-dist-1.3.10\repository\org.fusesource.hawtjni\hawtjni-runtime\1.8\jars\hawtjni-runtime.jar
+	[NOT REQUIRED] org.fusesource.hawtjni#hawtjni-runtime;1.8!hawtjni-runtime.jar
+		tried D:\AA_Uni\Web-Technologien\activator-dist-1.3.10\repository\io.apigee\rhino\1.7R5pre4\jars\rhino.jar
+	[NOT REQUIRED] io.apigee#rhino;1.7R5pre4!rhino.jar
+		tried D:\AA_Uni\Web-Technologien\activator-dist-1.3.10\repository\org.slf4j\slf4j-api\1.7.12\jars\slf4j-api.jar
+	[NOT REQUIRED] org.slf4j#slf4j-api;1.7.12!slf4j-api.jar
+		tried D:\AA_Uni\Web-Technologien\activator-dist-1.3.10\repository\org.webjars\npm\2.11.2\jars\npm.jar
+	[NOT REQUIRED] org.webjars#npm;2.11.2!npm.jar
+		tried D:\AA_Uni\Web-Technologien\activator-dist-1.3.10\repository\org.webjars\coffee-script-node\1.7.1\jars\coffee-script-node.jar
+	[NOT REQUIRED] org.webjars#coffee-script-node;1.7.1!coffee-script-node.jar
+		tried D:\AA_Uni\Web-Technologien\activator-dist-1.3.10\repository\org.webjars\less-node\2.5.0\jars\less-node.jar
+	[NOT REQUIRED] org.webjars#less-node;2.5.0!less-node.jar
+		tried D:\AA_Uni\Web-Technologien\activator-dist-1.3.10\repository\org.webjars\source-map\0.1.40-1\jars\source-map.jar
+	[NOT REQUIRED] org.webjars#source-map;0.1.40-1!source-map.jar
+		tried D:\AA_Uni\Web-Technologien\activator-dist-1.3.10\repository\org.webjars\mkdirp\0.5.0\jars\mkdirp.jar
+	[NOT REQUIRED] org.webjars#mkdirp;0.5.0!mkdirp.jar
+		tried D:\AA_Uni\Web-Technologien\activator-dist-1.3.10\repository\org.webjars\clean-css\2.2.7\jars\clean-css.jar
+	[NOT REQUIRED] org.webjars#clean-css;2.2.7!clean-css.jar
+		tried D:\AA_Uni\Web-Technologien\activator-dist-1.3.10\repository\org.webjars\es6-promise-node\2.1.1\jars\es6-promise-node.jar
+	[NOT REQUIRED] org.webjars#es6-promise-node;2.1.1!es6-promise-node.jar
+		tried D:\AA_Uni\Web-Technologien\activator-dist-1.3.10\repository\org.webjars\amdefine\0.1.0-2\jars\amdefine.jar
+	[NOT REQUIRED] org.webjars#amdefine;0.1.0-2!amdefine.jar
+		tried D:\AA_Uni\Web-Technologien\activator-dist-1.3.10\repository\org.webjars\jshint-node\2.4.3\jars\jshint-node.jar
+	[NOT REQUIRED] org.webjars#jshint-node;2.4.3!jshint-node.jar
+		tried D:\AA_Uni\Web-Technologien\activator-dist-1.3.10\repository\org.webjars\strip-json-comments\1.0.2-1\jars\strip-json-comments.jar
+	[NOT REQUIRED] org.webjars#strip-json-comments;1.0.2-1!strip-json-comments.jar
+		tried D:\AA_Uni\Web-Technologien\activator-dist-1.3.10\repository\org.webjars\underscorejs\1.5.2-2\jars\underscorejs.jar
+	[NOT REQUIRED] org.webjars#underscorejs;1.5.2-2!underscorejs.jar
+		tried D:\AA_Uni\Web-Technologien\activator-dist-1.3.10\repository\org.webjars\console-browserify\0.1.6-1\jars\console-browserify.jar
+	[NOT REQUIRED] org.webjars#console-browserify;0.1.6-1!console-browserify.jar
+		tried D:\AA_Uni\Web-Technologien\activator-dist-1.3.10\repository\org.webjars\rjs\2.1.15\jars\rjs.jar
+	[NOT REQUIRED] org.webjars#rjs;2.1.15!rjs.jar
+		tried D:\AA_Uni\Web-Technologien\activator-dist-1.3.10\repository\org.webjars\mocha\1.17.1\jars\mocha.jar
+	[NOT REQUIRED] org.webjars#mocha;1.17.1!mocha.jar
+		tried D:\AA_Uni\Web-Technologien\activator-dist-1.3.10\repository\org.webjars\debug\0.7.4\jars\debug.jar
+	[NOT REQUIRED] org.webjars#debug;0.7.4!debug.jar
+		tried D:\AA_Uni\Web-Technologien\activator-dist-1.3.10\repository\org.webjars\diff\1.0.7\jars\diff.jar
+	[NOT REQUIRED] org.webjars#diff;1.0.7!diff.jar
+		tried D:\AA_Uni\Web-Technologien\activator-dist-1.3.10\repository\com.typesafe.play\play-json_2.10\2.4.4\jars\play-json_2.10.jar
+	[NOT REQUIRED] com.typesafe.play#play-json_2.10;2.4.4!play-json_2.10.jar
+		tried D:\AA_Uni\Web-Technologien\activator-dist-1.3.10\repository\com.nativelibs4java\jnaerator-runtime\0.12\jars\jnaerator-runtime.jar
+	[NOT REQUIRED] com.nativelibs4java#jnaerator-runtime;0.12!jnaerator-runtime.jar
+		tried D:\AA_Uni\Web-Technologien\activator-dist-1.3.10\repository\com.typesafe.play\play-iteratees_2.10\2.4.4\jars\play-iteratees_2.10.jar
+	[NOT REQUIRED] com.typesafe.play#play-iteratees_2.10;2.4.4!play-iteratees_2.10.jar
+		tried D:\AA_Uni\Web-Technologien\activator-dist-1.3.10\repository\com.typesafe.play\play-functional_2.10\2.4.4\jars\play-functional_2.10.jar
+	[NOT REQUIRED] com.typesafe.play#play-functional_2.10;2.4.4!play-functional_2.10.jar
+		tried D:\AA_Uni\Web-Technologien\activator-dist-1.3.10\repository\com.typesafe.play\play-datacommons_2.10\2.4.4\jars\play-datacommons_2.10.jar
+	[NOT REQUIRED] com.typesafe.play#play-datacommons_2.10;2.4.4!play-datacommons_2.10.jar
+		tried D:\AA_Uni\Web-Technologien\activator-dist-1.3.10\repository\joda-time\joda-time\2.8.1\jars\joda-time.jar
+	[NOT REQUIRED] joda-time#joda-time;2.8.1!joda-time.jar
+		tried D:\AA_Uni\Web-Technologien\activator-dist-1.3.10\repository\org.joda\joda-convert\1.7\jars\joda-convert.jar
+	[NOT REQUIRED] org.joda#joda-convert;1.7!joda-convert.jar
+		tried D:\AA_Uni\Web-Technologien\activator-dist-1.3.10\repository\com.fasterxml.jackson.core\jackson-core\2.5.4\bundles\jackson-core.jar
+	[NOT REQUIRED] com.fasterxml.jackson.core#jackson-core;2.5.4!jackson-core.jar(bundle)
+		tried D:\AA_Uni\Web-Technologien\activator-dist-1.3.10\repository\com.fasterxml.jackson.core\jackson-annotations\2.5.4\bundles\jackson-annotations.jar
+	[NOT REQUIRED] com.fasterxml.jackson.core#jackson-annotations;2.5.4!jackson-annotations.jar(bundle)
+		tried D:\AA_Uni\Web-Technologien\activator-dist-1.3.10\repository\com.fasterxml.jackson.core\jackson-databind\2.5.4\bundles\jackson-databind.jar
+	[NOT REQUIRED] com.fasterxml.jackson.core#jackson-databind;2.5.4!jackson-databind.jar(bundle)
+		tried D:\AA_Uni\Web-Technologien\activator-dist-1.3.10\repository\com.fasterxml.jackson.datatype\jackson-datatype-jdk8\2.5.4\bundles\jackson-datatype-jdk8.jar
+	[NOT REQUIRED] com.fasterxml.jackson.datatype#jackson-datatype-jdk8;2.5.4!jackson-datatype-jdk8.jar(bundle)
+		tried D:\AA_Uni\Web-Technologien\activator-dist-1.3.10\repository\com.fasterxml.jackson.datatype\jackson-datatype-jsr310\2.5.4\bundles\jackson-datatype-jsr310.jar
+	[NOT REQUIRED] com.fasterxml.jackson.datatype#jackson-datatype-jsr310;2.5.4!jackson-datatype-jsr310.jar(bundle)
+		tried D:\AA_Uni\Web-Technologien\activator-dist-1.3.10\repository\org.scala-stm\scala-stm_2.10\0.7\jars\scala-stm_2.10.jar
+	[NOT REQUIRED] org.scala-stm#scala-stm_2.10;0.7!scala-stm_2.10.jar
+		tried D:\AA_Uni\Web-Technologien\activator-dist-1.3.10\repository\com.nativelibs4java\ochafik-util\0.12\jars\ochafik-util.jar
+	[NOT REQUIRED] com.nativelibs4java#ochafik-util;0.12!ochafik-util.jar
+		tried D:\AA_Uni\Web-Technologien\activator-dist-1.3.10\repository\net.java.dev.jna\jna\4.1.0\jars\jna.jar
+	[NOT REQUIRED] net.java.dev.jna#jna;4.1.0!jna.jar
+		tried D:\AA_Uni\Web-Technologien\activator-dist-1.3.10\repository\com.typesafe.play\play-enhancer\1.1.0\jars\play-enhancer.jar
+	[NOT REQUIRED] com.typesafe.play#play-enhancer;1.1.0!play-enhancer.jar
+	[NOT REQUIRED] org.javassist#javassist;3.18.2-GA!javassist.jar(bundle)
+		tried D:\AA_Uni\Web-Technologien\activator-dist-1.3.10\repository\org.scalaz\scalaz-core_2.10\7.1.0\bundles\scalaz-core_2.10.jar
+	[NOT REQUIRED] org.scalaz#scalaz-core_2.10;7.1.0!scalaz-core_2.10.jar(bundle)
+		tried D:\AA_Uni\Web-Technologien\activator-dist-1.3.10\repository\org.scalaz\scalaz-effect_2.10\7.1.0\bundles\scalaz-effect_2.10.jar
+	[NOT REQUIRED] org.scalaz#scalaz-effect_2.10;7.1.0!scalaz-effect_2.10.jar(bundle)
+	[NOT REQUIRED] org.scala-sbt#sbt;0.13.8!sbt.jar
+	[NOT REQUIRED] org.scala-sbt#main;0.13.8!main.jar
+	[NOT REQUIRED] org.scala-sbt#compiler-interface;0.13.8!compiler-interface-bin.jar
+	[NOT REQUIRED] org.scala-sbt#compiler-interface;0.13.8!compiler-interface-src.jar
+	[NOT REQUIRED] org.scala-sbt#precompiled-2_8_2;0.13.8!compiler-interface-bin.jar
+	[NOT REQUIRED] org.scala-sbt#precompiled-2_9_2;0.13.8!compiler-interface-bin.jar
+	[NOT REQUIRED] org.scala-sbt#precompiled-2_9_3;0.13.8!compiler-interface-bin.jar
+	[NOT REQUIRED] org.scala-sbt#actions;0.13.8!actions.jar
+	[NOT REQUIRED] org.scala-sbt#main-settings;0.13.8!main-settings.jar
+	[NOT REQUIRED] org.scala-sbt#interface;0.13.8!interface.jar
+	[NOT REQUIRED] org.scala-sbt#io;0.13.8!io.jar
+	[NOT REQUIRED] org.scala-sbt#ivy;0.13.8!ivy.jar
+	[NOT REQUIRED] org.scala-sbt#launcher-interface;0.13.8!launcher-interface.jar
+	[NOT REQUIRED] org.scala-sbt#logging;0.13.8!logging.jar
+	[NOT REQUIRED] org.scala-sbt#logic;0.13.8!logic.jar
+	[NOT REQUIRED] org.scala-sbt#process;0.13.8!process.jar
+	[NOT REQUIRED] org.scala-sbt#run;0.13.8!run.jar
+	[NOT REQUIRED] org.scala-sbt#command;0.13.8!command.jar
+	[NOT REQUIRED] org.scala-sbt#classpath;0.13.8!classpath.jar
+	[NOT REQUIRED] org.scala-sbt#completion;0.13.8!completion.jar
+	[NOT REQUIRED] org.scala-sbt#api;0.13.8!api.jar
+	[NOT REQUIRED] org.scala-sbt#compiler-integration;0.13.8!compiler-integration.jar
+	[NOT REQUIRED] org.scala-sbt#compiler-ivy-integration;0.13.8!compiler-ivy-integration.jar
+	[NOT REQUIRED] org.scala-sbt#relation;0.13.8!relation.jar
+	[NOT REQUIRED] org.scala-sbt#task-system;0.13.8!task-system.jar
+	[NOT REQUIRED] org.scala-sbt#tasks;0.13.8!tasks.jar
+	[NOT REQUIRED] org.scala-sbt#tracking;0.13.8!tracking.jar
+	[NOT REQUIRED] org.scala-sbt#testing;0.13.8!testing.jar
+	[NOT REQUIRED] org.scala-sbt#control;0.13.8!control.jar
+	[NOT REQUIRED] org.scala-sbt#collections;0.13.8!collections.jar
+	[NOT REQUIRED] jline#jline;2.11!jline.jar
+	[NOT REQUIRED] org.scala-sbt#incremental-compiler;0.13.8!incremental-compiler.jar
+	[NOT REQUIRED] org.scala-sbt#compile;0.13.8!compile.jar
+	[NOT REQUIRED] org.scala-sbt#persist;0.13.8!persist.jar
+	[NOT REQUIRED] org.scala-sbt#classfile;0.13.8!classfile.jar
+	[NOT REQUIRED] org.scala-tools.sbinary#sbinary_2.10;0.4.2!sbinary_2.10.jar
+	[NOT REQUIRED] org.scala-sbt#cross;0.13.8!cross.jar
+	[NOT REQUIRED] org.scala-sbt.ivy#ivy;2.3.0-sbt-fccfbd44c9f64523b61398a0155784dcbaeae28f!ivy.jar
+	[NOT REQUIRED] com.jcraft#jsch;0.1.46!jsch.jar
+	[NOT REQUIRED] org.scala-sbt#serialization_2.10;0.1.1!serialization_2.10.jar
+	[NOT REQUIRED] org.scala-lang.modules#scala-pickling_2.10;0.10.0!scala-pickling_2.10.jar
+	[NOT REQUIRED] org.json4s#json4s-core_2.10;3.2.10!json4s-core_2.10.jar
+	[NOT REQUIRED] org.spire-math#jawn-parser_2.10;0.6.0!jawn-parser_2.10.jar
+	[NOT REQUIRED] org.spire-math#json4s-support_2.10;0.6.0!json4s-support_2.10.jar
+	[NOT REQUIRED] org.scalamacros#quasiquotes_2.10;2.0.1!quasiquotes_2.10.jar
+	[NOT REQUIRED] org.json4s#json4s-ast_2.10;3.2.10!json4s-ast_2.10.jar
+	[NOT REQUIRED] com.thoughtworks.paranamer#paranamer;2.6!paranamer.jar
+	[NOT REQUIRED] org.scala-sbt#cache;0.13.8!cache.jar
+	[NOT REQUIRED] org.scala-sbt#test-agent;0.13.8!test-agent.jar
+	[NOT REQUIRED] org.scala-sbt#test-interface;1.0!test-interface.jar
+	[NOT REQUIRED] org.scala-sbt#apply-macro;0.13.8!apply-macro.jar
+	[NOT REQUIRED] org.scala-lang#jline;2.10.4!jline.jar
+	[NOT REQUIRED] org.fusesource.jansi#jansi;1.4!jansi.jar
+:: resolution report :: resolve 173926ms :: artifacts dl 82458ms
+[warn] 	::::::::::::::::::::::::::::::::::::::::::::::
+	::::::::::::::::::::::::::::::::::::::::::::::
+[warn] 	::          UNRESOLVED DEPENDENCIES         ::
+	::          UNRESOLVED DEPENDENCIES         ::
+[warn] 	::::::::::::::::::::::::::::::::::::::::::::::
+	::::::::::::::::::::::::::::::::::::::::::::::
+[warn] 	:: org.avaje.ebeanorm#avaje-ebeanorm-agent;4.5.3: not found
+	:: org.avaje.ebeanorm#avaje-ebeanorm-agent;4.5.3: not found
+[warn] 	::::::::::::::::::::::::::::::::::::::::::::::
+	::::::::::::::::::::::::::::::::::::::::::::::
+
+	report for default#recipes-build;0.1-SNAPSHOT compile produced in D:\AA_Uni\Web-Technologien\Repository\Assignement3\recipes\project\target\resolution-cache\reports\default-recipes-build-compile.xml
+	report for default#recipes-build;0.1-SNAPSHOT runtime produced in D:\AA_Uni\Web-Technologien\Repository\Assignement3\recipes\project\target\resolution-cache\reports\default-recipes-build-runtime.xml
+	report for default#recipes-build;0.1-SNAPSHOT test produced in D:\AA_Uni\Web-Technologien\Repository\Assignement3\recipes\project\target\resolution-cache\reports\default-recipes-build-test.xml
+	report for default#recipes-build;0.1-SNAPSHOT provided produced in D:\AA_Uni\Web-Technologien\Repository\Assignement3\recipes\project\target\resolution-cache\reports\default-recipes-build-provided.xml
+	report for default#recipes-build;0.1-SNAPSHOT optional produced in D:\AA_Uni\Web-Technologien\Repository\Assignement3\recipes\project\target\resolution-cache\reports\default-recipes-build-optional.xml
+	report for default#recipes-build;0.1-SNAPSHOT compile-internal produced in D:\AA_Uni\Web-Technologien\Repository\Assignement3\recipes\project\target\resolution-cache\reports\default-recipes-build-compile-internal.xml
+	report for default#recipes-build;0.1-SNAPSHOT runtime-internal produced in D:\AA_Uni\Web-Technologien\Repository\Assignement3\recipes\project\target\resolution-cache\reports\default-recipes-build-runtime-internal.xml
+	report for default#recipes-build;0.1-SNAPSHOT test-internal produced in D:\AA_Uni\Web-Technologien\Repository\Assignement3\recipes\project\target\resolution-cache\reports\default-recipes-build-test-internal.xml
+	report for default#recipes-build;0.1-SNAPSHOT plugin produced in D:\AA_Uni\Web-Technologien\Repository\Assignement3\recipes\project\target\resolution-cache\reports\default-recipes-build-plugin.xml
+	report for default#recipes-build;0.1-SNAPSHOT sources produced in D:\AA_Uni\Web-Technologien\Repository\Assignement3\recipes\project\target\resolution-cache\reports\default-recipes-build-sources.xml
+	report for default#recipes-build;0.1-SNAPSHOT docs produced in D:\AA_Uni\Web-Technologien\Repository\Assignement3\recipes\project\target\resolution-cache\reports\default-recipes-build-docs.xml
+	report for default#recipes-build;0.1-SNAPSHOT pom produced in D:\AA_Uni\Web-Technologien\Repository\Assignement3\recipes\project\target\resolution-cache\reports\default-recipes-build-pom.xml
+	report for default#recipes-build;0.1-SNAPSHOT scala-tool produced in D:\AA_Uni\Web-Technologien\Repository\Assignement3\recipes\project\target\resolution-cache\reports\default-recipes-build-scala-tool.xml
+	resolve done (173926ms resolve - 82458ms download)
+[warn] 
+[warn] 	Note: Unresolved dependencies path:
+
+	Note: Unresolved dependencies path:
+[warn] 		org.avaje.ebeanorm:avaje-ebeanorm-agent:4.5.3
+		org.avaje.ebeanorm:avaje-ebeanorm-agent:4.5.3
+[warn] 		  +- com.typesafe.sbt:sbt-play-ebean:1.0.0 (scalaVersion=2.10, sbtVersion=0.13) (D:\AA_Uni\Web-Technologien\Repository\Assignement3\recipes\project\plugins.sbt#L21-22)
+		  +- com.typesafe.sbt:sbt-play-ebean:1.0.0 (scalaVersion=2.10, sbtVersion=0.13) (D:\AA_Uni\Web-Technologien\Repository\Assignement3\recipes\project\plugins.sbt#L21-22)
+[warn] 		  +- default:recipes-build:0.1-SNAPSHOT (scalaVersion=2.10, sbtVersion=0.13)
+		  +- default:recipes-build:0.1-SNAPSHOT (scalaVersion=2.10, sbtVersion=0.13)
+unresolved dependency: org.avaje.ebeanorm#avaje-ebeanorm-agent;4.5.3: not found
+sbt.ResolveException: unresolved dependency: org.avaje.ebeanorm#avaje-ebeanorm-agent;4.5.3: not found
+	at sbt.IvyActions$.sbt$IvyActions$$resolve(IvyActions.scala:291)
+	at sbt.IvyActions$$anonfun$updateEither$1.apply(IvyActions.scala:188)
+	at sbt.IvyActions$$anonfun$updateEither$1.apply(IvyActions.scala:165)
+	at sbt.IvySbt$Module$$anonfun$withModule$1.apply(Ivy.scala:155)
+	at sbt.IvySbt$Module$$anonfun$withModule$1.apply(Ivy.scala:155)
+	at sbt.IvySbt$$anonfun$withIvy$1.apply(Ivy.scala:132)
+	at sbt.IvySbt.sbt$IvySbt$$action$1(Ivy.scala:57)
+	at sbt.IvySbt$$anon$4.call(Ivy.scala:65)
+	at xsbt.boot.Locks$GlobalLock.withChannel$1(Locks.scala:93)
+	at xsbt.boot.Locks$GlobalLock.xsbt$boot$Locks$GlobalLock$$withChannelRetries$1(Locks.scala:78)
+	at xsbt.boot.Locks$GlobalLock$$anonfun$withFileLock$1.apply(Locks.scala:97)
+	at xsbt.boot.Using$.withResource(Using.scala:10)
+	at xsbt.boot.Using$.apply(Using.scala:9)
+	at xsbt.boot.Locks$GlobalLock.ignoringDeadlockAvoided(Locks.scala:58)
+	at xsbt.boot.Locks$GlobalLock.withLock(Locks.scala:48)
+	at xsbt.boot.Locks$.apply0(Locks.scala:31)
+	at xsbt.boot.Locks$.apply(Locks.scala:28)
+	at sbt.IvySbt.withDefaultLogger(Ivy.scala:65)
+	at sbt.IvySbt.withIvy(Ivy.scala:127)
+	at sbt.IvySbt.withIvy(Ivy.scala:124)
+	at sbt.IvySbt$Module.withModule(Ivy.scala:155)
+	at sbt.IvyActions$.updateEither(IvyActions.scala:165)
+	at sbt.Classpaths$$anonfun$sbt$Classpaths$$work$1$1.apply(Defaults.scala:1369)
+	at sbt.Classpaths$$anonfun$sbt$Classpaths$$work$1$1.apply(Defaults.scala:1365)
+	at sbt.Classpaths$$anonfun$doWork$1$1$$anonfun$87.apply(Defaults.scala:1399)
+	at sbt.Classpaths$$anonfun$doWork$1$1$$anonfun$87.apply(Defaults.scala:1397)
+	at sbt.Tracked$$anonfun$lastOutput$1.apply(Tracked.scala:37)
+	at sbt.Classpaths$$anonfun$doWork$1$1.apply(Defaults.scala:1402)
+	at sbt.Classpaths$$anonfun$doWork$1$1.apply(Defaults.scala:1396)
+	at sbt.Tracked$$anonfun$inputChanged$1.apply(Tracked.scala:60)
+	at sbt.Classpaths$.cachedUpdate(Defaults.scala:1419)
+	at sbt.Classpaths$$anonfun$updateTask$1.apply(Defaults.scala:1348)
+	at sbt.Classpaths$$anonfun$updateTask$1.apply(Defaults.scala:1310)
+	at scala.Function1$$anonfun$compose$1.apply(Function1.scala:47)
+	at sbt.$tilde$greater$$anonfun$$u2219$1.apply(TypeFunctions.scala:40)
+	at sbt.std.Transform$$anon$4.work(System.scala:63)
+	at sbt.Execute$$anonfun$submit$1$$anonfun$apply$1.apply(Execute.scala:226)
+	at sbt.Execute$$anonfun$submit$1$$anonfun$apply$1.apply(Execute.scala:226)
+	at sbt.ErrorHandling$.wideConvert(ErrorHandling.scala:17)
+	at sbt.Execute.work(Execute.scala:235)
+	at sbt.Execute$$anonfun$submit$1.apply(Execute.scala:226)
+	at sbt.Execute$$anonfun$submit$1.apply(Execute.scala:226)
+	at sbt.ConcurrentRestrictions$$anon$4$$anonfun$1.apply(ConcurrentRestrictions.scala:159)
+	at sbt.CompletionService$$anon$2.call(CompletionService.scala:28)
+	at java.util.concurrent.FutureTask.run(Unknown Source)
+	at java.util.concurrent.Executors$RunnableAdapter.call(Unknown Source)
+	at java.util.concurrent.FutureTask.run(Unknown Source)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(Unknown Source)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(Unknown Source)
+	at java.lang.Thread.run(Unknown Source)
+[error] (*:update) sbt.ResolveException: unresolved dependency: org.avaje.ebeanorm#avaje-ebeanorm-agent;4.5.3: not found
+(*:update) sbt.ResolveException: unresolved dependency: org.avaje.ebeanorm#avaje-ebeanorm-agent;4.5.3: not found
+> load-failed
+Failed to load project.
+> server-wait-for-reboot
