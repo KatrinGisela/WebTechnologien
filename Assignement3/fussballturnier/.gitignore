@@ -1,8 +1,12 @@
 logs
 target
-/.idea
-/.idea_modules
-/.classpath
-/.project
-/.settings
-/RUNNING_PID
+.idea
+.idea_modules
+.classpath
+.project
+.settings
+RUNNING_PID
+
+# von mir hinzuegfügt 
+*.log
+
