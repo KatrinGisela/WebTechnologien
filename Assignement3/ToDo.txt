@@ -2,3 +2,33 @@ TODOS:
 Sladjana: Partie Ctrl, Partie View
 Andreas: Partie Ctrl, Stadion View
 Gisela: Stadion Ctrl
+
+
+
+	*** HINWEIS AN EUCH***
+
+Ein Import in Eclipse hat bei mir(Sladjana) leider nicht funktioniert, daher habe ich simple models-Ordner anstatt Packages angelegt (habe im simplen Editor arbeiten müssen)
+
+weitere todos:
+
+- Models anlegen:
+	- Stadion
+	- Partie (aktuelles erweitern, verbessern..)
+
+- in der Datenbank mindestens drei Stadien erzeugen (passiert im ApplicationTimer)
+- Routen immer jeweils anpassen, nachdem Ctrl/ View erzuegt wurden
+
+
+
+	*** Fragen/ Anmerkungen ****
+
+- laut https://www.playframework.com/documentation/2.5.x/Anatomy#Typical-.gitignore-file 
+  müssen folgende Pfade und Ordner auch in die gitIgnore-Datei. Wisst Ihr hier mehr?	
+
+logs
+project/project
+project/target
+target
+tmp
+dist
+.cache
