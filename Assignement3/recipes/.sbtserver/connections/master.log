@@ -1,0 +1,10 @@
+New log file opened at Tue Jun 28 16:28:04 CEST 2016 by 8352@NbKatrin
+Taking next connection to: 53705
+New client attempting to connect on port: 53706-53705
+  Address = /192.168.12.1:53705
+This client on port 53706 has uuid 302cd419-f52a-4329-8c22-3493fb1c9927 configName activator humanReadableName Activator protocolVersion 3 featureTags Vector()
+Connected Clients: activator-302cd419-f52a-4329-8c22-3493fb1c9927
+Taking next connection to: 53705
+Checking to see if clients are empty...
+We have 1 non-daemon clients, continuing serving connections.
+Taking next connection to: 53705
