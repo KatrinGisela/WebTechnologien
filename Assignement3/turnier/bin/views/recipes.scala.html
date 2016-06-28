@@ -1,0 +1,28 @@
+@(recipes: List[Recipe]) 
+
+@import helper._
+
+@main("Recipes") {
+<h1>List of Recipes</h1>
+<a href="@routes.RecipesCtrl.createRecipe()">Create Recipe</a>
+<table>
+	@for(recipe <- recipes) {
+	<tr>
+		<td>@recipe.name</td>
+		<td>
+			<ul>
+				@for(ingredient <- recipe.ingredients) {
+				<li>@ingredient.name</li> }
+			</ul>
+		</td>
+		<td>@recipe.description</td>
+		<td>@form(routes.RecipesCtrl.updateRecipe(recipe.rid)) { 
+		<input type="submit" value="Update"> }
+		</td>
+		<td>@form(routes.RecipesCtrl.deleteRecipe(recipe.rid)) { 
+			<input type="submit" value="Delete"> }
+		</td>
+	</tr>
+	}
+</table>
+}

@@ -1,0 +1,15 @@
+@(formType: String, ingredientForm: Form[Ingredient]) 
+
+	@main(formType + " Ingredient") {
+	
+	<h1>@formType Ingredient</h1>
+	
+	@helper.form(action = routes.IngredientsCtrl.storeIngredient()) {
+	<input type="hidden" id="@ingredientForm("iid").id"
+		name="@ingredientForm("iid").name"
+		value='@ingredientForm("iid").value' />
+	@helper.inputText(ingredientForm("name"))
+	@helper.inputText(ingredientForm("description"))
+	<input type="submit" value="Save">
+	} 
+}
