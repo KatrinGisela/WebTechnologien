@@ -7,6 +7,5 @@ target
 .settings
 RUNNING_PID
 
-# von mir hinzuegfügt 
-*.log
+*.log*
 
