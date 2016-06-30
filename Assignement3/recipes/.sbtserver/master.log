@@ -128,19 +128,14 @@ Initial source changes:
 Removed products: Set()
 External API changes: API Changes: Set()
 Modified binary dependencies: Set()
-Initial directly invalidated sources: Set()
-
-Sources indirectly invalidated by:
-	product: Set()
-	binary dep: Set()
-	external source: Set()
-All initially invalidated sources: Set()
-
-Total time: 2 s, completed 30.06.2016 10:35:34
-> server-post-command-cleanup
-> server-handle-next-server-request
-> backgroundRun
-Evaluating tasks: compile:backgroundRun
+Initial directly invalidaDone executing sbt server engine, result Right(Exit(0))
+Closing listening server socket
+Waiting for socket thread
+Waiting for request processor thread
+Waiting for command engine result
+Returning control to sbt launcher with result Exit(0)
+Closing the 4212@NbKatrin logs at Thu Jun 30 10:38:12 CEST 2016, goodbye.
+kgroundRun
 Running task... Cancel: sbt.server.ServerTaskCancellation@148937c, check cycles: false
 Total time: 1 s, completed 30.06.2016 10:35:35
 > server-post-command-cleanup
