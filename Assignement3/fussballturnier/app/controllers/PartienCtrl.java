@@ -40,7 +40,7 @@ public class PartienCtrl extends Controller {
 		}
 		else {
 			Partie ingredient = filledForm.get();
-			if (ingredient.iid == null){
+			if (ingredient.pid == null){
 				Partie.create(ingredient);
 			} else {
 				Partie.update(ingredient);

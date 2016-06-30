@@ -7,16 +7,14 @@ import java.util.Map;
 @Entity
 public class Partie extends Model {
 	@Id
-	public Long iid;
-	@Required
-	public String name;
+	public Long pid;
 	@Required
 	public String heimmannschaftName;
 	@Required
 	public String gastmannschaftName;
 	@Required
 	public String partieDatum;
-	@ManyToMany(mappedBy = "partien")
+	@ManyToOne(mappedBy = "partien")
 	public List<Stadion> stadien;
 
 	public static Finder<Long, Partie> find = new Finder<Long, Partie>(
@@ -42,7 +40,7 @@ public class Partie extends Model {
 		HashMap<Long, String> partienMap = new HashMap<Long, String>();
 		List<Partie> partien = Partie.read();
 		for (Partie partie : partien) {
-			partienMap.put(partie.iid, partie.name);
+			partienMap.put(partie.pid, partie.name);
 		}
 		return partienMap;
 	}
