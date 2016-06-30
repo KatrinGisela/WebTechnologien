@@ -22473,3 +22473,142 @@ All initially invalidated sources: Set()
 Total time: 0 s, completed 28.06.2016 17:39:49
 > server-post-command-cleanup
 > server-handle-next-server-request
+> {file:/D:/AA_Uni/Web-Technologien/Repository/Assignement3/Fu%C3%9Fballturnier/}fu-ballturnier/compile:mainClass
+Evaluating tasks: compile:mainClass
+Running task... Cancel: sbt.server.ServerTaskCancellation@dd849e, check cycles: false
+
+Initial source changes: 
+	removed:Set()
+	added: Set()
+	modified: Set()
+Removed products: Set()
+External API changes: API Changes: Set()
+Modified binary dependencies: Set()
+Initial directly invalidated sources: Set()
+
+Sources indirectly invalidated by:
+	product: Set()
+	binary dep: Set()
+	external source: Set()
+All initially invalidated sources: Set()
+
+Total time: 3 s, completed 29.06.2016 07:35:50
+> server-post-command-cleanup
+> server-handle-next-server-request
+> {file:/D:/AA_Uni/Web-Technologien/Repository/Assignement3/Fu%C3%9Fballturnier/}fu-ballturnier/compile:discoveredMainClasses
+Evaluating tasks: compile:discoveredMainClasses
+Running task... Cancel: sbt.server.ServerTaskCancellation@1805c7d, check cycles: false
+
+Initial source changes: 
+	removed:Set()
+	added: Set()
+	modified: Set()
+Removed products: Set()
+External API changes: API Changes: Set()
+Modified binary dependencies: Set()
+Initial directly invalidated sources: Set()
+
+Sources indirectly invalidated by:
+	product: Set()
+	binary dep: Set()
+	external source: Set()
+All initially invalidated sources: Set()
+
+Total time: 1 s, completed 29.06.2016 07:35:50
+> server-post-command-cleanup
+> server-handle-next-server-request
+> {file:/D:/AA_Uni/Web-Technologien/Repository/Assignement3/Fu%C3%9Fballturnier/}fu-ballturnier/compile:mainClass
+Evaluating tasks: compile:mainClass
+Running task... Cancel: sbt.server.ServerTaskCancellation@52af4c, check cycles: false
+
+Initial source changes: 
+	removed:Set()
+	added: Set()
+	modified: Set()
+Removed products: Set()
+External API changes: API Changes: Set()
+Modified binary dependencies: Set()
+Initial directly invalidated sources: Set()
+
+Sources indirectly invalidated by:
+	product: Set()
+	binary dep: Set()
+	external source: Set()
+All initially invalidated sources: Set()
+
+Total time: 3 s, completed 29.06.2016 10:14:25
+> server-post-command-cleanup
+> server-handle-next-server-request
+> {file:/D:/AA_Uni/Web-Technologien/Repository/Assignement3/Fu%C3%9Fballturnier/}fu-ballturnier/compile:discoveredMainClasses
+Evaluating tasks: compile:discoveredMainClasses
+Running task... Cancel: sbt.server.ServerTaskCancellation@13cb3cb, check cycles: false
+
+Initial source changes: 
+	removed:Set()
+	added: Set()
+	modified: Set()
+Removed products: Set()
+External API changes: API Changes: Set()
+Modified binary dependencies: Set()
+Initial directly invalidated sources: Set()
+
+Sources indirectly invalidated by:
+	product: Set()
+	binary dep: Set()
+	external source: Set()
+All initially invalidated sources: Set()
+
+Total time: 1 s, completed 29.06.2016 10:14:26
+> server-post-command-cleanup
+> server-handle-next-server-request
+> {file:/D:/AA_Uni/Web-Technologien/Repository/Assignement3/Fu%C3%9Fballturnier/}fu-ballturnier/compile:discoveredMainClasses
+Evaluating tasks: compile:discoveredMainClasses
+Running task... Cancel: sbt.server.ServerTaskCancellation@18b5020, check cycles: false
+
+Initial source changes: 
+	removed:Set()
+	added: Set()
+	modified: Set()
+Removed products: Set()
+External API changes: API Changes: Set()
+Modified binary dependencies: Set()
+Initial directly invalidated sources: Set()
+
+Sources indirectly invalidated by:
+	product: Set()
+	binary dep: Set()
+	external source: Set()
+All initially invalidated sources: Set()
+
+Total time: 2 s, completed 29.06.2016 14:46:12
+> server-post-command-cleanup
+> server-handle-next-server-request
+> {file:/D:/AA_Uni/Web-Technologien/Repository/Assignement3/Fu%C3%9Fballturnier/}fu-ballturnier/compile:mainClass
+Evaluating tasks: compile:mainClass
+Running task... Cancel: sbt.server.ServerTaskCancellation@1396ba7, check cycles: false
+
+Initial source changes: 
+	removed:Set()
+	added: Set()
+	modified: Set()
+Removed products: Set()
+External API changes: API Changes: Set()
+Modified binary dependencies: Set()
+Initial directly invalidated sources: Set()
+
+Sources indirectly invalidated by:
+	product: Set()
+	binary dep: Set()
+	external source: Set()
+All initially invalidated sources: Set()
+
+Total time: 1 s, completed 29.06.2016 14:46:13
+> server-post-command-cleanup
+> server-handle-next-server-request
+Done executing sbt server engine, result Right(Exit(0))
+Closing listening server socket
+Waiting for socket thread
+Waiting for request processor thread
+Waiting for command engine result
+Returning control to sbt launcher with result Exit(0)
+Closing the 10272@NbKatrin logs at Wed Jun 29 14:52:10 CEST 2016, goodbye.
