@@ -5,3 +5,9 @@ New client attempting to connect on port: 58328-58327
 This client on port 58328 has uuid 62b2a88d-290a-47f7-bd3c-852b6f123968 configName activator humanReadableName Activator protocolVersion 3 featureTags Vector()
 Connected Clients: activator-62b2a88d-290a-47f7-bd3c-852b6f123968
 Taking next connection to: 58327
+Checking to see if clients are empty...
+We have 1 non-daemon clients, continuing serving connections.
+Taking next connection to: 58327
+Checking to see if clients are empty...
+We have 1 non-daemon clients, continuing serving connections.
+Taking next connection to: 58327
