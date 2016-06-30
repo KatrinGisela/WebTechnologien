@@ -1,22 +1,7 @@
-New log file opened at Thu Jun 30 11:08:23 CEST 2016 by 4868@NbKatrin
-Taking next connection to: 58230
-New client attempting to connect on port: 58231-58230
-  Address = /192.168.12.1:58230
-This client on port 58231 has uuid e9fbc443-7fa2-483a-8de4-3337a08c3b00 configName activator humanReadableName Activator protocolVersion 3 featureTags Vector()
-Connected Clients: activator-e9fbc443-7fa2-483a-8de4-3337a08c3b00
-Taking next connection to: 58230
-Checking to see if clients are empty...
-We have 1 non-daemon clients, continuing serving connections.
-Taking next connection to: 58230
-Checking to see if clients are empty...
-We have 1 non-daemon clients, continuing serving connections.
-Taking next connection to: 58230
-Checking to see if clients are empty...
-We have 1 non-daemon clients, continuing serving connections.
-Taking next connection to: 58230
-Checking to see if clients are empty...
-We have 1 non-daemon clients, continuing serving connections.
-Taking next connection to: 58230
-Checking to see if clients are empty...
-We have 1 non-daemon clients, continuing serving connections.
-Taking next connection to: 58230
+New log file opened at Thu Jun 30 11:32:57 CEST 2016 by 8700@NbKatrin
+Taking next connection to: 58327
+New client attempting to connect on port: 58328-58327
+  Address = /192.168.12.1:58327
+This client on port 58328 has uuid 62b2a88d-290a-47f7-bd3c-852b6f123968 configName activator humanReadableName Activator protocolVersion 3 featureTags Vector()
+Connected Clients: activator-62b2a88d-290a-47f7-bd3c-852b6f123968
+Taking next connection to: 58327
