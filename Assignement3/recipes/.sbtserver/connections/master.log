@@ -1,58 +1,22 @@
-New log file opened at Thu Jun 30 10:35:15 CEST 2016 by 1344@NbKatrin
-Taking next connection to: 58118
-New client attempting to connect on port: 58119-58118
-  Address = /192.168.12.1:58118
-This client on port 58119 has uuid d1abd5ba-d79f-4138-b168-a57f44918173 configName activator humanReadableName Activator protocolVersion 3 featureTags Vector()
-Connected Clients: activator-d1abd5ba-d79f-4138-b168-a57f44918173
-Taking next connection to: 58118
-New client attempting to connect on port: 58121-58118
-  Address = /192.168.12.1:58118
-Handshake exception on socket: 58121
-sbt.impl.ipc.HandshakeException: Unable to perform handshake
-	at sbt.impl.ipc.Peer.handshake(IPC.scala:46)
-	at sbt.impl.ipc.MultiClientServer.<init>(IPC.scala:150)
-	at sbt.server.SbtServerSocketHandler$$anon$1.run(SbtServerSocketHandler.scala:43)
-Caused by: java.net.SocketException: Software caused connection abort: recv failed
-	at java.net.SocketInputStream.socketRead0(Native Method)
-	at java.net.SocketInputStream.socketRead(Unknown Source)
-	at java.net.SocketInputStream.read(Unknown Source)
-	at java.net.SocketInputStream.read(Unknown Source)
-	at java.io.BufferedInputStream.fill(Unknown Source)
-	at java.io.BufferedInputStream.read(Unknown Source)
-	at java.io.DataInputStream.readInt(Unknown Source)
-	at sbt.impl.ipc.Peer.receive(IPC.scala:95)
-	at sbt.impl.ipc.Peer.handshake(IPC.scala:49)
-	... 2 more
-Taking next connection to: 58118
-New client attempting to connect on port: 58122-58118
-  Address = /192.168.12.1:58118
-This client on port 58122 has uuid 5b3413fc-a0bf-45ce-ba61-9c6643b9f8b9 configName play-fork-run humanReadableName Play Fork Run protocolVersion 1 featureTags Vector()
-Connected Clients: activator-d1abd5ba-d79f-4138-b168-a57f44918173, play-fork-run-5b3413fc-a0bf-45ce-ba61-9c6643b9f8b9
-Taking next connection to: 58118
+New log file opened at Thu Jun 30 11:08:23 CEST 2016 by 4868@NbKatrin
+Taking next connection to: 58230
+New client attempting to connect on port: 58231-58230
+  Address = /192.168.12.1:58230
+This client on port 58231 has uuid e9fbc443-7fa2-483a-8de4-3337a08c3b00 configName activator humanReadableName Activator protocolVersion 3 featureTags Vector()
+Connected Clients: activator-e9fbc443-7fa2-483a-8de4-3337a08c3b00
+Taking next connection to: 58230
 Checking to see if clients are empty...
 We have 1 non-daemon clients, continuing serving connections.
-Taking next connection to: 58118
+Taking next connection to: 58230
 Checking to see if clients are empty...
 We have 1 non-daemon clients, continuing serving connections.
-Taking next connection to: 58118
+Taking next connection to: 58230
 Checking to see if clients are empty...
 We have 1 non-daemon clients, continuing serving connections.
-Taking next connection to: 58118
+Taking next connection to: 58230
 Checking to see if clients are empty...
 We have 1 non-daemon clients, continuing serving connections.
-Taking next connection to: 58118
+Taking next connection to: 58230
 Checking to see if clients are empty...
 We have 1 non-daemon clients, continuing serving connections.
-Taking next connection to: 58118
-Checking to see if clients are empty...
-We have 1 non-daemon clients, continuing serving connections.
-Taking next connection to: 58118
-Checking to see if clients are empty...
-We have 1 non-daemon clients, continuing serving connections.
-Taking next connection to: 58118
-Checking to see if clients are empty...
-We have 1 non-daemon clients, continuing serving connections.
-Taking next connection to: 58118
-Checking to see if clients are empty...
-We have 1 non-daemon clients, continuing serving connections.
-Taking next connection to: 58118
+Taking next connection to: 58230

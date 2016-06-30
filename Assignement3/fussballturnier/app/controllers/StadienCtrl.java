@@ -7,8 +7,8 @@ import java.util.Set;
 
 import javax.inject.Inject;
 
-import models.Ingredient;
-import models.Recipe;
+import models.Partie;
+import models.Stadion;
 import play.data.Form;
 import play.data.FormFactory;
 import play.mvc.Controller;
@@ -20,41 +20,41 @@ public class StadienCtrl extends Controller {
 	private FormFactory formFactory;
 
 	public Result createRecipe() {
-		return ok(views.html.recipesForm.render("Create", formFactory.form(Recipe.class), Ingredient.read()));
+		return ok(views.html.recipesForm.render("Create", formFactory.form(Stadion.class), Partie.read()));
 	}
 
 	public Result readRecipes() {
-		return ok(views.html.recipes.render(Recipe.read()));
+		return ok(views.html.recipes.render(Stadion.read()));
 	}
 
 	public Result updateRecipe(Long iid) {
-		Recipe recipe = Recipe.find.byId(iid);
-		Form<Recipe> filledForm = formFactory.form(Recipe.class).fill(recipe);
-		return ok(views.html.recipesForm.render("Update", filledForm, Ingredient.read()));
+		Stadion recipe = Stadion.find.byId(iid);
+		Form<Stadion> filledForm = formFactory.form(Stadion.class).fill(recipe);
+		return ok(views.html.recipesForm.render("Update", filledForm, Partie.read()));
 	}
 
 	public Result deleteRecipe(Long rid) {
-		Recipe.delete(rid);
+		Stadion.delete(rid);
 		return redirect(routes.StadienCtrl.readRecipes());
 	}
 
 	public Result storeRecipe() {
-		Form<Recipe> recipeForm = formFactory.form(Recipe.class);
-		Form<Recipe> filledForm = recipeForm.bindFromRequest();
+		Form<Stadion> recipeForm = formFactory.form(Stadion.class);
+		Form<Stadion> filledForm = recipeForm.bindFromRequest();
 		if (filledForm.hasErrors()) {
-			return ok(views.html.recipesForm.render("Correct", filledForm, Ingredient.read()));
+			return ok(views.html.recipesForm.render("Correct", filledForm, Partie.read()));
 		} else {
-			Recipe recipe = filledForm.get();
+			Stadion recipe = filledForm.get();
 			List<Long> selectedIngredients = this.getMultiSelectIDs(filledForm.data(), "ingredients.iid");
 			for (Long ingredientID : selectedIngredients) {
-				Ingredient tmpIngredient = Ingredient.find.byId(ingredientID);
+				Partie tmpIngredient = Partie.find.byId(ingredientID);
 				recipe.ingredients.add(tmpIngredient);
 			}
 			if (recipe.rid == null)
-				Recipe.create(recipe);
+				Stadion.create(recipe);
 			else
-				Recipe.update(recipe);
-			return ok(views.html.recipes.render(Recipe.read()));
+				Stadion.update(recipe);
+			return ok(views.html.recipes.render(Stadion.read()));
 		}
 	}
 
