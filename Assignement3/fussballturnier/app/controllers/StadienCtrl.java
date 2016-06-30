@@ -14,7 +14,7 @@ import play.data.FormFactory;
 import play.mvc.Controller;
 import play.mvc.Result;
 
-public class RecipesCtrl extends Controller {
+public class StadienCtrl extends Controller {
 
 	@Inject
 	private FormFactory formFactory;
@@ -35,7 +35,7 @@ public class RecipesCtrl extends Controller {
 
 	public Result deleteRecipe(Long rid) {
 		Recipe.delete(rid);
-		return redirect(routes.RecipesCtrl.readRecipes());
+		return redirect(routes.StadienCtrl.readRecipes());
 	}
 
 	public Result storeRecipe() {

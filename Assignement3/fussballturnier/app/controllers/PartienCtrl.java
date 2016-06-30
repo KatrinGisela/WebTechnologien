@@ -8,7 +8,7 @@ import play.data.FormFactory;
 import play.mvc.Controller;
 import play.mvc.Result;
 
-public class IngredientsCtrl extends Controller {
+public class PartienCtrl extends Controller {
 	
 	@Inject
 	private FormFactory formFactory;
@@ -29,7 +29,7 @@ public class IngredientsCtrl extends Controller {
 
 	public Result deleteIngredient(Long iid) {
 		Ingredient.delete(iid);
-		return redirect(routes.IngredientsCtrl.readIngredients());
+		return redirect(routes.PartienCtrl.readIngredients());
 	}
 
 	public Result storeIngredient() {
@@ -45,7 +45,7 @@ public class IngredientsCtrl extends Controller {
 			} else {
 				Ingredient.update(ingredient);
 			}
-			return redirect(routes.IngredientsCtrl.readIngredients());
+			return redirect(routes.PartienCtrl.readIngredients());
 		}
 	}
 }
