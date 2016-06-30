@@ -1832,4 +1832,167 @@ sbt-chain: module revision found in cache: org.fusesource.jansi#jansi;1.4
 	[NOT REQUIRED] org.scala-lang#scala-reflect;2.10.4!scala-reflect.jar
 	[NOT REQUIRED] org.scala-sbt#control;0.13.8!control.jar
 	[NOT REQUIRED] org.scala-sbt#collections;0.13.8!collections.jar
-	[NOT REQUIRED] jline#jline;2.11!jline
+	[NOT REQUIRED] jline#jline;2.11!jline.jar
+	[NOT REQUIRED] org.scala-sbt#incremental-compiler;0.13.8!incremental-compiler.jar
+	[NOT REQUIRED] org.scala-sbt#compile;0.13.8!compile.jar
+	[NOT REQUIRED] org.scala-sbt#persist;0.13.8!persist.jar
+	[NOT REQUIRED] org.scala-sbt#classfile;0.13.8!classfile.jar
+	[NOT REQUIRED] org.scala-tools.sbinary#sbinary_2.10;0.4.2!sbinary_2.10.jar
+	[NOT REQUIRED] org.scala-sbt#cross;0.13.8!cross.jar
+	[NOT REQUIRED] org.scala-sbt.ivy#ivy;2.3.0-sbt-fccfbd44c9f64523b61398a0155784dcbaeae28f!ivy.jar
+	[NOT REQUIRED] com.jcraft#jsch;0.1.46!jsch.jar
+	[NOT REQUIRED] org.scala-sbt#serialization_2.10;0.1.1!serialization_2.10.jar
+	[NOT REQUIRED] org.scala-lang.modules#scala-pickling_2.10;0.10.0!scala-pickling_2.10.jar
+	[NOT REQUIRED] org.json4s#json4s-core_2.10;3.2.10!json4s-core_2.10.jar
+	[NOT REQUIRED] org.spire-math#jawn-parser_2.10;0.6.0!jawn-parser_2.10.jar
+	[NOT REQUIRED] org.spire-math#json4s-support_2.10;0.6.0!json4s-support_2.10.jar
+	[NOT REQUIRED] org.scalamacros#quasiquotes_2.10;2.0.1!quasiquotes_2.10.jar
+	[NOT REQUIRED] org.json4s#json4s-ast_2.10;3.2.10!json4s-ast_2.10.jar
+	[NOT REQUIRED] com.thoughtworks.paranamer#paranamer;2.6!paranamer.jar
+	[NOT REQUIRED] org.scala-sbt#cache;0.13.8!cache.jar
+	[NOT REQUIRED] org.scala-sbt#test-agent;0.13.8!test-agent.jar
+	[NOT REQUIRED] org.scala-sbt#test-interface;1.0!test-interface.jar
+	[NOT REQUIRED] org.scala-sbt#apply-macro;0.13.8!apply-macro.jar
+	[NOT REQUIRED] org.scala-lang#jline;2.10.4!jline.jar
+	[NOT REQUIRED] org.fusesource.jansi#jansi;1.4!jansi.jar
+:: resolution report :: resolve 6580ms :: artifacts dl 280ms
+	report for default#recipes-build;0.1-SNAPSHOT compile produced in D:\AA_Uni\Web-Technologien\Repository\Assignement3\recipes\project\target\resolution-cache\reports\default-recipes-build-compile.xml
+	report for default#recipes-build;0.1-SNAPSHOT runtime produced in D:\AA_Uni\Web-Technologien\Repository\Assignement3\recipes\project\target\resolution-cache\reports\default-recipes-build-runtime.xml
+	report for default#recipes-build;0.1-SNAPSHOT test produced in D:\AA_Uni\Web-Technologien\Repository\Assignement3\recipes\project\target\resolution-cache\reports\default-recipes-build-test.xml
+	report for default#recipes-build;0.1-SNAPSHOT provided produced in D:\AA_Uni\Web-Technologien\Repository\Assignement3\recipes\project\target\resolution-cache\reports\default-recipes-build-provided.xml
+	report for default#recipes-build;0.1-SNAPSHOT optional produced in D:\AA_Uni\Web-Technologien\Repository\Assignement3\recipes\project\target\resolution-cache\reports\default-recipes-build-optional.xml
+	report for default#recipes-build;0.1-SNAPSHOT compile-internal produced in D:\AA_Uni\Web-Technologien\Repository\Assignement3\recipes\project\target\resolution-cache\reports\default-recipes-build-compile-internal.xml
+	report for default#recipes-build;0.1-SNAPSHOT runtime-internal produced in D:\AA_Uni\Web-Technologien\Repository\Assignement3\recipes\project\target\resolution-cache\reports\default-recipes-build-runtime-internal.xml
+	report for default#recipes-build;0.1-SNAPSHOT test-internal produced in D:\AA_Uni\Web-Technologien\Repository\Assignement3\recipes\project\target\resolution-cache\reports\default-recipes-build-test-internal.xml
+	report for default#recipes-build;0.1-SNAPSHOT plugin produced in D:\AA_Uni\Web-Technologien\Repository\Assignement3\recipes\project\target\resolution-cache\reports\default-recipes-build-plugin.xml
+	report for default#recipes-build;0.1-SNAPSHOT sources produced in D:\AA_Uni\Web-Technologien\Repository\Assignement3\recipes\project\target\resolution-cache\reports\default-recipes-build-sources.xml
+	report for default#recipes-build;0.1-SNAPSHOT docs produced in D:\AA_Uni\Web-Technologien\Repository\Assignement3\recipes\project\target\resolution-cache\reports\default-recipes-build-docs.xml
+	report for default#recipes-build;0.1-SNAPSHOT pom produced in D:\AA_Uni\Web-Technologien\Repository\Assignement3\recipes\project\target\resolution-cache\reports\default-recipes-build-pom.xml
+	report for default#recipes-build;0.1-SNAPSHOT scala-tool produced in D:\AA_Uni\Web-Technologien\Repository\Assignement3\recipes\project\target\resolution-cache\reports\default-recipes-build-scala-tool.xml
+	resolve done (6580ms resolve - 280ms download)
+[info] Done updating.
+Done updating.
+
+Initial source changes: 
+	removed:Set()
+	added: Set()
+	modified: Set()
+Removed products: Set()
+External API changes: API Changes: Set()
+Modified binary dependencies: Set()
+Initial directly invalidated sources: Set()
+
+Sources indirectly invalidated by:
+	product: Set()
+	binary dep: Set()
+	external source: Set()
+All initially invalidated sources: Set()
+
+Copy resource mappings: 
+	
+[Loading] Scanning directory D:\AA_Uni\Web-Technologien\Repository\Assignement3\recipes
+[Loading] Found non-root projects 
+[Loading] Done in D:\AA_Uni\Web-Technologien\Repository\Assignement3\recipes, returning: ()
+deducing auto plugins based on known facts Set(Atom(sbt.plugins.CorePlugin)) and clauses Clauses(List(Clause(Atom(sbt.plugins.JvmPlugin),Set(Atom(sbt.plugins.IvyPlugin))), Clause(Atom(sbt.plugins.JUnitXmlReportPlugin),Set(Atom(sbt.plugins.JvmPlugin))), Clause(Atom(sbt.plugins.CorePlugin),Set(Atom(sbt.plugins.IvyPlugin))), Clause(Atom(sbt.plugins.IvyPlugin),Set(Atom(sbt.plugins.JvmPlugin))), Clause(Atom(sbt.plugins.JvmPlugin),Set(Atom(sbt.plugins.JUnitXmlReportPlugin)))))
+  :: deduced result: Matched(sbt.plugins.CorePlugin,sbt.plugins.IvyPlugin,sbt.plugins.JvmPlugin,sbt.plugins.JUnitXmlReportPlugin)
+sorting: ns: List(sbt.plugins.CorePlugin, sbt.plugins.IvyPlugin, sbt.plugins.JvmPlugin, sbt.plugins.JUnitXmlReportPlugin)
+  :: sorting:: found: List(sbt.plugins.CorePlugin) not found List(sbt.plugins.IvyPlugin, sbt.plugins.JvmPlugin, sbt.plugins.JUnitXmlReportPlugin)
+  :: sorting:: found: List(sbt.plugins.CorePlugin, sbt.plugins.IvyPlugin) not found List(sbt.plugins.JvmPlugin, sbt.plugins.JUnitXmlReportPlugin)
+  :: sorting:: found: List(sbt.plugins.CorePlugin, sbt.plugins.IvyPlugin, sbt.plugins.JvmPlugin) not found List(sbt.plugins.JUnitXmlReportPlugin)
+  :: sorting:: found: List(sbt.plugins.CorePlugin, sbt.plugins.IvyPlugin, sbt.plugins.JvmPlugin, sbt.plugins.JUnitXmlReportPlugin) not found List()
+  :: sorted deduced result: List(sbt.plugins.CorePlugin, sbt.plugins.IvyPlugin, sbt.plugins.JvmPlugin, sbt.plugins.JUnitXmlReportPlugin)
+[Loading] Done in D:\AA_Uni\Web-Technologien\Repository\Assignement3\recipes, returning: (recipes)
+Set current project to recipes (in build file:/D:/AA_Uni/Web-Technologien/Repository/Assignement3/recipes/)
+Reapplying settings...
+Set current project to recipes (in build file:/D:/AA_Uni/Web-Technologien/Repository/Assignement3/recipes/)
+> iflast shell
+> server-send-ready-for-request
+> server-handle-next-server-request
+> {file:/D:/AA_Uni/Web-Technologien/Repository/Assignement3/recipes/}recipes/compile:discoveredMainClasses
+Evaluating tasks: compile:discoveredMainClasses
+Running task... Cancel: sbt.server.ServerTaskCancellation@1e666, check cycles: false
+
+Initial source changes: 
+	removed:Set()
+	added: Set()
+	modified: Set()
+Removed products: Set()
+External API changes: API Changes: Set()
+Modified binary dependencies: Set()
+Initial directly invalidated sources: Set()
+
+Sources indirectly invalidated by:
+	product: Set()
+	binary dep: Set()
+	external source: Set()
+All initially invalidated sources: Set()
+
+Total time: 1 s, completed 30.06.2016 11:33:22
+> server-post-command-cleanup
+> server-handle-next-server-request
+> {file:/D:/AA_Uni/Web-Technologien/Repository/Assignement3/recipes/}recipes/compile:mainClass
+Evaluating tasks: compile:mainClass
+Running task... Cancel: sbt.server.ServerTaskCancellation@1d9e2df, check cycles: false
+
+Initial source changes: 
+	removed:Set()
+	added: Set()
+	modified: Set()
+Removed products: Set()
+External API changes: API Changes: Set()
+Modified binary dependencies: Set()
+Initial directly invalidated sources: Set()
+
+Sources indirectly invalidated by:
+	product: Set()
+	binary dep: Set()
+	external source: Set()
+All initially invalidated sources: Set()
+
+Total time: 1 s, completed 30.06.2016 11:33:23
+> server-post-command-cleanup
+> server-handle-next-server-request
+> {file:/D:/AA_Uni/Web-Technologien/Repository/Assignement3/recipes/}recipes/compile:discoveredMainClasses
+Evaluating tasks: compile:discoveredMainClasses
+Running task... Cancel: sbt.server.ServerTaskCancellation@12db9bc, check cycles: false
+
+Initial source changes: 
+	removed:Set()
+	added: Set()
+	modified: Set()
+Removed products: Set()
+External API changes: API Changes: Set()
+Modified binary dependencies: Set()
+Initial directly invalidated sources: Set()
+
+Sources indirectly invalidated by:
+	product: Set()
+	binary dep: Set()
+	external source: Set()
+All initially invalidated sources: Set()
+
+Total time: 0 s, completed 30.06.2016 11:33:23
+> server-post-command-cleanup
+> server-handle-next-server-request
+> {file:/D:/AA_Uni/Web-Technologien/Repository/Assignement3/recipes/}recipes/compile:mainClass
+Evaluating tasks: compile:mainClass
+Running task... Cancel: sbt.server.ServerTaskCancellation@673900, check cycles: false
+
+Initial source changes: 
+	removed:Set()
+	added: Set()
+	modified: Set()
+Removed products: Set()
+External API changes: API Changes: Set()
+Modified binary dependencies: Set()
+Initial directly invalidated sources: Set()
+
+Sources indirectly invalidated by:
+	product: Set()
+	binary dep: Set()
+	external source: Set()
+All initially invalidated sources: Set()
+
+Total time: 0 s, completed 30.06.2016 11:33:24
+> server-post-command-cleanup
+> server-handle-next-server-request
