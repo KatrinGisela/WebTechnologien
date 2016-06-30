@@ -6,7 +6,7 @@ import java.util.Map;
 
 import javax.persistence.Entity;
 import javax.persistence.Id;
-import javax.persistence.ManyToMany;
+import javax.persistence.OneToOne;
 
 import play.data.validation.Constraints.Required;
 
@@ -22,7 +22,7 @@ public class Partie extends Model {
 	public String gastmannschaftName;
 	@Required
 	public String partieDatum;
-	@ManyToOne(mappedBy = "partien")
+	@OneToOne(mappedBy = "partien")
 	public List<Stadion> stadien;
 
 	public static Finder<Long, Partie> find = new Finder<Long, Partie>(

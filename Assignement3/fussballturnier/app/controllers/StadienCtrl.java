@@ -20,32 +20,36 @@ public class StadienCtrl extends Controller {
 	private FormFactory formFactory;
 
 	public Result createRecipe() {
-		return ok(views.html.recipesForm.render("Create", formFactory.form(Stadion.class), Partie.read()));
+		return ok(views.html.stadienForm.render("Create",
+				formFactory.form(Stadion.class), Partie.read()));
 	}
 
-	public Result readRecipes() {
-		return ok(views.html.recipes.render(Stadion.read()));
+	public Result readStadien() {
+		return ok(views.html.stadien.render(Stadion.read()));
 	}
 
-	public Result updateRecipe(Long iid) {
+	public Result updateStadion(Long iid) {
 		Stadion recipe = Stadion.find.byId(iid);
 		Form<Stadion> filledForm = formFactory.form(Stadion.class).fill(recipe);
-		return ok(views.html.recipesForm.render("Update", filledForm, Partie.read()));
+		return ok(views.html.stadienForm.render("Update", filledForm,
+				Partie.read()));
 	}
 
-	public Result deleteRecipe(Long rid) {
+	public Result deleteStadion(Long rid) {
 		Stadion.delete(rid);
-		return redirect(routes.StadienCtrl.readRecipes());
+		return redirect(routes.StadienCtrl.readStadien());
 	}
 
 	public Result storeRecipe() {
 		Form<Stadion> recipeForm = formFactory.form(Stadion.class);
 		Form<Stadion> filledForm = recipeForm.bindFromRequest();
 		if (filledForm.hasErrors()) {
-			return ok(views.html.recipesForm.render("Correct", filledForm, Partie.read()));
+			return ok(views.html.recipesForm.render("Correct", filledForm,
+					Partie.read()));
 		} else {
 			Stadion recipe = filledForm.get();
-			List<Long> selectedIngredients = this.getMultiSelectIDs(filledForm.data(), "ingredients.iid");
+			List<Long> selectedIngredients = this.getMultiSelectIDs(
+					filledForm.data(), "ingredients.iid");
 			for (Long ingredientID : selectedIngredients) {
 				Partie tmpIngredient = Partie.find.byId(ingredientID);
 				recipe.ingredients.add(tmpIngredient);
@@ -58,7 +62,8 @@ public class StadienCtrl extends Controller {
 		}
 	}
 
-	public List<Long> getMultiSelectIDs(Map<String, String> formMap, String multiName) {
+	public List<Long> getMultiSelectIDs(Map<String, String> formMap,
+			String multiName) {
 		ArrayList<Long> selectedIDs = new ArrayList<Long>();
 		Set<String> fieldNames = formMap.keySet();
 		for (String fieldName : fieldNames) {
