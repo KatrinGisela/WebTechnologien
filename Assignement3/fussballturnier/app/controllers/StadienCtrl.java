@@ -19,28 +19,35 @@ public class StadienCtrl extends Controller {
 	@Inject
 	private FormFactory formFactory;
 
-	public Result createRecipe() {
-		return ok(views.html.stadienForm.render("Create",
+	// TODO
+	public Result createStadion() {
+		return ok(views.html.recipesForm.render("Create",
 				formFactory.form(Stadion.class), Partie.read()));
 	}
 
-	public Result readStadien() {
-		return ok(views.html.stadien.render(Stadion.read()));
+	// TODO
+	public Result readStadion() {
+		return ok(views.html.recipes.render(Stadion.read()));
 	}
 
-	public Result updateStadion(Long iid) {
-		Stadion recipe = Stadion.find.byId(iid);
-		Form<Stadion> filledForm = formFactory.form(Stadion.class).fill(recipe);
-		return ok(views.html.stadienForm.render("Update", filledForm,
+	// TODO
+	public Result updateStadion(Long pid) {
+		Stadion stadion = Stadion.find.byId(pid);
+		Form<Stadion> filledForm = formFactory.form(Stadion.class)
+				.fill(stadion);
+		return ok(views.html.stadionForm.render("Update", filledForm,
 				Partie.read()));
 	}
 
-	public Result deleteStadion(Long rid) {
-		Stadion.delete(rid);
-		return redirect(routes.StadienCtrl.readStadien());
+	// TODO
+	public Result deleteStadion(Long sid) {
+		Stadion.delete(sid);
+		return redirect(routes.StadienCtrl.readStadion());
+>>>>>>> origin/master
 	}
 
-	public Result storeRecipe() {
+	// TODO
+	public Result storeStadion() {
 		Form<Stadion> recipeForm = formFactory.form(Stadion.class);
 		Form<Stadion> filledForm = recipeForm.bindFromRequest();
 		if (filledForm.hasErrors()) {
@@ -54,7 +61,7 @@ public class StadienCtrl extends Controller {
 				Partie tmpIngredient = Partie.find.byId(ingredientID);
 				recipe.ingredients.add(tmpIngredient);
 			}
-			if (recipe.rid == null)
+			if (recipe.sid == null)
 				Stadion.create(recipe);
 			else
 				Stadion.update(recipe);

@@ -23,6 +23,7 @@ public class Stadion extends Model {
 	public int anzahlSitzplaetze;
 	@Required
 	public int anzahlEingaengeAusgaenge;
+	public String nameSponsor;
 	@ManyToMany(cascade = CascadeType.REMOVE)
 	public List<Partie> partien;
 	public static Finder<Long, Stadion> find = new Finder<Long, Stadion>(
@@ -41,7 +42,7 @@ public class Stadion extends Model {
 
 	}
 
-	public static void delete(Long rid) {
-		find.ref(rid).delete();
+	public static void delete(Long sid) {
+		find.ref(sid).delete();
 	}
 }
