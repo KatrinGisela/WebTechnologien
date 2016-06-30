@@ -1,0 +1,13 @@
+[error] IO error while decoding D:\AA_Uni\Web-Technologien\Repository\Assignement3\Fußballturnier\app\models\Partie.java with UTF-8
+[error] Please try specifying another one using the -encoding option
+[error] IO error while decoding D:\AA_Uni\Web-Technologien\Repository\Assignement3\Fußballturnier\target\scala-2.11\routes\main\controllers\ReverseRoutes.scala with UTF-8
+[error] Please try specifying another one using the -encoding option
+[error] IO error while decoding D:\AA_Uni\Web-Technologien\Repository\Assignement3\Fußballturnier\target\scala-2.11\routes\main\controllers\javascript\JavaScriptReverseRoutes.scala with UTF-8
+[error] Please try specifying another one using the -encoding option
+[error] IO error while decoding D:\AA_Uni\Web-Technologien\Repository\Assignement3\Fußballturnier\target\scala-2.11\routes\main\controllers\routes.java with UTF-8
+[error] Please try specifying another one using the -encoding option
+[error] IO error while decoding D:\AA_Uni\Web-Technologien\Repository\Assignement3\Fußballturnier\target\scala-2.11\routes\main\router\Routes.scala with UTF-8
+[error] Please try specifying another one using the -encoding option
+[error] IO error while decoding D:\AA_Uni\Web-Technologien\Repository\Assignement3\Fußballturnier\target\scala-2.11\routes\main\router\RoutesPrefix.scala with UTF-8
+[error] Please try specifying another one using the -encoding option
+[error] 6 errors found
