@@ -4,6 +4,14 @@ import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
+import javax.persistence.Entity;
+import javax.persistence.Id;
+import javax.persistence.ManyToMany;
+
+import play.data.validation.Constraints.Required;
+
+import com.avaje.ebean.Model;
+
 @Entity
 public class Partie extends Model {
 	@Id
