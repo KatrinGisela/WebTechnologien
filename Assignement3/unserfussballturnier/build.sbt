@@ -1,4 +1,4 @@
-name := """recipes"""
+name := """unserfussballturnier"""
 
 version := "1.0-SNAPSHOT"
 
