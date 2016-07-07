@@ -7,18 +7,18 @@ GET     /                           controllers.HomeController.index
 
 
 # Ingredients
-GET 	/ingredients 				controllers.IngredientsCtrl.readIngredients()
-POST 	/ingredients/store 		controllers.IngredientsCtrl.storeIngredient()
-GET 	/ingredients/create 		controllers.IngredientsCtrl.createIngredient()
-POST 	/ingredients/update/:iid 	controllers.IngredientsCtrl.updateIngredient(iid: Long)
-POST 	/ingredients/delete/:iid 	controllers.IngredientsCtrl.deleteIngredient(iid: Long)
+#GET 	/ingredients 				controllers.IngredientsCtrl.readIngredients()
+#POST 	/ingredients/store 		controllers.IngredientsCtrl.storeIngredient()
+#GET 	/ingredients/create 		controllers.IngredientsCtrl.createIngredient()
+#POST 	/ingredients/update/:iid 	controllers.IngredientsCtrl.updateIngredient(iid: Long)
+#POST 	/ingredients/delete/:iid 	controllers.IngredientsCtrl.deleteIngredient(iid: Long)
 
 # Recipes
-GET /recipes controllers.RecipesCtrl.readRecipes()
-POST /recipes/store controllers.RecipesCtrl.storeRecipe()
-GET /recipes/create controllers.RecipesCtrl.createRecipe()
-POST /recipes/update/:rid controllers.RecipesCtrl.updateRecipe(rid: Long)
-POST /recipes/delete/:rid controllers.RecipesCtrl.deleteRecipe(rid: Long)
+#GET /recipes controllers.RecipesCtrl.readRecipes()
+#POST /recipes/store controllers.RecipesCtrl.storeRecipe()
+#GET /recipes/create controllers.RecipesCtrl.createRecipe()
+#POST /recipes/update/:rid controllers.RecipesCtrl.updateRecipe(rid: Long)
+#POST /recipes/delete/:rid controllers.RecipesCtrl.deleteRecipe(rid: Long)
 
 # An example controller showing how to use dependency injection
 GET     /count                      controllers.CountController.count
