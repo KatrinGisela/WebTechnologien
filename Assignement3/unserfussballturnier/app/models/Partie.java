@@ -13,26 +13,26 @@ import com.avaje.ebean.Model;
 import play.data.validation.Constraints.Required;
 
 @Entity
-public class Ingredient extends Model {
+public class Partie extends Model {
 	@Id
-	public Long iid;
+	public Long pid;
 	@Required
 	public String name;
 	public String description;
 	@ManyToMany(mappedBy = "ingredients")
-	public List<Recipe> recipes;
+	public List<Stadion> recipes;
 
-	public static Finder<Long, Ingredient> find = new Finder<Long, Ingredient>(Ingredient.class);
+	public static Finder<Long, Partie> find = new Finder<Long, Partie>(Partie.class);
 
-	public static void create(Ingredient ingredient) {
+	public static void create(Partie ingredient) {
 		ingredient.save();
 	}
 
-	public static List<Ingredient> read() {
+	public static List<Partie> read() {
 		return find.all();
 	}
 
-	public static void update(Ingredient updatedIngredient) {
+	public static void update(Partie updatedIngredient) {
 		updatedIngredient.update();
 	}
 
@@ -42,9 +42,9 @@ public class Ingredient extends Model {
 
 	public static Map<Long, String> getAllAsMap() {
 		HashMap<Long, String> ingredientsMap = new HashMap<Long, String>();
-		List<Ingredient> ingredients = Ingredient.read();
-		for (Ingredient ingredient : ingredients) {
-			ingredientsMap.put(ingredient.iid, ingredient.name);
+		List<Partie> ingredients = Partie.read();
+		for (Partie ingredient : ingredients) {
+			ingredientsMap.put(ingredient.pid, ingredient.name);
 		}
 		return ingredientsMap;
 	}

@@ -9,25 +9,25 @@ import com.avaje.ebean.Model;
 import play.data.validation.Constraints.Required;
 
 @Entity
-public class Recipe extends Model {
+public class Stadion extends Model {
 	@Id
-	public Long rid;
+	public Long sid;
 	@Required
 	public String name;
 	public String description;
 	@ManyToMany(cascade = CascadeType.REMOVE)
-	public List<Ingredient> ingredients;
-	public static Finder<Long, Recipe> find = new Finder<Long,Recipe>(Recipe.class);
+	public List<Partie> ingredients;
+	public static Finder<Long, Stadion> find = new Finder<Long,Stadion>(Stadion.class);
 
-	public static void create(Recipe ingredient) {
+	public static void create(Stadion ingredient) {
 		ingredient.save();
 	}
 
-	public static List<Recipe> read() {
+	public static List<Stadion> read() {
 		return find.all();
 	}
 
-	public static void update(Recipe updatedIngredient) {
+	public static void update(Stadion updatedIngredient) {
 		updatedIngredient.update();
 	}
 

@@ -11,27 +11,26 @@ import play.Logger;
 import play.inject.ApplicationLifecycle;
 
 /**
- * This class demonstrates how to run code when the
- * application starts and stops. It starts a timer when the
- * application starts. When the application stops it prints out how
- * long the application was running for.
- *
- * This class is registered for Guice dependency injection in the
- * {@link Module} class. We want the class to start when the application
- * starts, so it is registered as an "eager singleton". See the code
- * in the {@link Module} class to see how this happens.
- *
- * This class needs to run code when the server stops. It uses the
- * application's {@link ApplicationLifecycle} to register a stop hook.
+ * This class demonstrates how to run code when the application starts and
+ * stops. It starts a timer when the application starts. When the application
+ * stops it prints out how long the application was running for.
+ * 
+ * This class is registered for Guice dependency injection in the {@link Module}
+ * class. We want the class to start when the application starts, so it is
+ * registered as an "eager singleton". See the code in the {@link Module} class
+ * to see how this happens.
+ * 
+ * This class needs to run code when the server stops. It uses the application's
+ * {@link ApplicationLifecycle} to register a stop hook.
  */
 @Singleton
 public class ApplicationTimer {
 
-    private final Clock clock;
-    private final ApplicationLifecycle appLifecycle;
-    private final Instant start;
+	private final Clock clock;
+	private final ApplicationLifecycle appLifecycle;
+	private final Instant start;
 
-    @Inject
+	@Inject
     public ApplicationTimer(Clock clock, ApplicationLifecycle appLifecycle) {
         this.clock = clock;
         this.appLifecycle = appLifecycle;
@@ -40,20 +39,20 @@ public class ApplicationTimer {
         Logger.info("ApplicationTimer demo: Starting application at " + start);
 
         // Create ingredients here:
-        Ingredient paprika = new Ingredient();
+        Partie paprika = new Partie();
         paprika.name = "Paprika";
         paprika.description = "Rotes Gemüse";
-        Ingredient.create(paprika);
+        Partie.create(paprika);
         
-        Ingredient kartoffel = new Ingredient();
+        Partie kartoffel = new Partie();
         kartoffel.name = "Kartoffel";
         kartoffel.description = "Wohlschmeckendes Nachtschattengewächs";
-        Ingredient.create(kartoffel);
+        Partie.create(kartoffel);
         
-        Ingredient nudeln = new Ingredient();
+        Partie nudeln = new Partie();
         nudeln.name = "Nudeln";
         nudeln.description = "Schön al dente";
-        Ingredient.create(nudeln);
+        Partie.create(nudeln);
         
         Recipe recipe = new Recipe();
         recipe.name = "Paprikanudeln";
@@ -72,5 +71,4 @@ public class ApplicationTimer {
             return CompletableFuture.completedFuture(null);
         });
     }
-
 }
