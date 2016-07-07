@@ -2,7 +2,7 @@ package controllers;
 
 import javax.inject.Inject;
 
-import models.Ingredient;
+import models.Partie;
 import play.data.Form;
 import play.data.FormFactory;
 import play.mvc.Controller;
@@ -14,36 +14,36 @@ public class IngredientsCtrl extends Controller {
 	private FormFactory formFactory;
 	
 	public Result createIngredient() {
-		return ok(views.html.ingredientsForm.render("Create", formFactory.form(Ingredient.class)));
+		return ok(views.html.ingredientsForm.render("Create", formFactory.form(Partie.class)));
 	}
 
 	public Result readIngredients() {
-		return ok(views.html.ingredients.render(Ingredient.read()));
+		return ok(views.html.ingredients.render(Partie.read()));
 	}
 
 	public Result updateIngredient(Long iid) {
-		Ingredient ingredient  = Ingredient.find.byId(iid);
-		Form<Ingredient> filledForm = formFactory.form(Ingredient.class).fill(ingredient);
+		Partie ingredient  = Partie.find.byId(iid);
+		Form<Partie> filledForm = formFactory.form(Partie.class).fill(ingredient);
 		return ok(views.html.ingredientsForm.render("Update", filledForm));
 	}
 
 	public Result deleteIngredient(Long iid) {
-		Ingredient.delete(iid);
+		Partie.delete(iid);
 		return redirect(routes.IngredientsCtrl.readIngredients());
 	}
 
 	public Result storeIngredient() {
-		Form<Ingredient> ingredientForm = formFactory.form(Ingredient.class);
-		Form<Ingredient> filledForm = ingredientForm.bindFromRequest();
+		Form<Partie> ingredientForm = formFactory.form(Partie.class);
+		Form<Partie> filledForm = ingredientForm.bindFromRequest();
 		if (filledForm.hasErrors()){
 			return ok(views.html.ingredientsForm.render("Correct", filledForm));
 		}
 		else {
-			Ingredient ingredient = filledForm.get();
+			Partie ingredient = filledForm.get();
 			if (ingredient.iid == null){
-				Ingredient.create(ingredient);
+				Partie.create(ingredient);
 			} else {
-				Ingredient.update(ingredient);
+				Partie.update(ingredient);
 			}
 			return redirect(routes.IngredientsCtrl.readIngredients());
 		}
