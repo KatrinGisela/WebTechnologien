@@ -49,6 +49,8 @@ public class Partie extends Model {
 		List<Partie> parties = Partie.read();
 		for (Partie partie : parties) {
 			partiesMap.put(partie.pid, partie.heimmannschaftName);	// hier auch die anderen Attribute?
+			partiesMap.put(partie.pid, partie.gastmannschaftName);	// macht das Sinn so?
+			partiesMap.put(partie.pid, partie.partieDatum);
 		}
 		return partiesMap;
 	}
