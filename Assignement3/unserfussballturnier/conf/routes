@@ -6,12 +6,12 @@
 GET     /                           controllers.HomeController.index
 
 
-# Ingredients
-GET 	/ingredients 				controllers.IngredientsCtrl.readIngredients()
-POST 	/ingredients/store 		controllers.IngredientsCtrl.storeIngredient()
-GET 	/ingredients/create 		controllers.IngredientsCtrl.createIngredient()
-POST 	/ingredients/update/:iid 	controllers.IngredientsCtrl.updateIngredient(iid: Long)
-POST 	/ingredients/delete/:iid 	controllers.IngredientsCtrl.deleteIngredient(iid: Long)
+# Parties
+#GET 	/parties 				controllers.PartiesCtrl.readParties()
+#POST 	/parties/store 			controllers.PartiesCtrl.storePartie()
+#GET 	/parties/create 		controllers.PartiesCtrl.createPartie()
+#POST 	/parties/update/:pid 	controllers.PartiesCtrl.updatePartie(pid: Long)
+#POST 	/parties/delete/:pid 	controllers.PartiesCtrl.deletePartie(pid: Long)
 
 # Recipes
 GET /recipes controllers.RecipesCtrl.readRecipes()
