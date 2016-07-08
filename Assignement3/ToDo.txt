@@ -34,3 +34,5 @@ target
 tmp
 dist
 .cache
+
+- .scala-Dateien: wie lauten hier die weiteren Anpassungen für die input/submit - Funktionalitäten?
