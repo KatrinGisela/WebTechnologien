@@ -8,44 +8,44 @@ import play.data.FormFactory;
 import play.mvc.Controller;
 import play.mvc.Result;
 
-public class IngredientsCtrl extends Controller {
+public class PartiesCtrl extends Controller {
 	
 	@Inject
 	private FormFactory formFactory;
 	
-	public Result createIngredient() {
-		return ok(views.html.ingredientsForm.render("Create", formFactory.form(Partie.class)));
+	public Result createPartie() {
+		return ok(views.html.partiesForm.render("Create", formFactory.form(Partie.class)));
 	}
 
-	public Result readIngredients() {
-		return ok(views.html.ingredients.render(Partie.read()));
+	public Result readParties() {
+		return ok(views.html.parties.render(Partie.read()));
 	}
 
-	public Result updateIngredient(Long iid) {
-		Partie ingredient  = Partie.find.byId(iid);
-		Form<Partie> filledForm = formFactory.form(Partie.class).fill(ingredient);
-		return ok(views.html.ingredientsForm.render("Update", filledForm));
+	public Result updateParte(Long pid) {
+		Partie partie  = Partie.find.byId(pid);
+		Form<Partie> filledForm = formFactory.form(Partie.class).fill(partie);
+		return ok(views.html.partiesForm.render("Update", filledForm));
 	}
 
-	public Result deleteIngredient(Long iid) {
-		Partie.delete(iid);
-		return redirect(routes.IngredientsCtrl.readIngredients());
+	public Result deleteParttie(Long pid) {
+		Partie.delete(pid);
+		return redirect(routes.PartiesCtrl.readParties());
 	}
 
-	public Result storeIngredient() {
-		Form<Partie> ingredientForm = formFactory.form(Partie.class);
-		Form<Partie> filledForm = ingredientForm.bindFromRequest();
+	public Result storePartie() {
+		Form<Partie> partieForm = formFactory.form(Partie.class);
+		Form<Partie> filledForm = partieForm.bindFromRequest();
 		if (filledForm.hasErrors()){
-			return ok(views.html.ingredientsForm.render("Correct", filledForm));
+			return ok(views.html.partieForm.render("Correct", filledForm));
 		}
 		else {
-			Partie ingredient = filledForm.get();
-			if (ingredient.iid == null){
-				Partie.create(ingredient);
+			Partie partie = filledForm.get();
+			if (partie.pid == null){
+				Partie.create(partie);
 			} else {
-				Partie.update(ingredient);
+				Partie.update(partie);
 			}
-			return redirect(routes.IngredientsCtrl.readIngredients());
+			return redirect(routes.PartiesCtrl.readParties());
 		}
 	}
 }
