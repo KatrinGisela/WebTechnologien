@@ -6,7 +6,7 @@
 GET     /                           controllers.HomeController.index
 
 
-# Ingredients
+# Parties
 #GET 	/parties 				controllers.PartiesCtrl.readParties()
 #POST 	/parties/store 			controllers.PartiesCtrl.storePartie()
 #GET 	/parties/create 		controllers.PartiesCtrl.createPartie()

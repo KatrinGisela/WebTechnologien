@@ -1,0 +1,26 @@
+@(ingredients: List[Partie]) 
+
+@main("Parties") {
+
+	<h1>List of Parties</h1>
+	
+	<a href="@routes.PartiesCtrl.createPartie()">Create	Partie</a>
+	<table>
+	@for(partie <- parties) {
+		<tr>
+			<td>@partie.heimmannschaftName</td>
+			<td>@partie.gastmannschaftName</td>
+			<td>@partie.partieDatum</td>
+			<td>@ingredient.description</td>
+			<td>@helper.form(action =
+				routes.PartiesCtrl.updatePartie(partie.pid)) { <input
+				type="submit" value="Update"> }
+			</td>
+			<td>@helper.form(action =
+				routes.PartiesCtrl.deletePartie(partie.pid)) { <input
+				type="submit" value="Delete"> }
+			</td>
+		</tr>
+	}
+</table>
+}
