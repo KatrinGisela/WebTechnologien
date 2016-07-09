@@ -19,7 +19,6 @@ public class Partie extends Model {
 	@Required
 	public String name;
 	public String description;
-
 	public String heimmannschaftName;
 	@Required
 	public String gastmannschaftName;

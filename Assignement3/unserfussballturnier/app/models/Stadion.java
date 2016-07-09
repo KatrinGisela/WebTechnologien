@@ -17,19 +17,19 @@ public class Stadion extends Model {
 	public String name;
 	public String description;
 	@ManyToMany(cascade = CascadeType.REMOVE)
-	public List<Partie> ingredients;
+	public List<Partie> parties;
 	public static Finder<Long, Stadion> find = new Finder<Long,Stadion>(Stadion.class);
 
-	public static void create(Stadion ingredient) {
-		ingredient.save();
+	public static void create(Stadion partie) {
+		partie.save();
 	}
 
 	public static List<Stadion> read() {
 		return find.all();
 	}
 
-	public static void update(Stadion updatedIngredient) {
-		updatedIngredient.update();
+	public static void update(Stadion updatePartie) {
+		updatePartie.update();
 	}
 
 	public static void delete(Long rid) {
