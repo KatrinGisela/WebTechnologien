@@ -24,7 +24,7 @@ public class StadienCtrl extends Controller {
 				formFactory.form(Stadion.class), Partie.read()));
 	}
 
-	public Result readStadion() {
+	public Result readStadien() {
 		return ok(views.html.stadien.render(Stadion.read()));
 	}
 
