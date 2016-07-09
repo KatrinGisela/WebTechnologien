@@ -12,7 +12,7 @@ import play.data.validation.Constraints.Required;
 @Entity
 public class Stadion extends Model {
 	@Id
-	public Long rid;
+	public Long sid;
 	@Required
 	public String name;
 	public String description;
