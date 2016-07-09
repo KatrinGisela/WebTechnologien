@@ -1,17 +1,17 @@
-@(ingredients: List[Partie]) 
+@(parties: List[Partie], taskForm: Form[partie]) 
+
+@import helper._	
 
 @main("Parties") {
 
-	<h1>List of Parties</h1>
+	<h1>List of parties</h1>
 	
 	<a href="@routes.PartiesCtrl.createPartie()">Create	Partie</a>
 	<table>
 	@for(partie <- parties) {
 		<tr>
-			<td>@partie.heimmannschaftName</td>
-			<td>@partie.gastmannschaftName</td>
-			<td>@partie.partieDatum</td>
-			<td>@ingredient.description</td>
+			<td>@partie.name</td>
+			<td>@partie.description</td>
 			<td>@helper.form(action =
 				routes.PartiesCtrl.updatePartie(partie.pid)) { <input
 				type="submit" value="Update"> }

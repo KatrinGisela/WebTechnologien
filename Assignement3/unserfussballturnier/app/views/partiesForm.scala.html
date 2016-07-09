@@ -1,0 +1,15 @@
+@(formType: String, partieForm: Form[Partie]) 
+
+	@main(formType + " Partie") {
+	
+	<h1>@formType Partie</h1>
+	
+	@helper.form(action = routes.PartiesCtrl.storePartie()) {
+	<input type="hidden" id="@partieForm("pid").id"
+		name="@ingredientForm("pid").name"
+		value='@ingredientForm("pid").value' />
+	@helper.inputText(ingredientForm("name"))
+	@helper.inputText(ingredientForm("description"))
+	<input type="submit" value="Save">
+	} 
+}

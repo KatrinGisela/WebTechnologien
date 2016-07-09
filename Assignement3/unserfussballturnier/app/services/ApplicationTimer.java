@@ -5,8 +5,8 @@ import java.time.Instant;
 import java.util.concurrent.CompletableFuture;
 import javax.inject.*;
 
-import models.Ingredient;
-import models.Recipe;
+import models.Partie;
+import models.Stadion;
 import play.Logger;
 import play.inject.ApplicationLifecycle;
 
@@ -54,12 +54,12 @@ public class ApplicationTimer {
         nudeln.description = "Schön al dente";
         Partie.create(nudeln);
         
-        Recipe recipe = new Recipe();
+        Stadion recipe = new Stadion();
         recipe.name = "Paprikanudeln";
         recipe.description = "Paprika und Nudeln kochen";
         recipe.ingredients.add(paprika);
         recipe.ingredients.add(nudeln);
-        Recipe.create(recipe);
+        Stadion.create(recipe);
         
         // When the application starts, register a stop hook with the
         // ApplicationLifecycle object. The code inside the stop hook will

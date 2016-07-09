@@ -1,15 +1,17 @@
-@(formType: String, ingredientForm: Form[Ingredient]) 
+@(formType: String, partieForm: Form[Partie]) 
 
-	@main(formType + " Ingredient") {
+	@main(formType + " Partie") {
 	
-	<h1>@formType Ingredient</h1>
+	<h1>@formType Partie</h1>
 	
-	@helper.form(action = routes.IngredientsCtrl.storeIngredient()) {
-	<input type="hidden" id="@ingredientForm("iid").id"
-		name="@ingredientForm("iid").name"
-		value='@ingredientForm("iid").value' />
-	@helper.inputText(ingredientForm("name"))
-	@helper.inputText(ingredientForm("description"))
+	@helper.form(action = routes.PartiesCtrl.storePartie()) {
+	<input type="hidden" id="@partieForm("pid").id"
+		heimmannschaftName="@partieForm("pid").heimmannschaftName"
+		value='@partieForm("pid").value' />
+	@helper.inputText(partieForm("heimmannschaftName"))
+	@helper.inputText(partieForm("description"))
 	<input type="submit" value="Save">
 	} 
+
+	// TODO: HIER MÜSSEN DANN ABER AUCH DIE ANDEREN ELEMENTE REIN, ODER? 
 }
