@@ -28,16 +28,16 @@ public class StadienCtrl extends Controller {
 		return ok(views.html.stadien.render(Stadion.read()));
 	}
 
-	public Result updateStadion(Long iid) {
-		Stadion stadion = Stadion.find.byId(iid);
+	public Result updateStadion(Long pid) {
+		Stadion stadion = Stadion.find.byId(pid);
 		Form<Stadion> filledForm = formFactory.form(Stadion.class)
 				.fill(stadion);
 		return ok(views.html.stadienForm.render("Update", filledForm,
 				Partie.read()));
 	}
 
-	public Result deleteRecipe(Long rid) {
-		Stadion.delete(rid);
+	public Result deleteStadion(Long sid) {
+		Stadion.delete(sid);
 		return redirect(routes.StadienCtrl.readStadien());
 	}
 

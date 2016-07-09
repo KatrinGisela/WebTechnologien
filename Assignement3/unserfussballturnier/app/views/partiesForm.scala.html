@@ -6,10 +6,10 @@
 	
 	@helper.form(action = routes.PartiesCtrl.storePartie()) {
 	<input type="hidden" id="@partieForm("pid").id"
-		name="@ingredientForm("pid").name"
-		value='@ingredientForm("pid").value' />
-	@helper.inputText(ingredientForm("name"))
-	@helper.inputText(ingredientForm("description"))
+		name="@partieForm("pid").name"
+		value='@partieForm("pid").value' />
+	@helper.inputText(partieForm("name"))
+	@helper.inputText(partieForm("description"))
 	<input type="submit" value="Save">
 	} 
 }
