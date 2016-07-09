@@ -22,13 +22,13 @@ public class PartiesCtrl extends Controller {
 		return ok(views.html.parties.render(Partie.read()));
 	}
 
-	public Result updateParte(Long pid) {
+	public Result updatePartie(Long pid) {
 		Partie partie = Partie.find.byId(pid);
 		Form<Partie> filledForm = formFactory.form(Partie.class).fill(partie);
 		return ok(views.html.partiesForm.render("Update", filledForm));
 	}
 
-	public Result deleteParttie(Long pid) {
+	public Result deletePartie(Long pid) {
 		Partie.delete(pid);
 		return redirect(routes.PartiesCtrl.readParties());
 	}
