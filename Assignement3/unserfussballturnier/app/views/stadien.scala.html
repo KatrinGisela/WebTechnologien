@@ -1,4 +1,4 @@
-@(recipes: List[Stadion]) 
+@(stadien: List[Stadion]) 
 
 @import helper._
 
@@ -19,7 +19,7 @@
 		<td>@form(routes.StadienCtrl.updateStadion(stadion.sid)) { 
 		<input type="submit" value="Update"> }
 		</td>
-		<td>@form(routes.StadienCtrl.deleteRecipe(stadion.sid)) { 
+		<td>@form(routes.StadienCtrl.deleteStadion(stadion.sid)) { 
 			<input type="submit" value="Delete"> }
 		</td>
 	</tr>
