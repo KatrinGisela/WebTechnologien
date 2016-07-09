@@ -1,0 +1,28 @@
+@(recipes: List[Stadion]) 
+
+@import helper._
+
+@main("Stadien") {
+<h1>List of Stadien</h1>
+<a href="@routes.StadienCtrl.createStadion()">Create Stadion</a>
+<table>
+	@for(stadion <- stadien) {
+	<tr>
+		<td>@stadion.name</td>
+		<td>
+			<ul>
+				@for(partie <- stadion.parties) {
+				<li>@partie.name</li> }
+			</ul>
+		</td>
+		<td>@stadion.description</td>
+		<td>@form(routes.StadienCtrl.updateStadion(stadion.sid)) { 
+		<input type="submit" value="Update"> }
+		</td>
+		<td>@form(routes.StadienCtrl.deleteRecipe(stadion.sid)) { 
+			<input type="submit" value="Delete"> }
+		</td>
+	</tr>
+	}
+</table>
+}
