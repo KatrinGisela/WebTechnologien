@@ -9,12 +9,13 @@ import play.mvc.Controller;
 import play.mvc.Result;
 
 public class PartiesCtrl extends Controller {
-	
+
 	@Inject
 	private FormFactory formFactory;
-	
+
 	public Result createPartie() {
-		return ok(views.html.partiesForm.render("Create", formFactory.form(Partie.class)));
+		return ok(views.html.partiesForm.render("Create",
+				formFactory.form(Partie.class)));
 	}
 
 	public Result readParties() {
@@ -22,7 +23,7 @@ public class PartiesCtrl extends Controller {
 	}
 
 	public Result updateParte(Long pid) {
-		Partie partie  = Partie.find.byId(pid);
+		Partie partie = Partie.find.byId(pid);
 		Form<Partie> filledForm = formFactory.form(Partie.class).fill(partie);
 		return ok(views.html.partiesForm.render("Update", filledForm));
 	}
@@ -35,12 +36,11 @@ public class PartiesCtrl extends Controller {
 	public Result storePartie() {
 		Form<Partie> partieForm = formFactory.form(Partie.class);
 		Form<Partie> filledForm = partieForm.bindFromRequest();
-		if (filledForm.hasErrors()){
-			return ok(views.html.partieForm.render("Correct", filledForm));
-		}
-		else {
+		if (filledForm.hasErrors()) {
+			return ok(views.html.partiesForm.render("Correct", filledForm));
+		} else {
 			Partie partie = filledForm.get();
-			if (partie.pid == null){
+			if (partie.pid == null) {
 				Partie.create(partie);
 			} else {
 				Partie.update(partie);

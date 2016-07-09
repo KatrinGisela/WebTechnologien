@@ -13,12 +13,12 @@ GET     /                           controllers.HomeController.index
 #POST 	/parties/update/:pid 	controllers.PartiesCtrl.updatePartie(pid: Long)
 #POST 	/parties/delete/:pid 	controllers.PartiesCtrl.deletePartie(pid: Long)
 
-# Recipes
-GET /recipes controllers.RecipesCtrl.readRecipes()
-POST /recipes/store controllers.RecipesCtrl.storeRecipe()
-GET /recipes/create controllers.RecipesCtrl.createRecipe()
-POST /recipes/update/:rid controllers.RecipesCtrl.updateRecipe(rid: Long)
-POST /recipes/delete/:rid controllers.RecipesCtrl.deleteRecipe(rid: Long)
+# Stadien
+GET /stadien controllers.StadienCtrl.readStadion()
+POST /stadien/store controllers.StadienCtrl.storeStadion()
+GET /stadien/create controllers.StadienCtrl.createStadion()
+POST /stadien/update/:sid controllers.StadienCtrl.updateStadion(sid: Long)
+POST /stadien/delete/:sid controllers.StadienCtrl.deleteStadion(sid: Long)
 
 # An example controller showing how to use dependency injection
 GET     /count                      controllers.CountController.count
