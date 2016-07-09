@@ -7,18 +7,18 @@ GET     /                           controllers.HomeController.index
 
 
 # Parties
-#GET 	/parties 				controllers.PartiesCtrl.readParties()
-#POST 	/parties/store 			controllers.PartiesCtrl.storePartie()
-#GET 	/parties/create 		controllers.PartiesCtrl.createPartie()
-#POST 	/parties/update/:pid 	controllers.PartiesCtrl.updatePartie(pid: Long)
-#POST 	/parties/delete/:pid 	controllers.PartiesCtrl.deletePartie(pid: Long)
+GET 	/parties		controllers.PartiesCtrl.readParties()
+POST 	/parties/store		controllers.PartiesCtrl.storePartie()
+GET 	/parties/create		controllers.PartiesCtrl.createPartie()
+POST 	/parties/update/:pid		controllers.PartiesCtrl.updatePartie(pid: Long)
+POST 	/parties/delete/:pid		controllers.PartiesCtrl.deletePartie(pid: Long)
 
 # Stadien
-GET /stadien controllers.StadienCtrl.readStadion()
-POST /stadien/store controllers.StadienCtrl.storeStadion()
-GET /stadien/create controllers.StadienCtrl.createStadion()
-POST /stadien/update/:sid controllers.StadienCtrl.updateStadion(sid: Long)
-POST /stadien/delete/:sid controllers.StadienCtrl.deleteStadion(sid: Long)
+GET /stadien		controllers.StadienCtrl.readStadien()
+POST /stadien/store		controllers.StadienCtrl.storeStadion()
+GET /stadien/create		controllers.StadienCtrl.createStadion()
+POST /stadien/update/:sid		controllers.StadienCtrl.updateStadion(sid: Long)
+POST /stadien/delete/:sid		controllers.StadienCtrl.deleteStadion(sid: Long)
 
 # An example controller showing how to use dependency injection
 GET     /count                      controllers.CountController.count

@@ -24,7 +24,7 @@ public class StadienCtrl extends Controller {
 				formFactory.form(Stadion.class), Partie.read()));
 	}
 
-	public Result readStadion() {
+	public Result readStadien() {
 		return ok(views.html.stadien.render(Stadion.read()));
 	}
 
@@ -53,7 +53,7 @@ public class StadienCtrl extends Controller {
 					filledForm.data(), "partien.pid");
 			for (Long partieID : selectedPartien) {
 				Partie tmpPartie = Partie.find.byId(partieID);
-				stadion.ingredients.add(tmpPartie);
+				stadion.parties.add(tmpPartie);
 			}
 			if (stadion.sid == null)
 				Stadion.create(stadion);

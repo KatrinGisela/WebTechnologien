@@ -3,11 +3,14 @@ package services;
 import java.time.Clock;
 import java.time.Instant;
 import java.util.concurrent.CompletableFuture;
-import javax.inject.*;
+
+import javax.inject.Inject;
+import javax.inject.Singleton;
 
 import models.Partie;
 import models.Stadion;
 import play.Logger;
+import play.api.inject.Module;
 import play.inject.ApplicationLifecycle;
 
 /**
@@ -54,12 +57,12 @@ public class ApplicationTimer {
         nudeln.description = "Schön al dente";
         Partie.create(nudeln);
         
-        Stadion recipe = new Stadion();
-        recipe.name = "Paprikanudeln";
-        recipe.description = "Paprika und Nudeln kochen";
-        recipe.ingredients.add(paprika);
-        recipe.ingredients.add(nudeln);
-        Stadion.create(recipe);
+        Stadion stadion = new Stadion();
+        stadion.name = "Paprikanudeln";
+        stadion.description = "Paprika und Nudeln kochen";
+        stadion.parties.add(paprika);
+        stadion.parties.add(nudeln);
+        Stadion.create(stadion);
         
         // When the application starts, register a stop hook with the
         // ApplicationLifecycle object. The code inside the stop hook will

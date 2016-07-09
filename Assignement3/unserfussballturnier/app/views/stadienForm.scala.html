@@ -1,32 +1,32 @@
-@(formType: String, recipeForm: Form[Recipe], ingredients: List[models.Ingredient]) 
+@(formType: String, stadionForm: Form[Stadion], parties: List[models.Partie]) 
 
 @import helper._ 
 
-@main(formType + " Recipe") {
-	<h1>@formType Recipe</h1>
-	@form(routes.RecipesCtrl.storeRecipe()) {
-		<input type="hidden" id="@recipeForm("rid").id"
-		name="@recipeForm("rid").name" 
-		value='@recipeForm("rid").value' />
-	@inputText(recipeForm("name"))
+@main(formType + " Stadion") {
+	<h1>@formType Stadion</h1>
+	@form(routes.StadienCtrl.storeStadion()) {
+		<input type="hidden" id="@stadionForm("sid").id"
+		name="@stadionForm("sid").name" 
+		value='@stadionForm("sid").value' />
+	@inputText(stadionForm("name"))
 	<div>
 		<div>
-			<strong>Ingredients</strong>
+			<strong>Parties</strong>
 		</div>
 	<div>
-	@for(ingredient <- ingredients) { 
+	@for(partie <- parties) { 
 		<label class="checkbox"> 
-		<input type="checkbox" name="ingredients.iid[]" value="@ingredient.iid"
-			@if(recipeForm.value.isDefined &&
-				recipeForm.value.get.ingredients.contains(ingredient)) {			
+		<input type="checkbox" name="parties.pid[]" value="@partie.pid"
+			@if(stadionForm.value.isDefined &&
+				stadionForm.value.get.parties.contains(partie)) {			
 					checked="checked" 
 			}
 		/>
-		@ingredient.name
+		@partie.name
 		</label> }
 	</div>
 </div>
-@textarea(field = recipeForm("description"), args = 'rows -> 3, 'cols -> 50)
+@textarea(field = stadionForm("description"), args = 'rows -> 3, 'cols -> 50)
 <input type="submit" value="Save">
 	} 
 }
