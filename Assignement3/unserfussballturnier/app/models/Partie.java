@@ -18,12 +18,13 @@ public class Partie extends Model {
 	public Long pid;
 	@Required
 	public String name;
-	public String description;
+	@Required
 	public String heimmannschaftName;
 	@Required
 	public String gastmannschaftName;
 	@Required
 	public String partieDatum;
+	public String description;
 	@OneToOne(mappedBy = "parties")
 	public List<Stadion> stadien;
 

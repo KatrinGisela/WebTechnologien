@@ -2,12 +2,14 @@ package models;
 
 import java.util.List;
 
-
-import javax.persistence.*;
-
-import com.avaje.ebean.Model;
+import javax.persistence.CascadeType;
+import javax.persistence.Entity;
+import javax.persistence.Id;
+import javax.persistence.ManyToMany;
 
 import play.data.validation.Constraints.Required;
+
+import com.avaje.ebean.Model;
 
 @Entity
 public class Stadion extends Model {
@@ -15,10 +17,19 @@ public class Stadion extends Model {
 	public Long sid;
 	@Required
 	public String name;
+	@Required
+	public String addresse;
+	@Required
+	public int anzahlSitzplaetze;
+	@Required
+	public int anzahlZugaenge;
+	@Required
+	public String sponsor;
 	public String description;
 	@ManyToMany(cascade = CascadeType.REMOVE)
 	public List<Partie> parties;
-	public static Finder<Long, Stadion> find = new Finder<Long,Stadion>(Stadion.class);
+	public static Finder<Long, Stadion> find = new Finder<Long, Stadion>(
+			Stadion.class);
 
 	public static void create(Stadion partie) {
 		partie.save();
