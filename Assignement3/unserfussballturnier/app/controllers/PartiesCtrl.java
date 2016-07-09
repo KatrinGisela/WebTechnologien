@@ -8,6 +8,7 @@ import play.data.FormFactory;
 import play.mvc.Controller;
 import play.mvc.Result;
 
+
 public class PartiesCtrl extends Controller {
 
 	@Inject
