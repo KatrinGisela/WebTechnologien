@@ -1,6 +1,5 @@
 package models;
 
-import java.time.LocalDate;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
@@ -9,6 +8,7 @@ import javax.persistence.Entity;
 import javax.persistence.Id;
 import javax.persistence.OneToOne;
 
+import play.data.format.Formats;
 import play.data.validation.Constraints.Required;
 
 import com.avaje.ebean.Model;
@@ -22,7 +22,8 @@ public class Partie extends Model {
 	@Required
 	public String gastmannschaftName;
 	@Required
-	public LocalDate partieDatum;
+	@Formats.DateTime(pattern = "yyyy-mm-dd")
+	public String partieDatum;
 	@OneToOne(mappedBy = "parties")
 	public List<Stadion> stadien;
 
@@ -51,7 +52,7 @@ public class Partie extends Model {
 		for (Partie partie : parties) {
 			partiesMap.put(partie.pid, partie.heimmannschaftName);
 			partiesMap.put(partie.pid, partie.gastmannschaftName);
-			partiesMap.put(partie.pid, partie.partieDatum.toString());
+			partiesMap.put(partie.pid, partie.partieDatum);
 		}
 		return partiesMap;
 	}

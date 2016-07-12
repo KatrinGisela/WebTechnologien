@@ -41,24 +41,26 @@ public class ApplicationTimer {
         // This code is called when the application starts.
         start = clock.instant();
         Logger.info("ApplicationTimer demo: Starting application at " + start);
-
+        
+        if(Partie.find.all().isEmpty() && Stadion.find.all().isEmpty()){
+ 
         // Create matches here:
         Partie halbfinale = new Partie();
         halbfinale.heimmannschaftName = "Inter";
         halbfinale.gastmannschaftName = "Roma";
-        halbfinale.partieDatum = LocalDate.parse("2017-06-02") ;
+        halbfinale.partieDatum = "2017-06-02" ;
         Partie.create(halbfinale);
         
         Partie viertelfinale = new Partie();
         viertelfinale.heimmannschaftName = "Lazio";
         viertelfinale.gastmannschaftName = "Juve";
-        viertelfinale.partieDatum = LocalDate.parse("2017-04-25");
+        viertelfinale.partieDatum = "2017-04-25";
         Partie.create(viertelfinale);
         
         Partie achtelfinale = new Partie();
         achtelfinale.heimmannschaftName = "Parma";
         achtelfinale.gastmannschaftName = "Bologna";
-        achtelfinale.partieDatum = LocalDate.parse("2017-09-20");
+        achtelfinale.partieDatum = "2017-09-20";
         Partie.create(achtelfinale);
         
         Stadion stadion = new Stadion();
@@ -78,6 +80,7 @@ public class ApplicationTimer {
         sanSiro.parties.add(achtelfinale);
         Stadion.create(sanSiro);
         
+        }
         
         // When the application starts, register a stop hook with the
         // ApplicationLifecycle object. The code inside the stop hook will

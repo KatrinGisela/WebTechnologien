@@ -1,4 +1,5 @@
-@(formType: String, partieForm: Form[Partie]) 
+@(formType: String, partieForm: Form[Partie], stadien: List[Stadion]) 
+@import helper._
 
 	@main(formType + " Partie") {
 	
@@ -10,6 +11,9 @@
 		value='@partieForm("pid").value' />
 	@helper.inputText(partieForm("heimmannschaftName"))
 	@helper.inputText(partieForm("gastmannschaftName"))
+	@helper.inputDate(partieForm("partieDatum"))
+	@select(partieForm("Stadien"), stadien.map(s => s.sid.toString() -> s.name))
 	<input type="submit" value="Save">
+
 	} 
 }
