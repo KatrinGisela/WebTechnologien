@@ -26,7 +26,13 @@
 		</label> }
 	</div>
 </div>
-@textarea(field = stadionForm("description"), args = 'rows -> 3, 'cols -> 50)
+@textarea(field = stadionForm("addresse"), args = 'rows -> 3, 'cols -> 50)
+<input type="submit" value="Save">
+@textarea(field = stadionForm("anzahlSitzplaetze"), args = 'rows -> 1, 'cols -> 50)
+<input type="submit" value="Save">
+@textarea(field = stadionForm("anzahlZugaenge"), args = 'rows -> 1, 'cols -> 50)
+<input type="submit" value="Save">
+@textarea(field = stadionForm("sponsor"), args = 'rows -> 1, 'cols -> 50)
 <input type="submit" value="Save">
 	} 
 }

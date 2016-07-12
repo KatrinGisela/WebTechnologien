@@ -1,5 +1,6 @@
 package models;
 
+import java.time.LocalDate;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
@@ -21,7 +22,7 @@ public class Partie extends Model {
 	@Required
 	public String gastmannschaftName;
 	@Required
-	public String partieDatum;
+	public LocalDate partieDatum;
 	@OneToOne(mappedBy = "parties")
 	public List<Stadion> stadien;
 
@@ -50,7 +51,7 @@ public class Partie extends Model {
 		for (Partie partie : parties) {
 			partiesMap.put(partie.pid, partie.heimmannschaftName);
 			partiesMap.put(partie.pid, partie.gastmannschaftName);
-			partiesMap.put(partie.pid, partie.partieDatum);
+			partiesMap.put(partie.pid, partie.partieDatum.toString());
 		}
 		return partiesMap;
 	}

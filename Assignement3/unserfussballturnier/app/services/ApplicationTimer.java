@@ -2,6 +2,7 @@ package services;
 
 import java.time.Clock;
 import java.time.Instant;
+import java.time.LocalDate;
 import java.util.concurrent.CompletableFuture;
 
 import javax.inject.Inject;
@@ -45,19 +46,19 @@ public class ApplicationTimer {
         Partie halbfinale = new Partie();
         halbfinale.heimmannschaftName = "Inter";
         halbfinale.gastmannschaftName = "Roma";
-        halbfinale.partieDatum = "01/01/2015";
+        halbfinale.partieDatum = LocalDate.parse("2017-06-02") ;
         Partie.create(halbfinale);
         
         Partie viertelfinale = new Partie();
         viertelfinale.heimmannschaftName = "Lazio";
         viertelfinale.gastmannschaftName = "Juve";
-        viertelfinale.partieDatum = "07/06/2016";
+        viertelfinale.partieDatum = LocalDate.parse("2017-04-25");
         Partie.create(viertelfinale);
         
         Partie achtelfinale = new Partie();
         achtelfinale.heimmannschaftName = "Parma";
         achtelfinale.gastmannschaftName = "Bologna";
-        achtelfinale.partieDatum = "20/09/2014";
+        achtelfinale.partieDatum = LocalDate.parse("2017-09-20");
         Partie.create(achtelfinale);
         
         Stadion stadion = new Stadion();

@@ -6,6 +6,7 @@
 <h1>List of Stadien</h1>
 <a href="@routes.StadienCtrl.createStadion()">Create Stadion</a>
 <table>
+<th>Name</th> <th>Heimmannschaft</th> <th>Adresse</th>
 	@for(stadion <- stadien) {
 	<tr>
 		<td>@stadion.name</td>
