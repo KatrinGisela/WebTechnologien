@@ -2,6 +2,7 @@ package services;
 
 import java.time.Clock;
 import java.time.Instant;
+import java.time.LocalDate;
 import java.util.concurrent.CompletableFuture;
 
 import javax.inject.Inject;
@@ -41,28 +42,42 @@ public class ApplicationTimer {
         start = clock.instant();
         Logger.info("ApplicationTimer demo: Starting application at " + start);
 
-        // Create ingredients here:
-        Partie paprika = new Partie();
-        paprika.name = "Paprika";
-        paprika.description = "Rotes Gemüse";
-        Partie.create(paprika);
+        // Create matches here:
+        Partie halbfinale = new Partie();
+        halbfinale.heimmannschaftName = "Inter";
+        halbfinale.gastmannschaftName = "Roma";
+        halbfinale.partieDatum = LocalDate.parse("2017-06-02") ;
+        Partie.create(halbfinale);
         
-        Partie kartoffel = new Partie();
-        kartoffel.name = "Kartoffel";
-        kartoffel.description = "Wohlschmeckendes Nachtschattengewächs";
-        Partie.create(kartoffel);
+        Partie viertelfinale = new Partie();
+        viertelfinale.heimmannschaftName = "Lazio";
+        viertelfinale.gastmannschaftName = "Juve";
+        viertelfinale.partieDatum = LocalDate.parse("2017-04-25");
+        Partie.create(viertelfinale);
         
-        Partie nudeln = new Partie();
-        nudeln.name = "Nudeln";
-        nudeln.description = "Schön al dente";
-        Partie.create(nudeln);
+        Partie achtelfinale = new Partie();
+        achtelfinale.heimmannschaftName = "Parma";
+        achtelfinale.gastmannschaftName = "Bologna";
+        achtelfinale.partieDatum = LocalDate.parse("2017-09-20");
+        Partie.create(achtelfinale);
         
         Stadion stadion = new Stadion();
-        stadion.name = "Paprikanudeln";
-        stadion.description = "Paprika und Nudeln kochen";
-        stadion.parties.add(paprika);
-        stadion.parties.add(nudeln);
+        stadion.name = "Stadio Olimpico";
+        stadion.addresse = "Roma"; 
+        stadion.anzahlSitzplaetze = 5000; 
+        stadion.anzahlZugaenge = 10; 
+        stadion.parties.add(halbfinale);
         Stadion.create(stadion);
+        
+        Stadion sanSiro = new Stadion();
+        sanSiro.name = "San Siro";
+        sanSiro.addresse = "Milano";
+        sanSiro.anzahlSitzplaetze = 10000;
+        sanSiro.anzahlZugaenge = 50;  
+        sanSiro.parties.add(viertelfinale);
+        sanSiro.parties.add(achtelfinale);
+        Stadion.create(sanSiro);
+        
         
         // When the application starts, register a stop hook with the
         // ApplicationLifecycle object. The code inside the stop hook will

@@ -16,3 +16,4 @@ EclipseKeys.preTasks := Seq(compile in Compile)
 
 EclipseKeys.projectFlavor := EclipseProjectFlavor.Java 
 EclipseKeys.createSrc := EclipseCreateSrc.ValueSet(EclipseCreateSrc.ManagedClasses, EclipseCreateSrc.ManagedResources) 
+
