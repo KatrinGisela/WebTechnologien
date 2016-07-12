@@ -12,10 +12,10 @@
 		<td>
 			<ul>
 				@for(partie <- stadion.parties) {
-				<li>@partie.name</li> }
+				<li>@partie.heimmannschaftName</li> }
 			</ul>
 		</td>
-		<td>@stadion.description</td>
+		<td>@stadion.addresse</td>
 		<td>@form(routes.StadienCtrl.updateStadion(stadion.sid)) { 
 		<input type="submit" value="Update"> }
 		</td>

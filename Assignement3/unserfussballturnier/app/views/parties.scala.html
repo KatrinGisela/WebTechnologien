@@ -10,8 +10,9 @@
 	<table>
 	@for(partie <- parties) {
 		<tr>
-			<td>@partie.name</td>
-			<td>@partie.description</td>
+			<td>@partie.heimmannschaftName</td>
+			<td>@partie.gastmannschaftName</td>
+			<td>@partie.partieDatum</td>
 			<td>@helper.form(action =
 				routes.PartiesCtrl.updatePartie(partie.pid)) { <input
 				type="submit" value="Update"> }

@@ -17,14 +17,11 @@ public class Partie extends Model {
 	@Id
 	public Long pid;
 	@Required
-	public String name;
-	@Required
 	public String heimmannschaftName;
 	@Required
 	public String gastmannschaftName;
 	@Required
 	public String partieDatum;
-	public String description;
 	@OneToOne(mappedBy = "parties")
 	public List<Stadion> stadien;
 
@@ -51,14 +48,9 @@ public class Partie extends Model {
 		HashMap<Long, String> partiesMap = new HashMap<Long, String>();
 		List<Partie> parties = Partie.read();
 		for (Partie partie : parties) {
-			partiesMap.put(partie.pid, partie.heimmannschaftName); // hier auch
-																	// die
-																	// anderen
-																	// Attribute?
-			partiesMap.put(partie.pid, partie.gastmannschaftName); // macht das
-																	// Sinn so?
-			partiesMap.put(partie.pid, partie.partieDatum); // macht das Sinn
-															// so?
+			partiesMap.put(partie.pid, partie.heimmannschaftName);
+			partiesMap.put(partie.pid, partie.gastmannschaftName);
+			partiesMap.put(partie.pid, partie.partieDatum);
 		}
 		return partiesMap;
 	}
