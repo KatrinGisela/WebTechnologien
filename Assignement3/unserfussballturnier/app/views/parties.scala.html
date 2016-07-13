@@ -6,7 +6,11 @@
 
 	<h1>List of parties</h1>	
 	<a href="@routes.PartiesCtrl.createPartie()">Create Partie</a>
+
 	<table>
+	<th>Heimmannschaft</th>
+	<th>Gastmannschaft</th>
+	<th>Datum</th>
 	@for(partie <- parties) {
 		<tr>
 			<td>@partie.heimmannschaftName</td>
@@ -16,8 +20,7 @@
 				routes.PartiesCtrl.updatePartie(partie.pid)) { <input
 				type="submit" value="Update"> }
 			</td>
-			<td>@helper.form(action = routes.PartiesCtrl.deletePartie(partie.pid)) { <input
-				type="submit" value="Delete" onclick="deleteConfirmation()"> }
+			<td><a href="@routes.PartiesCtrl.deletePartie(partie.pid)" onclick="return confirm('Sind Sie sicher?');">Delete</a>
 			</td>
 		</tr>
 	}

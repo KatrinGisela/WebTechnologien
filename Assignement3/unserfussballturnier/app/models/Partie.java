@@ -4,9 +4,10 @@ import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
+import javax.persistence.CascadeType;
 import javax.persistence.Entity;
 import javax.persistence.Id;
-import javax.persistence.OneToOne;
+import javax.persistence.ManyToOne;
 
 import play.data.format.Formats;
 import play.data.validation.Constraints.Required;
@@ -24,9 +25,8 @@ public class Partie extends Model {
 	@Required
 	@Formats.DateTime(pattern = "yyyy-mm-dd")
 	public String partieDatum;
-	@OneToOne(mappedBy = "parties")
-	public List<Stadion> stadien;
-
+	@ManyToOne(cascade = CascadeType.REFRESH)
+	public Stadion stadion;
 	public static Finder<Long, Partie> find = new Finder<Long, Partie>(
 			Partie.class);
 

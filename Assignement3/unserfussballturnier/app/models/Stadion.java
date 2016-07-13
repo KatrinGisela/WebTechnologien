@@ -5,7 +5,7 @@ import java.util.List;
 import javax.persistence.CascadeType;
 import javax.persistence.Entity;
 import javax.persistence.Id;
-import javax.persistence.ManyToMany;
+import javax.persistence.OneToMany;
 
 import play.data.validation.Constraints.Required;
 
@@ -24,7 +24,7 @@ public class Stadion extends Model {
 	@Required
 	public int anzahlZugaenge;
 	public String sponsor;
-	@ManyToMany(cascade = CascadeType.REMOVE)
+	@OneToMany(cascade = CascadeType.REMOVE)
 	public List<Partie> parties;
 	public static Finder<Long, Stadion> find = new Finder<Long, Stadion>(
 			Stadion.class);
