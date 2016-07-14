@@ -49,4 +49,8 @@ public class PartiesCtrl extends Controller {
 			return redirect(routes.PartiesCtrl.readParties());
 		}
 	}
+	
+	
+	
+	
 }

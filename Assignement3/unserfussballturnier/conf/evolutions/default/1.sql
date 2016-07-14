@@ -5,11 +5,9 @@
 
 create table partie (
   pid                       bigint not null,
-  name                      varchar(255),
   heimmannschaft_name       varchar(255),
   gastmannschaft_name       varchar(255),
-  partie_datum              varchar(255),
-  description               varchar(255),
+  partie_datum              date,
   constraint pk_partie primary key (pid))
 ;
 
@@ -20,7 +18,6 @@ create table stadion (
   anzahl_sitzplaetze        integer,
   anzahl_zugaenge           integer,
   sponsor                   varchar(255),
-  description               varchar(255),
   constraint pk_stadion primary key (sid))
 ;
 

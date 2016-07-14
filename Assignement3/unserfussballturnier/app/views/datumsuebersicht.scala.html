@@ -1,0 +1,46 @@
+@(myMap: Map[Date, List[Partie]]) 
+
+@import helper._	
+
+@main("Parties") {
+
+	<h1>List of parties</h1>	
+
+	<table>
+	<tr>
+	@for((datum, parties) <- myMap) {
+		<th>
+		@datum
+		</th>
+	}
+	</tr>
+	
+	<tr>
+	@for((datum, parties) <- myMap) {
+	<td>
+		<table>
+	<tr>
+		<th>H</th>
+		<th>G</th>
+	</tr>
+	@for(partie <- parties) {
+	<tr>
+		<td>@partie.heimmannschaftName</td>
+		<td>@partie.gastmannschaftName</td>
+	</tr>
+	</table>
+	</td>
+	}
+
+	}
+	</tr>
+	
+	
+	
+	</table>
+
+
+
+
+
+}
