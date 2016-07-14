@@ -55,11 +55,12 @@ public class StadienCtrl extends Controller {
 				Partie tmpPartie = Partie.find.byId(partieID);
 				stadion.parties.add(tmpPartie);
 			}
-			if (stadion.sid == null)
+			if (stadion.sid == null) {
 				Stadion.create(stadion);
-			else
+			} else {
 				Stadion.update(stadion);
-			return ok(views.html.stadien.render(Stadion.read()));
+			}
+			return redirect(routes.StadienCtrl.readStadien());
 		}
 	}
 
