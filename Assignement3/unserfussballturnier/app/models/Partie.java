@@ -1,10 +1,8 @@
 package models;
 
-import java.util.HashMap;
+import java.time.LocalDate;
 import java.util.List;
-import java.util.Map;
 
-import javax.persistence.CascadeType;
 import javax.persistence.Entity;
 import javax.persistence.Id;
 import javax.persistence.ManyToOne;
@@ -24,8 +22,8 @@ public class Partie extends Model {
 	public String gastmannschaftName;
 	@Required
 	@Formats.DateTime(pattern = "yyyy-mm-dd")
-	public String partieDatum;
-	@ManyToOne(cascade = CascadeType.REFRESH)
+	public LocalDate partieDatum;
+	@ManyToOne
 	public Stadion stadion;
 	public static Finder<Long, Partie> find = new Finder<Long, Partie>(
 			Partie.class);
@@ -46,14 +44,12 @@ public class Partie extends Model {
 		find.ref(pid).delete();
 	}
 
-	public static Map<Long, String> getAllAsMap() {
-		HashMap<Long, String> partiesMap = new HashMap<Long, String>();
-		List<Partie> parties = Partie.read();
-		for (Partie partie : parties) {
-			partiesMap.put(partie.pid, partie.heimmannschaftName);
-			partiesMap.put(partie.pid, partie.gastmannschaftName);
-			partiesMap.put(partie.pid, partie.partieDatum);
-		}
-		return partiesMap;
-	}
+	/*
+	 * public static Map<Long, String> getAllAsMap() { HashMap<Long, String>
+	 * partiesMap = new HashMap<Long, String>(); List<Partie> parties =
+	 * Partie.read(); for (Partie partie : parties) { partiesMap.put(partie.pid,
+	 * partie.heimmannschaftName); partiesMap.put(partie.pid,
+	 * partie.gastmannschaftName); partiesMap.put(partie.pid,
+	 * partie.partieDatum); } return partiesMap; }
+	 */
 }

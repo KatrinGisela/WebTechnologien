@@ -24,7 +24,7 @@ public class Stadion extends Model {
 	@Required
 	public int anzahlZugaenge;
 	public String sponsor;
-	@OneToMany(cascade = CascadeType.REMOVE)
+	@OneToMany(cascade = CascadeType.ALL)
 	public List<Partie> parties;
 	public static Finder<Long, Stadion> find = new Finder<Long, Stadion>(
 			Stadion.class);
