@@ -1,15 +1,12 @@
 package services;
 
-import java.text.SimpleDateFormat;
 import java.time.Clock;
 import java.time.Instant;
-import java.time.LocalDate;
+import java.util.Date;
 import java.util.concurrent.CompletableFuture;
 
 import javax.inject.Inject;
 import javax.inject.Singleton;
-
-import org.springframework.format.datetime.joda.LocalDateParser;
 
 import models.Partie;
 import models.Stadion;
@@ -44,46 +41,58 @@ public class ApplicationTimer {
         // This code is called when the application starts.
         start = clock.instant();
         Logger.info("ApplicationTimer demo: Starting application at " + start);
-
+        
         // Create matches here:
         Partie halbfinale = new Partie();
         halbfinale.heimmannschaftName = "Inter";
-        halbfinale.gastmannschaftName = "Roma";
-        halbfinale.partieDatum = LocalDate.parse("2017-06-02") ;
-        halbfinale.partieDatum = LocalDate.parse("2017-04-25"); 
-        Partie.create(halbfinale);
+        halbfinale.gastmannschaftName = "Roma";        
+        halbfinale.partieDatum = new Date();  
         
         Partie viertelfinale = new Partie();
         viertelfinale.heimmannschaftName = "Lazio";
         viertelfinale.gastmannschaftName = "Juve";
-        viertelfinale.partieDatum = LocalDate.parse("2017-04-25");
-        Partie.create(viertelfinale);
+        viertelfinale.partieDatum = new Date();
+        
         
         Partie achtelfinale = new Partie();
         achtelfinale.heimmannschaftName = "Parma";
         achtelfinale.gastmannschaftName = "Bologna";
-        achtelfinale.partieDatum = LocalDate.parse("2017-09-20");
-        achtelfinale.partieDatum = LocalDate.parse("2017-04-25");
-        Partie.create(achtelfinale);
+        achtelfinale.partieDatum = new Date();
+        Partie.create(achtelfinale); 
         
-        Stadion stadion = new Stadion();
-        stadion.name = "Stadio Olimpico";
-        stadion.addresse = "Roma"; 
-        stadion.anzahlSitzplaetze = 5000; 
-        stadion.anzahlZugaenge = 10; 
-        stadion.parties.add(halbfinale);
-        Stadion.create(stadion);
-        
+        Stadion olimpia = new Stadion();
+        olimpia.name = "Stadio Olimpico";
+        olimpia.addresse = "Roma"; 
+        olimpia.anzahlSitzplaetze = 5000; 
+        olimpia.anzahlZugaenge = 10; 
+        Stadion.create(olimpia);
+       
+        halbfinale.stadion = olimpia;
+        Partie.create(halbfinale);
+         
         Stadion sanSiro = new Stadion();
         sanSiro.name = "San Siro";
         sanSiro.addresse = "Milano";
         sanSiro.anzahlSitzplaetze = 10000;
         sanSiro.anzahlZugaenge = 50;  
-        sanSiro.parties.add(viertelfinale);
-        sanSiro.parties.add(achtelfinale);
+        sanSiro.sponsor = "Der Präsident"; 
         Stadion.create(sanSiro);
         
+        viertelfinale.stadion = sanSiro; 
+        Partie.create(viertelfinale);
+       
         
+        Stadion tardini = new Stadion();
+        tardini.name = "Ennio Tardini";
+        tardini.addresse = "Parma";
+        tardini.anzahlSitzplaetze = 34000;
+        tardini.anzahlZugaenge = 50;  
+        tardini.sponsor = "Parmalat"; 
+        Stadion.create(tardini);
+        
+        achtelfinale.stadion = tardini; 
+        Partie.create(achtelfinale);
+       
         // When the application starts, register a stop hook with the
         // ApplicationLifecycle object. The code inside the stop hook will
         // be run when the application stops.

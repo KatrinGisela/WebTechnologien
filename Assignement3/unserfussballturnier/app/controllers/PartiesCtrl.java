@@ -3,11 +3,11 @@ package controllers;
 import javax.inject.Inject;
 
 import models.Partie;
+import models.Stadion;
 import play.data.Form;
 import play.data.FormFactory;
 import play.mvc.Controller;
 import play.mvc.Result;
-
 
 public class PartiesCtrl extends Controller {
 
@@ -15,8 +15,11 @@ public class PartiesCtrl extends Controller {
 	private FormFactory formFactory;
 
 	public Result createPartie() {
-		return ok(views.html.partiesForm.render("Create",
-				formFactory.form(Partie.class)));
+		if (!Stadion.find.all().isEmpty()) {
+			return ok(views.html.partiesForm.render("Create",
+					formFactory.form(Partie.class), Stadion.find.all()));
+		}
+		return ok("Noch keine Stadien vorhanden. Bitte ein Stadion hinzufügen");
 	}
 
 	public Result readParties() {
@@ -26,7 +29,8 @@ public class PartiesCtrl extends Controller {
 	public Result updatePartie(Long pid) {
 		Partie partie = Partie.find.byId(pid);
 		Form<Partie> filledForm = formFactory.form(Partie.class).fill(partie);
-		return ok(views.html.partiesForm.render("Update", filledForm));
+		return ok(views.html.partiesForm.render("Update", filledForm,
+				Stadion.find.all()));
 	}
 
 	public Result deletePartie(Long pid) {
@@ -38,7 +42,8 @@ public class PartiesCtrl extends Controller {
 		Form<Partie> partieForm = formFactory.form(Partie.class);
 		Form<Partie> filledForm = partieForm.bindFromRequest();
 		if (filledForm.hasErrors()) {
-			return ok(views.html.partiesForm.render("Correct", filledForm));
+			return ok(views.html.partiesForm.render("Correct", filledForm,
+					Stadion.find.all()));
 		} else {
 			Partie partie = filledForm.get();
 			if (partie.pid == null) {
@@ -49,8 +54,4 @@ public class PartiesCtrl extends Controller {
 			return redirect(routes.PartiesCtrl.readParties());
 		}
 	}
-	
-	
-	
-	
 }

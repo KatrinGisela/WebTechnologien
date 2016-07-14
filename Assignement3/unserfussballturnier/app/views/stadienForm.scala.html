@@ -9,30 +9,10 @@
 		name="@stadionForm("sid").name" 
 		value='@stadionForm("sid").value' />
 	@inputText(stadionForm("name"))
-	<div>
-		<div>
-			<strong>Parties</strong>
-		</div>
-	<div>
-	@for(partie <- parties) { 
-		<label class="checkbox"> 
-		<input type="checkbox" name="parties.pid[]" value="@partie.pid"
-			@if(stadionForm.value.isDefined &&
-				stadionForm.value.get.parties.contains(partie)) {			
-					checked="checked" 
-			}
-		/>
-		@partie.heimmannschaftName
-		</label> }
-	</div>
-</div>
-@textarea(field = stadionForm("addresse"), args = 'rows -> 3, 'cols -> 50)
-<input type="submit" value="Save">
-@textarea(field = stadionForm("anzahlSitzplaetze"), args = 'rows -> 1, 'cols -> 50)
-<input type="submit" value="Save">
-@textarea(field = stadionForm("anzahlZugaenge"), args = 'rows -> 1, 'cols -> 50)
-<input type="submit" value="Save">
-@textarea(field = stadionForm("sponsor"), args = 'rows -> 1, 'cols -> 50)
-<input type="submit" value="Save">
+	@textarea(field = stadionForm("addresse"), args = 'rows -> 3, 'cols -> 23)
+	@inputText(stadionForm("anzahlSitzplaetze"))
+	@inputText(stadionForm("anzahlZugaenge"))
+	@inputText(stadionForm("sponsor"))
+	<input type="submit" value="Save">
 	} 
 }

@@ -1,7 +1,6 @@
 package models;
 
-import java.time.LocalDate;
-
+import java.util.Date;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
@@ -9,7 +8,7 @@ import java.util.Map;
 import javax.persistence.Entity;
 import javax.persistence.Id;
 import javax.persistence.ManyToOne;
-import javax.persistence.OneToOne;
+
 import play.data.format.Formats;
 import play.data.validation.Constraints.Required;
 
@@ -24,13 +23,8 @@ public class Partie extends Model {
 	@Required
 	public String gastmannschaftName;
 	@Required
-
-//	public LocalDate partieDatum;
-	@OneToOne(mappedBy = "parties")
-	public List<Stadion> stadien;
-
-	@Formats.DateTime(pattern = "yyyy-mm-dd")
-	public LocalDate partieDatum;
+	@Formats.DateTime(pattern = "yyyy-MM-dd")
+	public Date partieDatum;
 	@ManyToOne
 	public Stadion stadion;
 	public static Finder<Long, Partie> find = new Finder<Long, Partie>(
@@ -49,7 +43,7 @@ public class Partie extends Model {
 	}
 
 	public static void delete(Long pid) {
-		find.ref(pid).delete();
+		find.byId(pid).delete();
 	}
 
 	public static Map<Long, String> getAllAsMap() {
@@ -62,12 +56,5 @@ public class Partie extends Model {
 		}
 		return partiesMap;
 	}
-	/*
-	 * public static Map<Long, String> getAllAsMap() { HashMap<Long, String>
-	 * partiesMap = new HashMap<Long, String>(); List<Partie> parties =
-	 * Partie.read(); for (Partie partie : parties) { partiesMap.put(partie.pid,
-	 * partie.heimmannschaftName); partiesMap.put(partie.pid,
-	 * partie.gastmannschaftName); partiesMap.put(partie.pid,
-	 * partie.partieDatum); } return partiesMap; }
-	 */
+
 }

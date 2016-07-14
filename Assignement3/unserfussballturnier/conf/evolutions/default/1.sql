@@ -7,7 +7,8 @@ create table partie (
   pid                       bigint not null,
   heimmannschaft_name       varchar(255),
   gastmannschaft_name       varchar(255),
-  partie_datum              date,
+  partie_datum              timestamp,
+  stadion_sid               bigint,
   constraint pk_partie primary key (pid))
 ;
 
@@ -21,22 +22,14 @@ create table stadion (
   constraint pk_stadion primary key (sid))
 ;
 
-
-create table stadion_partie (
-  stadion_sid                    bigint not null,
-  partie_pid                     bigint not null,
-  constraint pk_stadion_partie primary key (stadion_sid, partie_pid))
-;
 create sequence partie_seq;
 
 create sequence stadion_seq;
 
+alter table partie add constraint fk_partie_stadion_1 foreign key (stadion_sid) references stadion (sid) on delete restrict on update restrict;
+create index ix_partie_stadion_1 on partie (stadion_sid);
 
 
-
-alter table stadion_partie add constraint fk_stadion_partie_stadion_01 foreign key (stadion_sid) references stadion (sid) on delete restrict on update restrict;
-
-alter table stadion_partie add constraint fk_stadion_partie_partie_02 foreign key (partie_pid) references partie (pid) on delete restrict on update restrict;
 
 # --- !Downs
 
@@ -45,8 +38,6 @@ SET REFERENTIAL_INTEGRITY FALSE;
 drop table if exists partie;
 
 drop table if exists stadion;
-
-drop table if exists stadion_partie;
 
 SET REFERENTIAL_INTEGRITY TRUE;
 
