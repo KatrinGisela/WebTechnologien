@@ -21,9 +21,11 @@ public class PartiesCtrl extends Controller {
 	 */
 	public Result createPartie() {
 		if (!Stadion.find.all().isEmpty()) {
-			return ok(views.html.partiesForm.render("Create", formFactory.form(Partie.class), Stadion.find.all()));
+			return ok(views.html.partiesForm.render("Create",
+					formFactory.form(Partie.class), Stadion.find.all()));
 		}
-		return ok("Noch keine Stadien vorhanden. Bitte ein Stadion hinzufügen");
+		return ok(views.html.stadienForm.render("Create",
+				formFactory.form(Stadion.class), Partie.read()));
 	}
 
 	/**
@@ -42,7 +44,8 @@ public class PartiesCtrl extends Controller {
 	public Result updatePartie(Long pid) {
 		Partie partie = Partie.find.byId(pid);
 		Form<Partie> filledForm = formFactory.form(Partie.class).fill(partie);
-		return ok(views.html.partiesForm.render("Update", filledForm, Stadion.find.all()));
+		return ok(views.html.partiesForm.render("Update", filledForm,
+				Stadion.find.all()));
 	}
 
 	/**
@@ -64,8 +67,10 @@ public class PartiesCtrl extends Controller {
 	public Result storePartie() {
 		Form<Partie> partieForm = formFactory.form(Partie.class);
 		Form<Partie> filledForm = partieForm.bindFromRequest();
-		if (filledForm.hasErrors()) {
-			return ok(views.html.partiesForm.render("Correct", filledForm, Stadion.find.all()));
+		if (isFormDateEqualToStadionPartieDate(filledForm)
+				|| filledForm.hasErrors()) {
+			return ok(views.html.partiesForm.render("Correct", filledForm,
+					Stadion.find.all()));
 		} else {
 			Partie partie = filledForm.get();
 			if (partie.pid == null) {
@@ -75,5 +80,18 @@ public class PartiesCtrl extends Controller {
 			}
 			return redirect(routes.PartiesCtrl.readParties());
 		}
+	}
+
+	public boolean isFormDateEqualToStadionPartieDate(Form<Partie> inputForm) {
+		System.out.println("metodo");
+		for (Partie partie : inputForm.get().stadion.parties) {
+			System.out.println("for");
+			if ((inputForm.get().partieDatum).equals(partie.partieDatum)) {
+				System.out.println("if");
+				return true;
+			}
+		}
+
+		return false;
 	}
 }

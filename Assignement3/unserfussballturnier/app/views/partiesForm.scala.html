@@ -1,10 +1,9 @@
 @(formType: String, partieForm: Form[Partie], stadion: List[Stadion]) 
 @import helper._
-@import java.time.LocalDate;
 
-	@main(formType + " Partie") {
+	@main(formType + "Partie") {
 	
-	<h1>@formType Partie</h1>
+	<h1>Partieerstellung</h1>
 	
 	@helper.form(action = routes.PartiesCtrl.storePartie()) {
 	<input type="hidden" id="@partieForm("pid").id"

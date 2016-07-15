@@ -4,27 +4,29 @@
 
 @main("Stadien") {
 
-<h1>List of Stadien</h1>
-<a href="@routes.StadienCtrl.createStadion()">Create Stadion</a>
+<h1>Stadienliste</h1>
+<a href="@routes.StadienCtrl.createStadion()">Stadion erstellen</a>
 <table>
-<th>Name</th> <!-- <th>Heimmannschaft</th> --->
+<th>Name</th>
+<th>Partien</th>
 <th>Adresse</th>
 <th>Sponsor</th>
 	@for(stadion <- stadien) {
 	<tr>
 		<td>@stadion.name</td>
-		<!-- <td>
-		<ul>
+		<td>
+			<ul>
 				@for(partie <- stadion.parties) {
-				<li>@partie.heimmannschaftName</li> }
+				<li>@partie.heimmannschaftName vs. @partie.gastmannschaftName am @partie.partieDatum</li>
+				}
 			</ul>
-		</td> -->
+		</td>
 		<td>@stadion.addresse</td>
 		<td>@stadion.sponsor</td>
 		<td>@form(routes.StadienCtrl.updateStadion(stadion.sid)) { 
-		<input type="submit" value="Update"> }
+		<input type="submit" value="Aktualisieren"> }
 		</td>
-		<td><a href="@routes.StadienCtrl.deleteStadion(stadion.sid)" onclick="return confirm('Sind Sie sicher?');">Delete</a>
+		<td><a href="@routes.StadienCtrl.deleteStadion(stadion.sid)" onclick="return confirm('Sind Sie sicher?');">Entfernen</a>
 		</td>
 	</tr>
 	}

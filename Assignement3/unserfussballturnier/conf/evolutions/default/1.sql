@@ -7,7 +7,7 @@ create table partie (
   pid                       bigint not null,
   heimmannschaft_name       varchar(255),
   gastmannschaft_name       varchar(255),
-  partie_datum              date,
+  partie_datum              timestamp,
   stadion_sid               bigint,
   constraint pk_partie primary key (pid))
 ;

@@ -1,11 +1,8 @@
 @import helper._	
-@import java.time.LocalDate;
-@(myMap: Map[LocalDate, List[Partie]]) 
+@(myMap: Map[Date, List[Partie]]) 
 
 @main("Parties") {
-
-	<h1>List of parties</h1>	
-
+	<h1>Partienliste</h1>	
 	<table>
 	<tr>
 	@for((datum, parties) <- myMap) {

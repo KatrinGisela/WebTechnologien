@@ -1,7 +1,6 @@
 package models;
 
-import java.time.LocalDate;
-
+import java.util.Date;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
@@ -22,26 +21,26 @@ public class Partie extends Model {
 	 */
 	@Id
 	public Long pid;
-	
+
 	/**
-	 * String heimmannschaftName the name of the home team 
+	 * String heimmannschaftName the name of the home team
 	 */
 	@Required
 	public String heimmannschaftName;
-	
+
 	/**
-	 * String gastmannschaftName the name of the visiting team 
+	 * String gastmannschaftName the name of the visiting team
 	 */
 	@Required
 	public String gastmannschaftName;
-	
+
 	/**
 	 * LocalDate partieDatum the date of the partie
 	 */
 	@Required
 	@Formats.DateTime(pattern = "yyyy-MM-dd")
-	public LocalDate partieDatum;
-	
+	public Date partieDatum;
+
 	/**
 	 * Stadion stadion the stadion where the parties take place
 	 */
@@ -53,7 +52,9 @@ public class Partie extends Model {
 
 	/**
 	 * Creates a new partie and saves it.
-	 * @param partie the partie that the user wants to create.
+	 * 
+	 * @param partie
+	 *            the partie that the user wants to create.
 	 */
 	public static void create(Partie partie) {
 		partie.save();
@@ -61,6 +62,7 @@ public class Partie extends Model {
 
 	/**
 	 * Reads and displays all existing parties.
+	 * 
 	 * @return all existing parties
 	 */
 	public static List<Partie> read() {
@@ -88,7 +90,9 @@ public class Partie extends Model {
 	}
 
 	/**
-	 * Creates a map of all parties containing the names of the partie members, the date of the partie and the stadium id.
+	 * Creates a map of all parties containing the names of the partie members,
+	 * the date of the partie and the stadium id.
+	 * 
 	 * @return the map of the parties
 	 */
 	public static Map<Long, String> getAllAsMap() {

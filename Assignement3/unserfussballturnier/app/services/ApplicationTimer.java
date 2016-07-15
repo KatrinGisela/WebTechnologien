@@ -44,36 +44,38 @@ public class ApplicationTimer {
         start = clock.instant();
         Logger.info("ApplicationTimer demo: Starting application at " + start);
         
-        // Create matches here:
+         
         Partie halbfinale = new Partie();
         halbfinale.heimmannschaftName = "Inter";
         halbfinale.gastmannschaftName = "Roma";    
-        LocalDate date = LocalDate.of(2000, Month.NOVEMBER, 20);
-        halbfinale.partieDatum = date;    
+        halbfinale.partieDatum = new Date(89,0,1);    
         
         Partie viertelfinale = new Partie();
         viertelfinale.heimmannschaftName = "Lazio";
         viertelfinale.gastmannschaftName = "Juve";
-        LocalDate date0 = LocalDate.of(2001, Month.NOVEMBER, 21);
-        viertelfinale.partieDatum = date0;    
-        
-        
+        viertelfinale.partieDatum = new Date(88,1,2);    
+                
         Partie achtelfinale = new Partie();
         achtelfinale.heimmannschaftName = "Parma";
         achtelfinale.gastmannschaftName = "Bologna";
-        LocalDate date1 = LocalDate.of(2001, Month.NOVEMBER, 21);
-        achtelfinale.partieDatum = date1;
-        Partie.create(achtelfinale); 
-        
+        achtelfinale.partieDatum = new Date(87,2,3);
+               
+        Partie finale = new Partie();
+        finale.heimmannschaftName = "Fiorentina";
+        finale.gastmannschaftName = "Sampdoria";
+        finale.partieDatum = new Date(86,4,4);
+                     
         Stadion olimpia = new Stadion();
         olimpia.name = "Stadio Olimpico";
         olimpia.addresse = "Roma"; 
         olimpia.anzahlSitzplaetze = 5000; 
         olimpia.anzahlZugaenge = 10; 
         Stadion.create(olimpia);
-       
-        halbfinale.stadion = olimpia;
+        
+       halbfinale.stadion = olimpia;
         Partie.create(halbfinale);
+        finale.stadion = olimpia; 
+        Partie.create(finale);
          
         Stadion sanSiro = new Stadion();
         sanSiro.name = "San Siro";
