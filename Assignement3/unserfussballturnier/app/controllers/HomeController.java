@@ -28,9 +28,6 @@ public class HomeController extends Controller {
 	// public Result index() {
 	// return ok(index.render("Your new application is ready."));
 	// }
-	// public Result index() {
-	// return ok(index.render("Your new application is ready."));
-	// }
 
 	/**
 	 * Es muss von der Startseite aus eine „Terminansicht“ aufrufbar sein. Diese
@@ -60,9 +57,9 @@ public class HomeController extends Controller {
 			}
 			// myMap.get(Date.from(instant)).add(p); //VERSION DO MORGEN
 			myMap.get(instant).add(p);
+			
 		}
-
-		// Partie partiesPerDate = (Partie) Partie.find.orderBy(DATE);
+		return ok(views.html.datumsuebersicht.render(myMap));
 
 		// partiesList.sort(new Comparator<Partie>() {
 		//
@@ -71,28 +68,6 @@ public class HomeController extends Controller {
 		// return o1.partieDatum.compareTo((ChronoLocalDate) o2);
 		// }
 		// });
-		System.out.println(instant);
-		// Instant instant =
-		// p.partieDatum.atStartOfDay().atZone(ZoneId.systemDefault()).toInstant();
-		LocalDate instant = p.partieDatum;
-		if (!myMap.containsKey(p.partieDatum)) {
-			myMap.put(instant, new ArrayList<Partie>());
-		}
-		myMap.get(instant).add(p);
+
 	}
-
-	// Partie partiesPerDate = (Partie) Partie.find.m
-	// Partie partiesPerDate = (Partie) Partie.find.orderBy(DATE);
-
-	// partiesList.sort(new Comparator<Partie>() {
-	//
-	// @Override
-	// public int compare(Partie o1, Partie o2) {
-	// return o1.partieDatum.compareTo((ChronoLocalDate) o2);
-	// }
-	// });
-
-	return ok(views.html.datumsuebersicht.render(myMap);
-	
-		
-
+}
