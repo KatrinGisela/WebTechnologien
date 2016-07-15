@@ -68,7 +68,7 @@ public class PartiesCtrl extends Controller {
 		Form<Partie> partieForm = formFactory.form(Partie.class);
 		Form<Partie> filledForm = partieForm.bindFromRequest();
 		if (isFormDateEqualToStadionPartieDate(filledForm)
-				|| filledForm.hasErrors()) {
+				| filledForm.hasErrors()) {
 			return ok(views.html.partiesForm.render("Correct", filledForm,
 					Stadion.find.all()));
 		} else {
@@ -83,15 +83,11 @@ public class PartiesCtrl extends Controller {
 	}
 
 	public boolean isFormDateEqualToStadionPartieDate(Form<Partie> inputForm) {
-		System.out.println("metodo");
 		for (Partie partie : inputForm.get().stadion.parties) {
-			System.out.println("for");
 			if ((inputForm.get().partieDatum).equals(partie.partieDatum)) {
-				System.out.println("if");
 				return true;
 			}
 		}
-
 		return false;
 	}
 }

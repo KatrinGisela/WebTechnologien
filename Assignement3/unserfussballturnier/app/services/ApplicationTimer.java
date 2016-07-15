@@ -10,6 +10,8 @@ import java.util.concurrent.CompletableFuture;
 import javax.inject.Inject;
 import javax.inject.Singleton;
 
+import controllers.PartiesCtrl;
+
 import models.Partie;
 import models.Stadion;
 import play.Logger;
@@ -74,6 +76,7 @@ public class ApplicationTimer {
         
        halbfinale.stadion = olimpia;
         Partie.create(halbfinale);
+        olimpia.parties.add(halbfinale);  
         finale.stadion = olimpia; 
         Partie.create(finale);
          
