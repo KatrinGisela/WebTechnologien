@@ -1,5 +1,4 @@
 @(formType: String, stadionForm: Form[Stadion], parties: List[models.Partie]) 
-
 @import helper._ 
 
 @main(formType + " Stadion") {
@@ -8,11 +7,11 @@
 		<input type="hidden" id="@stadionForm("sid").id"
 		name="@stadionForm("sid").name" 
 		value='@stadionForm("sid").value' />
-	@inputText(stadionForm("name"))
-	@textarea(field = stadionForm("addresse"), args = 'rows -> 3, 'cols -> 23)
-	@inputText(stadionForm("anzahlSitzplaetze"))
-	@inputText(stadionForm("anzahlZugaenge"))
-	@inputText(stadionForm("sponsor"))
+	@inputText(stadionForm("name"), '_label -> "Name")
+	@textarea(field = stadionForm("addresse"), args = 'rows -> 3, 'cols -> 23, '_label -> "Adresse")
+	@inputText(stadionForm("anzahlSitzplaetze"), '_label -> "Anzahl Sitzplätze")
+	@inputText(stadionForm("anzahlZugaenge"), '_label -> "Anzahl Zugänge")
+	@inputText(stadionForm("sponsor"), '_label -> "Sponsor")
 	<input type="submit" value="Save">
 	} 
 }

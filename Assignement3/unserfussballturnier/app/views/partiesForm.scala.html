@@ -1,5 +1,6 @@
 @(formType: String, partieForm: Form[Partie], stadion: List[Stadion]) 
 @import helper._
+@import java.time.LocalDate;
 
 	@main(formType + " Partie") {
 	
@@ -9,10 +10,10 @@
 	<input type="hidden" id="@partieForm("pid").id"
 		name="@partieForm("pid").name"
 		value='@partieForm("pid").value' />
-	@helper.inputText(partieForm("heimmannschaftName"))
-	@helper.inputText(partieForm("gastmannschaftName"))
-	@helper.inputDate(partieForm("partieDatum"))
-	@select(partieForm("stadion.sid"), stadion.map(s => s.sid.toString -> s.name))
+	@helper.inputText(partieForm("heimmannschaftName"), '_label -> "Heimmannschaft")
+	@helper.inputText(partieForm("gastmannschaftName"), '_label -> "Gastmannschaft")
+	@helper.inputDate(partieForm("partieDatum"), '_label -> "Datum")
+	@select(partieForm("stadion.sid"), stadion.map(s => s.sid.toString -> s.name), '_label -> "Stadion")
 	<input type="submit" value="Save">
 	} 
 }
