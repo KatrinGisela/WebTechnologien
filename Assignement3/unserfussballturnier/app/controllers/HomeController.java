@@ -27,10 +27,13 @@ public class HomeController extends Controller {
 	 * be called when the application receives a <code>GET</code> request with a
 	 * path of <code>/</code>.
 	 */
-	
-//	 public Result index() {
-//	 return ok(index.render("Your new application is ready."));
-//	 }
+
+	// public Result index() {
+	// return ok(index.render("Your new application is ready."));
+	// }
+	// public Result index() {
+	// return ok(index.render("Your new application is ready."));
+	// }
 
 	/**
 	 * Es muss von der Startseite aus eine „Terminansicht“ aufrufbar sein. Diese
@@ -41,31 +44,57 @@ public class HomeController extends Controller {
 	 */
 	public Result showDatesOverview() {
 		List<Partie> partiesList = Partie.find.all();
+
+		// durch PartiesList durchlaufen
+		// existiert bereits eine Partie? Wenn ja, fügen wir das hinzu,
+
 		Map<Date, List<Partie>> myMap = new HashMap<Date, List<Partie>>();
 
 		// TODO: Sortieren!!!
 
 		for (Partie p : partiesList) {
-//			Instant instant = p.partieDatum.atStartOfDay().atZone(ZoneId.systemDefault()).toInstant();
+			// Instant instant =
+			// p.partieDatum.atStartOfDay().atZone(ZoneId.systemDefault()).toInstant();
 			Date instant = p.partieDatum;
 			if (!myMap.containsKey(p.partieDatum)) {
-//				myMap.put(Date.from(instant), new ArrayList<Partie>());	//VERSION DO MORGEN
+				// myMap.put(Date.from(instant), new ArrayList<Partie>());
+				// //VERSION DO MORGEN
 				myMap.put(instant, new ArrayList<Partie>());
 			}
-//			myMap.get(Date.from(instant)).add(p);					//VERSION DO MORGEN
-			myMap.get(instant).add(p);	
+			// myMap.get(Date.from(instant)).add(p); //VERSION DO MORGEN
+			myMap.get(instant).add(p);
 		}
 
 		// Partie partiesPerDate = (Partie) Partie.find.orderBy(DATE);
 
-//		partiesList.sort(new Comparator<Partie>() {
-//
-//			@Override
-//			public int compare(Partie o1, Partie o2) {
-//				return o1.partieDatum.compareTo((ChronoLocalDate) o2);
-//			}
-//		});
-System.out.println(instant);
-		return ok(views.html.datumsuebersicht.render(myMap));
+		// partiesList.sort(new Comparator<Partie>() {
+		//
+		// @Override
+		// public int compare(Partie o1, Partie o2) {
+		// return o1.partieDatum.compareTo((ChronoLocalDate) o2);
+		// }
+		// });
+		System.out.println(instant);
+		// Instant instant =
+		// p.partieDatum.atStartOfDay().atZone(ZoneId.systemDefault()).toInstant();
+		Date instant = p.partieDatum;
+		if (!myMap.containsKey(p.partieDatum)) {
+			myMap.put(instant, new ArrayList<Partie>());
+		}
+		myMap.get(instant).add(p);
+	}
+
+	// Partie partiesPerDate = (Partie) Partie.find.m
+	// Partie partiesPerDate = (Partie) Partie.find.orderBy(DATE);
+
+	// partiesList.sort(new Comparator<Partie>() {
+	//
+	// @Override
+	// public int compare(Partie o1, Partie o2) {
+	// return o1.partieDatum.compareTo((ChronoLocalDate) o2);
+	// }
+	// });
+
+	return ok(views.html.datumsuebersicht.render(myMap));
 	}
 }

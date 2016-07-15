@@ -38,8 +38,8 @@ public class Partie extends Model {
 		return find.all();
 	}
 
-	public static void update(Partie updatedPartie) {
-		updatedPartie.update();
+	public static void update(Partie updatePartie) {
+		updatePartie.update();
 	}
 
 	public static void delete(Long pid) {
@@ -53,6 +53,7 @@ public class Partie extends Model {
 			partiesMap.put(partie.pid, partie.heimmannschaftName);
 			partiesMap.put(partie.pid, partie.gastmannschaftName);
 			partiesMap.put(partie.pid, partie.partieDatum.toString());
+			partiesMap.put(partie.pid, partie.stadion.sid.toString());
 		}
 		return partiesMap;
 	}
