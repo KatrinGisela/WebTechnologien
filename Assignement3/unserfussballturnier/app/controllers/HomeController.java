@@ -1,7 +1,7 @@
 package controllers;
 
+import java.time.LocalDate;
 import java.util.ArrayList;
-import java.util.Date;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
@@ -39,14 +39,14 @@ public class HomeController extends Controller {
 		// durch PartiesList durchlaufen
 		// existiert bereits eine Partie? Wenn ja, fügen wir das hinzu,
 
-		Map<Date, List<Partie>> myMap = new HashMap<Date, List<Partie>>();
+		Map<LocalDate, List<Partie>> myMap = new HashMap<LocalDate, List<Partie>>();
 
 		// TODO: Sortieren!!!
 
 		for (Partie p : partiesList) {
 			// Instant instant =
 			// p.partieDatum.atStartOfDay().atZone(ZoneId.systemDefault()).toInstant();
-			Date instant = p.partieDatum;
+			LocalDate instant = p.partieDatum;
 			if (!myMap.containsKey(p.partieDatum)) {
 				myMap.put(instant, new ArrayList<Partie>());
 			}

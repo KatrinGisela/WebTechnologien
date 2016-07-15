@@ -1,6 +1,6 @@
 package models;
 
-import java.util.Date;
+import java.time.LocalDate;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
@@ -24,7 +24,7 @@ public class Partie extends Model {
 	public String gastmannschaftName;
 	@Required
 	@Formats.DateTime(pattern = "yyyy-MM-dd")
-	public Date partieDatum;
+	public LocalDate partieDatum;
 	@ManyToOne
 	public Stadion stadion;
 	public static Finder<Long, Partie> find = new Finder<Long, Partie>(

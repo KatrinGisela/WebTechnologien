@@ -2,6 +2,8 @@ package services;
 
 import java.time.Clock;
 import java.time.Instant;
+import java.time.LocalDate;
+import java.time.Month;
 import java.util.Date;
 import java.util.concurrent.CompletableFuture;
 
@@ -45,19 +47,22 @@ public class ApplicationTimer {
         // Create matches here:
         Partie halbfinale = new Partie();
         halbfinale.heimmannschaftName = "Inter";
-        halbfinale.gastmannschaftName = "Roma";        
-        halbfinale.partieDatum = new Date();  
+        halbfinale.gastmannschaftName = "Roma";    
+        LocalDate date = LocalDate.of(2000, Month.NOVEMBER, 20);
+        halbfinale.partieDatum = date;    
         
         Partie viertelfinale = new Partie();
         viertelfinale.heimmannschaftName = "Lazio";
         viertelfinale.gastmannschaftName = "Juve";
-        viertelfinale.partieDatum = new Date();
+        LocalDate date0 = LocalDate.of(2001, Month.NOVEMBER, 21);
+        viertelfinale.partieDatum = date0;    
         
         
         Partie achtelfinale = new Partie();
         achtelfinale.heimmannschaftName = "Parma";
         achtelfinale.gastmannschaftName = "Bologna";
-        achtelfinale.partieDatum = new Date();
+        LocalDate date1 = LocalDate.of(2001, Month.NOVEMBER, 21);
+        achtelfinale.partieDatum = date1;
         Partie.create(achtelfinale); 
         
         Stadion olimpia = new Stadion();
