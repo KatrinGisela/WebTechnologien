@@ -25,49 +25,27 @@ public class HomeController extends Controller {
 	 * path of <code>/</code>.
 	 */
 
-	// public Result index() {
-	// return ok(index.render("Your new application is ready."));
-	// }
+	 public Result index() {
+	 return ok(views.html.index.render("Your new application is ready."));
+	 }
 
 	/**
-	 * Es muss von der Startseite aus eine „Terminansicht“ aufrufbar sein. Diese
-	 * Ansicht ist nach den Stadien, sondern nach den Daten, an denen Partien
-	 * stattfinden, gruppiert und sortiert. Unterhalb jedes Datums stehen dann
-	 * jeweils alle Partien (Mannschaften und Name des Stadions), die an einem
-	 * Tag stattfinden.
+	 * Shows a date overview of all matches that are registered and that will take place
+	 * containing information about the date of the match, the match members and the stadium
 	 */
 	public Result showDatesOverview() {
 		List<Partie> partiesList = Partie.find.all();
 
-		// durch PartiesList durchlaufen
-		// existiert bereits eine Partie? Wenn ja, fügen wir das hinzu,
-
 		Map<LocalDate, List<Partie>> myMap = new HashMap<LocalDate, List<Partie>>();
-
-		// TODO: Sortieren!!!
-
 		for (Partie p : partiesList) {
-			// Instant instant =
-			// p.partieDatum.atStartOfDay().atZone(ZoneId.systemDefault()).toInstant();
 			LocalDate instant = p.partieDatum;
 			if (!myMap.containsKey(p.partieDatum)) {
-				// myMap.put(Date.from(instant), new ArrayList<Partie>());
-				// //VERSION DO MORGEN
 				myMap.put(instant, new ArrayList<Partie>());
 			}
-			// myMap.get(Date.from(instant)).add(p); //VERSION DO MORGEN
 			myMap.get(instant).add(p);
 			
 		}
 		return ok(views.html.datumsuebersicht.render(myMap));
-
-		// partiesList.sort(new Comparator<Partie>() {
-		//
-		// @Override
-		// public int compare(Partie o1, Partie o2) {
-		// return o1.partieDatum.compareTo((ChronoLocalDate) o2);
-		// }
-		// });
 
 	}
 }
