@@ -38,8 +38,8 @@ public class Partie extends Model {
 		return find.all();
 	}
 
-	public static void update(Partie updatedPartie) {
-		updatedPartie.update();
+	public static void update(Partie updatePartie) {
+		updatePartie.update();
 	}
 
 	public static void delete(Long pid) {

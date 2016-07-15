@@ -37,11 +37,11 @@ public class Stadion extends Model {
 		return find.all();
 	}
 
-	public static void update(Stadion updatePartie) {
-		updatePartie.update();
+	public static void update(Stadion updateStadion) {
+		updateStadion.update();
 	}
 
-	public static void delete(Long rid) {
-		find.byId(rid).delete();
+	public static void delete(Long sid) {
+		find.byId(sid).delete();
 	}
 }
