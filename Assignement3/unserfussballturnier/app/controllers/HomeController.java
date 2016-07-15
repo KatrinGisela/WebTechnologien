@@ -1,7 +1,9 @@
 package controllers;
 
+
 import java.time.LocalDate;
 import java.util.ArrayList;
+
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
@@ -22,6 +24,10 @@ public class HomeController extends Controller {
 	 * be called when the application receives a <code>GET</code> request with a
 	 * path of <code>/</code>.
 	 */
+
+	// public Result index() {
+	// return ok(index.render("Your new application is ready."));
+	// }
 	// public Result index() {
 	// return ok(index.render("Your new application is ready."));
 	// }
@@ -48,12 +54,14 @@ public class HomeController extends Controller {
 			// p.partieDatum.atStartOfDay().atZone(ZoneId.systemDefault()).toInstant();
 			LocalDate instant = p.partieDatum;
 			if (!myMap.containsKey(p.partieDatum)) {
+				// myMap.put(Date.from(instant), new ArrayList<Partie>());
+				// //VERSION DO MORGEN
 				myMap.put(instant, new ArrayList<Partie>());
 			}
+			// myMap.get(Date.from(instant)).add(p); //VERSION DO MORGEN
 			myMap.get(instant).add(p);
 		}
 
-		// Partie partiesPerDate = (Partie) Partie.find.m
 		// Partie partiesPerDate = (Partie) Partie.find.orderBy(DATE);
 
 		// partiesList.sort(new Comparator<Partie>() {
@@ -63,9 +71,28 @@ public class HomeController extends Controller {
 		// return o1.partieDatum.compareTo((ChronoLocalDate) o2);
 		// }
 		// });
-
-		return ok(views.html.datumsuebersicht.render(myMap));
-
+		System.out.println(instant);
+		// Instant instant =
+		// p.partieDatum.atStartOfDay().atZone(ZoneId.systemDefault()).toInstant();
+		LocalDate instant = p.partieDatum;
+		if (!myMap.containsKey(p.partieDatum)) {
+			myMap.put(instant, new ArrayList<Partie>());
+		}
+		myMap.get(instant).add(p);
 	}
 
-}
+	// Partie partiesPerDate = (Partie) Partie.find.m
+	// Partie partiesPerDate = (Partie) Partie.find.orderBy(DATE);
+
+	// partiesList.sort(new Comparator<Partie>() {
+	//
+	// @Override
+	// public int compare(Partie o1, Partie o2) {
+	// return o1.partieDatum.compareTo((ChronoLocalDate) o2);
+	// }
+	// });
+
+	return ok(views.html.datumsuebersicht.render(myMap);
+	
+		
+
