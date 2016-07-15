@@ -95,6 +95,7 @@ public class HomeController extends Controller {
 	// }
 	// });
 
-	return ok(views.html.datumsuebersicht.render(myMap));
-	}
-}
+	return ok(views.html.datumsuebersicht.render(myMap);
+	
+		
+
